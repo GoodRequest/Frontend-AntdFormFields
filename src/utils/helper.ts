@@ -68,3 +68,4 @@ export const createSlug = (value: string, separator = '-', lower = true) => {
     return ''
 }
 
+export const generateElementId = (key: string, form?: string) => (form ? `#${form}-${key}` : `#${key}`)

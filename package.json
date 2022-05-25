@@ -7,6 +7,8 @@
   "dependencies": {
     "@ant-design/icons": "4.7.0",
     "antd-dayjs-webpack-plugin": "1.0.6",
+    "cypress": "9.7.0",
+    "cypress-file-upload": "^5.0.8",
     "dayjs": "1.11.2",
     "lodash": "4.17.21",
     "lodash-checkit": "2.4.1",

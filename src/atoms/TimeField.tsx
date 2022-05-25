@@ -6,6 +6,8 @@ import { FormItemProps } from 'antd/lib/form/FormItem'
 import { Form, TimePicker } from 'antd'
 import { TimePickerProps } from 'antd/lib/time-picker'
 
+import { DEFAULT_TIME_FORMAT, DROPDOWN_POSITION } from '../utils/enums'
+
 // eslint-disable-next-line import/no-cycle
 import { formFieldID } from '../utils/helper'
 
@@ -27,7 +29,7 @@ class TimeField extends React.Component<Props> {
 	}
 
 	onChangeWrap = (value: Dayjs) => {
-		const { input, timeFormat } = this.props
+		const { input, timeFormat = DEFAULT_TIME_FORMAT } = this.props
 		const timeString = value.format(timeFormat)
 		input.onChange(timeString || null)
 	}
@@ -48,7 +50,7 @@ class TimeField extends React.Component<Props> {
 			required,
 			style,
 			meta: { error, touched, form },
-			timeFormat,
+			timeFormat = DEFAULT_TIME_FORMAT,
 			placeholder,
 			disabled,
 			allowClear,
@@ -57,7 +59,6 @@ class TimeField extends React.Component<Props> {
 			popupClassName,
 			clearIcon,
 			suffixIcon,
-			dropdownAlign,
 			size
 		} = this.props
 
@@ -72,13 +73,13 @@ class TimeField extends React.Component<Props> {
 				<div onKeyDown={this.onKeyDown} role={'button'} tabIndex={0}>
 					<TimePicker
 						id={formFieldID(form, input.name)}
-						dropdownAlign={dropdownAlign}
+						dropdownAlign={DROPDOWN_POSITION.BOTTOM_LEFT}
 						onSelect={this.onChangeWrap} // NOTE: workaround https://github.com/ant-design/ant-design/issues/21189
 						onChange={this.onClear}
 						format={timeFormat}
 						value={value}
-						className={'date-input time-input'}
-						popupClassName={popupClassName || 'time-dropdown'}
+						className={'noti-date-input noti-time-input'}
+						popupClassName={popupClassName || 'noti-time-dropdown'}
 						suffixIcon={suffixIcon}
 						placeholder={placeholder}
 						disabled={disabled}

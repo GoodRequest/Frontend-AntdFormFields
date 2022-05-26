@@ -2,7 +2,6 @@ import 'cypress-file-upload'
 
 import { generateElementId } from '../utils/helper'
 
-
 export const apiAuth = (email: string, password: string, url: string) => {
     cy.log(`Login as ${email}`)
     cy.request({
@@ -89,4 +88,9 @@ export const checkSuccessToastMessage = () => {
 
 export const clearDropdownSelection = (fieldName: string) => {
     cy.get(`.ant-select[name="${fieldName}"] > span.ant-select-clear`).click({ force: true })
+}
+
+export const checkFirstCheckBox = (key: string, form?: string,) => {
+    const elementId: string = generateElementId(key, form)
+    cy.get(elementId).first().check()
 }

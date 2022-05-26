@@ -1,3 +1,5 @@
+import { Gutter } from 'antd/lib/grid/row'
+
 export enum KEYBOARD_KEY {
     ENTER = 'Enter'
 }
@@ -17,6 +19,13 @@ export const DROPDOWN_POSITION = {
         }
     }
 }
+
+export enum BYTE_MULTIPLIER {
+    KILO = 10 ** 3,
+    MEGA = 10 ** 6
+}
+
+export const ROW_GUTTER_X_DEFAULT = [4, 0] as Gutter
 
 export const DEFAULT_DATE_INPUT_FORMAT = 'DD.MM.YYYY'
 

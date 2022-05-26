@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react'
+import { useCallback, useRef, memo } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import cx from 'classnames'
 
@@ -123,4 +123,4 @@ const InputNumberField = (props: Props) => {
 	)
 }
 
-export default React.memo(InputNumberField)
+export default memo(InputNumberField)

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import cx from 'classnames'
 import { Form, Switch, Tooltip, Typography } from 'antd'

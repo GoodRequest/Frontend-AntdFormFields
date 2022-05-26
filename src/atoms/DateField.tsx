@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import dayjs from 'dayjs'
 import cx from 'classnames'

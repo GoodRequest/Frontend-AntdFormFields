@@ -1,4 +1,4 @@
-import React, { KeyboardEvent } from 'react'
+import { KeyboardEvent, Component } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import dayjs, { Dayjs } from 'dayjs'
 // ant
@@ -17,7 +17,7 @@ type Props = WrappedFieldProps &
 		timeFormat?: string
 	}
 
-class TimeField extends React.Component<Props> {
+class TimeField extends Component<Props> {
 	state = { close: undefined }
 
 	onKeyDown = (e: KeyboardEvent) => {

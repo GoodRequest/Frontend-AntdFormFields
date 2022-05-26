@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState, useMemo } from 'react'
+import { useCallback, useRef, useState, useMemo } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 
 import { get, trimStart } from 'lodash'

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback, memo } from 'react'
 import { Form } from 'antd'
 import { WrappedFieldProps } from 'redux-form'
 import { InputProps } from 'antd/lib/input'
@@ -56,4 +56,4 @@ const InputMaskedField = (props: Props) => {
 	)
 }
 
-export default React.memo(InputMaskedField)
+export default memo(InputMaskedField)

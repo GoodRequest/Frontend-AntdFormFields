@@ -1,5 +1,9 @@
-import { chain, round, replace, isString, isNumber, isFinite } from 'lodash'
+import { chain, round, replace, isString, isNumber, isFinite, get, map } from 'lodash'
 import slugify from 'slugify'
+import { BYTE_MULTIPLIER } from './enums'
+import { notification } from 'antd'
+import { IToastTexts } from '../types/interfaces'
+const text = require('../utils/text.json')
 
 export const formFieldID = (form?: string, name?: string) => {
     let id
@@ -66,6 +70,36 @@ export const createSlug = (value: string, separator = '-', lower = true) => {
         })
     }
     return ''
+}
+
+export const getMaxSizeNotifyMessage = (maxFileSize: any, maxFileText: IToastTexts | undefined) => {
+    let notifyMaxSize
+    if (maxFileSize >= BYTE_MULTIPLIER.MEGA) {
+        notifyMaxSize = [maxFileSize / BYTE_MULTIPLIER.MEGA, 'MB']
+    } else {
+        notifyMaxSize = [maxFileSize / BYTE_MULTIPLIER.KILO, 'KB']
+    }
+    return notification.error({
+        message: maxFileText?.title || text.error,
+        description: `${maxFileText?.text || text.errMessageFileMAxUpload} ${notifyMaxSize[0]} ${notifyMaxSize[1]}`
+    })
+}
+
+type ImgUploadData = { uid: string; path: string } & any
+export type ImgUploadParam = { [key: string]: ImgUploadData }
+
+export const getImagesFormValues = (fileList: any, filesData: ImgUploadParam) => {
+    const values = map(fileList, (file) => {
+        const fileData = filesData[get(file, 'uid')]
+
+        return {
+            ...file,
+            id: get(file, 'id') || fileData?.id,
+            url: get(file, 'url') || fileData?.path,
+            signedUrl: fileData?.signedUrl
+        }
+    })
+    return values
 }
 
 export const generateElementId = (key: string, form?: string) => (form ? `#${form}-${key}` : `#${key}`)

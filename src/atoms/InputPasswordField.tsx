@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback } from 'react'
+import { ReactNode, useCallback, memo } from 'react'
 import { Form, Input } from 'antd'
 import cx from 'classnames'
 import { WrappedFieldProps } from 'redux-form'
@@ -114,4 +114,4 @@ const InputPasswordField = (props: Props) => {
 	)
 }
 
-export default React.memo(InputPasswordField)
+export default memo(InputPasswordField)

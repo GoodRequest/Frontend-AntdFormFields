@@ -45,7 +45,7 @@ const InputMaskedField = (props: Props) => {
 		<Item label={label} required={required} style={style} help={touched && error} validateStatus={error && touched ? 'error' : undefined}>
 			<InputMask
 				{...input}
-				className={cx('ant-input', 'noti-input', 'noti-input-masked', { 'noti-input-masked--large': size === 'large' })}
+				className={cx('ant-input', 'input', 'input-masked', { 'input-masked--large': size === 'large' })}
 				mask={mask}
 				onChange={handleChange}
 				value={input.value}

@@ -110,7 +110,7 @@ const InputNumberField = (props: Props) => {
 				precision={precision}
 				step={step}
 				type={type || 'text'}
-				className={cx('noti-input-number', { 'rounded-full': rounded })}
+				className={cx('input-number', { 'rounded-full': rounded })}
 				onFocus={onFocus}
 				decimalSeparator=','
 				parser={maxChars && maxChars > 0 ? maxCharsParser : parser}

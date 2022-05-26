@@ -103,7 +103,7 @@ const InputField = (props: Props) => {
 			<Input
 				{...input}
 				id={formFieldID(form, input.name)}
-				className={cx('noti-input', { 'noti-input-filter': fieldMode === FIELD_MODE.FILTER })}
+				className={cx('input', { 'input-filter': fieldMode === FIELD_MODE.FILTER })}
 				onChange={onChange}
 				onBlur={onBlur}
 				addonBefore={addonBefore}

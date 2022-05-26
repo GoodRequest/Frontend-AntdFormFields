@@ -58,7 +58,7 @@ const SwitchField = (props: Props) => {
 		<Item help={touched && error} validateStatus={error && touched ? 'error' : undefined} style={style} className={cx(className, { 'pt-25px': offsetLabel })}>
 			{label || customLabel ? (
 				<div
-					className={cx('noti-switch', { 'pointer-events-none': disabled, 'bg-gray-50': disabled })}
+					className={cx('switch', { 'pointer-events-none': disabled, 'bg-gray-50': disabled })}
 					onClick={() => onChange(!checkedState)}
 					onKeyDown={(e) => {
 						if (e.key === KEYBOARD_KEY.ENTER) {
@@ -70,7 +70,7 @@ const SwitchField = (props: Props) => {
 					tabIndex={0}
 				>
 					<div className={'flex items-center justify-between w-full'}>
-						<div className={'noti-switch__label flex items-center w-11/12'}>
+						<div className={'switch-label flex items-center w-11/12'}>
 							{customLabel || (
 								<Typography.Paragraph ellipsis={{ rows: 1, tooltip: true }} className={'label'}>
 									{label}

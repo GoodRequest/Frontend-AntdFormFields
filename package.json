@@ -8,7 +8,7 @@
     "@ant-design/icons": "4.7.0",
     "antd-dayjs-webpack-plugin": "1.0.6",
     "cypress": "9.7.0",
-    "cypress-file-upload": "^5.0.8",
+    "cypress-file-upload": "5.0.8",
     "dayjs": "1.11.2",
     "lodash": "4.17.21",
     "lodash-checkit": "2.4.1",
@@ -16,7 +16,7 @@
     "react": "17.0.2",
     "react-input-mask": "2.0.4",
     "react-pin-field": "3.0.12",
-    "react-redux": "^8.0.2",
+    "react-redux": "8.0.2",
     "react-scripts": "5.0.1",
     "redux-form": "8.3.8",
     "storybook": "6.5.5"

@@ -114,7 +114,7 @@ const customDropdown = (actions: Action[] | null | undefined, menu: React.ReactE
 		<Spin
 			style={{ margin: '10px', justifyContent: 'flex-start' }}
 			indicator={indicator}
-			className={'flex-center text-notino-black'}
+			className={'flex-center'}
 			tip={'Načítavam...'}
 			spinning={fetching}
 		>
@@ -122,7 +122,7 @@ const customDropdown = (actions: Action[] | null | undefined, menu: React.ReactE
 			<div className={'w-11/12 m-auto'}>{divider}</div>
 			{map(actions, (item, index) => (
 				<div className={'flex items-center h-12'} key={index}>
-					<Button key={item.title} type='link' size={'large'} htmlType='button' className={'noti-btn'} icon={item.icon} onClick={item.onAction}>
+					<Button key={item.title} type='link' size={'large'} htmlType='button' className={'btn'} icon={item.icon} onClick={item.onAction}>
 						{item.title}
 					</Button>
 				</div>
@@ -458,7 +458,7 @@ const SelectField = (props: Props) => {
 			<Select
 				bordered={bordered}
 				style={{ backgroundColor }}
-				className={cx({ 'noti-select-input': !disableTpStyles, rounded: backgroundColor, 'filter-select': fieldMode === FIELD_MODE.FILTER })}
+				className={cx({ 'select-input': !disableTpStyles, rounded: backgroundColor, 'filter-select': fieldMode === FIELD_MODE.FILTER })}
 				tagRender={tagRender}
 				mode={mode}
 				{...input}
@@ -491,7 +491,7 @@ const SelectField = (props: Props) => {
 				onSelect={onSelectWrap}
 				showArrow={showArrow}
 				menuItemSelectedIcon={renderMenuItemSelectedIcon(mode, menuItemSelectedIcon, disableMenuItemSelectedIcon)}
-				dropdownClassName={cx(`noti-select-dropdown ${dropdownClassName}`, { 'dropdown-match-select-width': dropdownMatchSelectWidth })}
+				dropdownClassName={cx(`select-dropdown ${dropdownClassName}`, { 'dropdown-match-select-width': dropdownMatchSelectWidth })}
 				dropdownStyle={dropdownStyle}
 				dropdownMatchSelectWidth={dropdownMatchSelectWidth}
 				listHeight={listHeight}

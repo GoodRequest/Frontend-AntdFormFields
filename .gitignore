@@ -6,7 +6,6 @@ coverage/
 .idea
 dist/
 package-lock.json
-build/
 tmp
 yarn.lock
 yarn-error.log

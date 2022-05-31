@@ -2,13 +2,10 @@
   "compilerOptions": {
     "noFallthroughCasesInSwitch": true,
     "target": "es2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
     "outDir": "./dist",
     "rootDir": "./src",
+    "module": "commonjs",
+    "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,14 +17,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "typeRoots": [
-      "node_modules/@types",
-      "./src/types"
-    ]
+    "jsx": "react-jsx"
   },
   "include": [
-    "src",
+    "src/**/*",
     "node_modules/cypress/types/cypress-global-vars.d.ts"
-  ]
+  ],
 }

@@ -1,12 +1,17 @@
 {
   "name": "antd-form-fields",
   "version": "1.0.0",
-  "repository": "git@github.com:GoodRequest/i18nextJsonToCsv.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/GoodRequest/i18nextJsonToCsv.git"
+  },
   "author": "Roman Haluska <roman.haluska@goodrequest.com>",
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "module": "src/index.ts",
   "types": "./src/types/index.d.ts",

@@ -50,7 +50,7 @@ class DateRangeField extends React.Component<Props> {
 	}
 
 	render() {
-		const { names, labels, formats, getCalendarContainer, renderExtraFooter, required, placeholders, disabled, disableStartDayEnd, suffixIcon, clearIcon } = this.props
+		const { names, formats, getCalendarContainer, renderExtraFooter, required, placeholders, disabled, disableStartDayEnd, suffixIcon, clearIcon } = this.props
 
 		return (
 			<div className={'flex'}>
@@ -72,7 +72,6 @@ class DateRangeField extends React.Component<Props> {
 					}
 					return (
 						<Item
-							label={(labels ? labels[index] : undefined) as string | undefined}
 							required={required}
 							// @ts-ignore
 							help={touched && error}

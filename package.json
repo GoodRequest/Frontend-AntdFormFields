@@ -8,9 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "main": "src/index.ts",
-  "module": "build/index.es.js",
-  "jsnext:main": "build/index.es.js",
+  "module": "src/index.ts",
   "types": "./src/types/index.d.ts",
   "devDependencies": {
     "@storybook/addon-actions": "6.5.5",

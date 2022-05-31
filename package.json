@@ -47,6 +47,9 @@
     "react-redux": "8.0.2",
     "react-scripts": "5.0.1",
     "redux-form": "8.3.8",
-    "storybook": "6.5.5"
+    "storybook": "6.5.5",
+    "@babel/core": "7.6.0",
+    "babel-loader": "8.0.6",
+    "webpack-cli": "3.3.8"
   }
 }

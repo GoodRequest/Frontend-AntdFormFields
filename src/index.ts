@@ -14,52 +14,30 @@ import {
     setSearchBoxValueAndSelectFirstOption, uploadFile
 } from './commands/cypressCommands'
 
-// atoms
-import CheckboxField from './atoms/CheckboxField'
-import CheckboxGroupField from './atoms/CheckboxGroupField'
-import DateField from './atoms/DateField'
-import DateRangeField from './atoms/DateRangeField'
-import DateRangePickerField from './atoms/DateRangePickerField'
-import FileUploadField from './atoms/FileUploadField'
-import ImgUploadField from './atoms/ImgUploadField'
-import InputField from './atoms/InputField'
-import RadioGroupField from './atoms/RadioGroupField'
-import SelectField from './atoms/SelectField'
-import SwitchField from './atoms/SwitchField'
-import TextareaField from './atoms/TextareaField'
-import TimeField from './atoms/TimeField'
-import TimeRangeField from './atoms/TimeRangeField'
-import ToggleField from './atoms/ToggleField'
-import InputMaskedField from './atoms/InputMaskedField'
-import InputNumberField from './atoms/InputNumberField'
-import InputPasswordField from './atoms/InputPasswordField'
-
 // dayjs extended plugins
 dayjs.extend(isBetween)
 dayjs.extend(utcPlugin)
 dayjs.extend(timezonePlugin)
 dayjs.extend(minMax)
 
-module.exports = {
-    CheckboxField,
-    CheckboxGroupField,
-    DateField,
-    DateRangeField,
-    DateRangePickerField,
-    FileUploadField,
-    ImgUploadField,
-    InputField,
-    InputMaskedField,
-    InputNumberField,
-    InputPasswordField,
-    RadioGroupField,
-    SelectField,
-    SwitchField,
-    TextareaField,
-    TimeField,
-    TimeRangeField,
-    ToggleField
-}
+export { default as CheckboxField } from './atoms/CheckboxField'
+export { default as CheckboxGroupField } from './atoms/CheckboxGroupField'
+export { default as DateField } from './atoms/DateField'
+export { default as DateRangeField } from './atoms/DateRangeField'
+export { default as DateRangePickerField } from './atoms/DateRangePickerField'
+export { default as FileUploadField } from './atoms/FileUploadField'
+export { default as ImgUploadField } from './atoms/ImgUploadField'
+export { default as InputField } from './atoms/InputField'
+export { default as InputMaskedField } from './atoms/InputMaskedField'
+export { default as InputNumberField } from './atoms/InputNumberField'
+export { default as InputPasswordField } from './atoms/InputPasswordField'
+export { default as RadioGroupField } from './atoms/RadioGroupField'
+export { default as SelectField } from './atoms/SelectField'
+export { default as SwitchField } from './atoms/SwitchField'
+export { default as TextareaField } from './atoms/TextareaField'
+export { default as TimeField } from './atoms/TimeField'
+export { default as TimeRangeField } from './atoms/TimeRangeField'
+export { default as ToggleField } from './atoms/ToggleField'
 
 // add all custom test commands for cypress
 const initializeCustomCommands = () => {

@@ -8,7 +8,7 @@ const lodash_1 = require("lodash");
 const slugify_1 = __importDefault(require("slugify"));
 const enums_1 = require("./enums");
 const antd_1 = require("antd");
-const text = require('../utils/text.json');
+const text_json_1 = __importDefault(require("../utils/text.json"));
 const formFieldID = (form, name) => {
     let id;
     if (form && name) {
@@ -87,8 +87,8 @@ const getMaxSizeNotifyMessage = (maxFileSize, maxFileText) => {
         notifyMaxSize = [maxFileSize / enums_1.BYTE_MULTIPLIER.KILO, 'KB'];
     }
     return antd_1.notification.error({
-        message: (maxFileText === null || maxFileText === void 0 ? void 0 : maxFileText.title) || text.error,
-        description: `${(maxFileText === null || maxFileText === void 0 ? void 0 : maxFileText.text) || text.errMessageFileMAxUpload} ${notifyMaxSize[0]} ${notifyMaxSize[1]}`
+        message: (maxFileText === null || maxFileText === void 0 ? void 0 : maxFileText.title) || text_json_1.default.error,
+        description: `${(maxFileText === null || maxFileText === void 0 ? void 0 : maxFileText.text) || text_json_1.default.errMessageFileMAxUpload} ${notifyMaxSize[0]} ${notifyMaxSize[1]}`
     });
 };
 exports.getMaxSizeNotifyMessage = getMaxSizeNotifyMessage;

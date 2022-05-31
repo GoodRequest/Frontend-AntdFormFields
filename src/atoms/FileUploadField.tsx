@@ -10,7 +10,7 @@ import { UploadOutlined } from '@ant-design/icons'
 import { IToastTexts } from '../types/interfaces'
 import { getMaxSizeNotifyMessage } from '../utils/helper'
 
-const text = require('../utils/text.json')
+import text from '../utils/text.json'
 
 const { Item } = Form
 

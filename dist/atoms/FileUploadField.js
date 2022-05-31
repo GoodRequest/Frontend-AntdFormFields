@@ -19,7 +19,7 @@ const classnames_1 = __importDefault(require("classnames"));
 const antd_1 = require("antd");
 const icons_1 = require("@ant-design/icons");
 const helper_1 = require("../utils/helper");
-const text = require('../utils/text.json');
+const text_json_1 = __importDefault(require("../utils/text.json"));
 const { Item } = antd_1.Form;
 /**
  * Umožňuje nahrať jeden súbor, nový súbor nahradí pôvodný
@@ -37,7 +37,7 @@ const FileUploadField = (props) => {
         if (info.file.status === 'error') {
             // NOTE: if uploaded file has a bad format (eg. txt)
             antd_1.notification.error({
-                message: afterUploadErrorTitle || text.error,
+                message: afterUploadErrorTitle || text_json_1.default.error,
                 description: (_a = info.file.response) === null || _a === void 0 ? void 0 : _a.messages
             });
         }
@@ -68,7 +68,7 @@ const FileUploadField = (props) => {
                 return false;
             }
             return true;
-        }, showUploadList: showUploadList, listType: 'picture-card' }, { children: !staticMode && ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)(icons_1.UploadOutlined, { className: `text-xl ${touched && error ? 'text-red-600' : 'text-gray-600'}` }), (0, jsx_runtime_1.jsx)("div", Object.assign({ className: `text-sm ${touched && error ? 'text-red-600' : 'text-gray-600'}` }, { children: uploadBtnText || text.upload }))] })) })));
+        }, showUploadList: showUploadList, listType: 'picture-card' }, { children: !staticMode && ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)(icons_1.UploadOutlined, { className: `text-xl ${touched && error ? 'text-red-600' : 'text-gray-600'}` }), (0, jsx_runtime_1.jsx)("div", Object.assign({ className: `text-sm ${touched && error ? 'text-red-600' : 'text-gray-600'}` }, { children: uploadBtnText || text_json_1.default.upload }))] })) })));
     return ((0, jsx_runtime_1.jsxs)(Item, Object.assign({ className: (0, classnames_1.default)('file-upload-field', { 'hide-overlay': staticMode, disabled }), label: label, required: required, style: { width: '100%' }, help: touched && error, validateStatus: touched && error ? 'error' : undefined }, { children: [staticMode && !input.value && '-', uploader] })));
 };
 // NOTE: Prevent voči animácii po submitnutí formulára

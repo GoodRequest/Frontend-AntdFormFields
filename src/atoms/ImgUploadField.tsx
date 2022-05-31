@@ -18,7 +18,7 @@ import {
 // types
 import { IToastTexts } from '../types/interfaces'
 
-const text = require('../utils/text.json')
+import text from '../utils/text.json'
 
 const { Item } = Form
 

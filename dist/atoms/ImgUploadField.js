@@ -8,6 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
@@ -16,7 +19,7 @@ const antd_1 = require("antd");
 const icons_1 = require("@ant-design/icons");
 // utils
 const helper_1 = require("../utils/helper");
-const text = require('../utils/text.json');
+const text_json_1 = __importDefault(require("../utils/text.json"));
 const { Item } = antd_1.Form;
 // export type ImgUploadParam = { [key: string]: { uid: string } }
 /**
@@ -29,8 +32,8 @@ const ImgUploadField = (props) => {
     const onChange = (info) => __awaiter(void 0, void 0, void 0, function* () {
         if (info.file.status === 'error') {
             antd_1.notification.error({
-                message: uploadErrorTitle || text.error,
-                description: info.file.error.message || text.errMessageFileMAxUpload
+                message: uploadErrorTitle || text_json_1.default.error,
+                description: info.file.error.message || text_json_1.default.errMessageFileMAxUpload
             });
         }
         if (info.file.status === 'done' || info.file.status === 'removed') {
@@ -67,13 +70,13 @@ const ImgUploadField = (props) => {
                 const { uid: uidLast } = fileList[fileList.length - 1];
                 if (uidCurrent === uidLast)
                     antd_1.notification.error({
-                        message: (maxFilesText === null || maxFilesText === void 0 ? void 0 : maxFilesText.title) || text.error,
-                        description: `${(maxFilesText === null || maxFilesText === void 0 ? void 0 : maxFilesText.text) || text.errMessageFileMAxUpload} Nahrajte maximálne ${maxCount} súborov`
+                        message: (maxFilesText === null || maxFilesText === void 0 ? void 0 : maxFilesText.title) || text_json_1.default.error,
+                        description: `${(maxFilesText === null || maxFilesText === void 0 ? void 0 : maxFilesText.text) || text_json_1.default.errMessageFileMAxUpload} Nahrajte maximálne ${maxCount} súborov`
                     });
                 return antd_1.Upload.LIST_IGNORE;
             }
             return true;
-        } }, { children: !staticMode && input.value.length < maxCount && ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)(icons_1.UploadOutlined, { className: `text-xl ${touched && error ? 'text-red-600' : 'text-gray-600'}` }), (0, jsx_runtime_1.jsx)("div", Object.assign({ className: `text-sm ${touched && error ? 'text-red-600' : 'text-gray-600'}` }, { children: uploadBtnText || text.upload }))] })) })));
+        } }, { children: !staticMode && input.value.length < maxCount && ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)(icons_1.UploadOutlined, { className: `text-xl ${touched && error ? 'text-red-600' : 'text-gray-600'}` }), (0, jsx_runtime_1.jsx)("div", Object.assign({ className: `text-sm ${touched && error ? 'text-red-600' : 'text-gray-600'}` }, { children: uploadBtnText || text_json_1.default.upload }))] })) })));
     return ((0, jsx_runtime_1.jsxs)(Item, Object.assign({ className: 'w-full', label: label, required: required, help: touched && error ? error : undefined, validateStatus: touched && error ? 'error' : undefined }, { children: [staticMode && !input.value && '-', uploader, (0, jsx_runtime_1.jsx)(antd_1.Modal, Object.assign({ visible: !!previewUrl, onCancel: () => setPreviewUrl(''), footer: null }, { children: (0, jsx_runtime_1.jsx)("img", { className: 'w-full', src: previewUrl, alt: 'preview' }, previewUrl) }))] })));
 };
 // NOTE: Prevent voči animácii po submitnutí formulára

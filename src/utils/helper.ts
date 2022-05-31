@@ -3,7 +3,7 @@ import slugify from 'slugify'
 import { BYTE_MULTIPLIER } from './enums'
 import { notification } from 'antd'
 import { IToastTexts } from '../types/interfaces'
-const text = require('../utils/text.json')
+import text from '../utils/text.json'
 
 export const formFieldID = (form?: string, name?: string) => {
     let id

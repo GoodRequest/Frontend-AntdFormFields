@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
+    "resolveJsonModule": true,
     "jsx": "react-jsx",
     "typeRoots" : [
       "./src/types",
@@ -21,6 +22,6 @@
   ],
   "exclude": [
     "dist",
-    "./src/stories"
+    "src/stories"
   ]
 }

@@ -59,7 +59,6 @@ module.exports = {
     TimeField,
     TimeRangeField,
     ToggleField
-
 }
 
 // add all custom test commands for cypress

@@ -4,7 +4,6 @@
     "target": "es2020",
     "outDir": "./dist",
     "rootDir": "./src",
-    "module": "commonjs",
     "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,

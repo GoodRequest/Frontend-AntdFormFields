@@ -4,9 +4,6 @@ import timezonePlugin from 'dayjs/plugin/timezone'
 import isBetween from 'dayjs/plugin/isBetween'
 import minMax from 'dayjs/plugin/minMax'
 
-// cypress commands
-import initializeCustomCommands from './commands/cypressCommands'
-
 // dayjs extended plugins
 dayjs.extend(isBetween)
 dayjs.extend(utcPlugin)
@@ -31,6 +28,4 @@ export { default as TextareaField } from './atoms/TextareaField'
 export { default as TimeField } from './atoms/TimeField'
 export { default as TimeRangeField } from './atoms/TimeRangeField'
 export { default as ToggleField } from './atoms/ToggleField'
-
-// init all commands
-initializeCustomCommands()
+export { default as initializeCustomCommands } from './commands/cypressCommands'

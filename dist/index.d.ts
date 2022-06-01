@@ -16,3 +16,4 @@ export { default as TextareaField } from './atoms/TextareaField';
 export { default as TimeField } from './atoms/TimeField';
 export { default as TimeRangeField } from './atoms/TimeRangeField';
 export { default as ToggleField } from './atoms/ToggleField';
+export { default as initializeCustomCommands } from './commands/cypressCommands';

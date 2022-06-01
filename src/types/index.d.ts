@@ -6,7 +6,7 @@ declare namespace Cypress {
          * Command to login into app via api endpoint
          * @example cy.apiAuth('test@test.com', 't123')
          */
-        apiAuth(email: string, password: string): Chainable<Element>
+        apiAuth(email: string, password: string, url: string): Chainable<Element>
         /**
          * Command to get input and set value
          * attribute clear input value before its set

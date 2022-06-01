@@ -101,4 +101,20 @@ const checkFirstCheckBox = (key, form) => {
     cy.get(elementId).first().check();
 };
 exports.checkFirstCheckBox = checkFirstCheckBox;
+// add all custom test commands for cypress
+const initializeCustomCommands = () => {
+    Cypress.Commands.addAll({
+        apiAuth: exports.apiAuth,
+        setInputValue: exports.setInputValue,
+        selectOptionDropdown: exports.selectOptionDropdown,
+        setSearchBoxValueAndSelectFirstOption: exports.setSearchBoxValueAndSelectFirstOption,
+        clickButton: exports.clickButton,
+        clickDeleteButtonWithConf: exports.clickDeleteButtonWithConf,
+        uploadFile: exports.uploadFile,
+        checkSuccessToastMessage: exports.checkSuccessToastMessage,
+        clearDropdownSelection: exports.clearDropdownSelection,
+        checkFirstCheckBox: exports.checkFirstCheckBox
+    });
+};
+exports.default = initializeCustomCommands;
 //# sourceMappingURL=cypressCommands.js.map

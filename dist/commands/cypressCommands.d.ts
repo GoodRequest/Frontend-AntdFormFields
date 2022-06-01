@@ -10,3 +10,5 @@ export declare const uploadFile: (key: string, filePath: string, form?: string) 
 export declare const checkSuccessToastMessage: () => void;
 export declare const clearDropdownSelection: (fieldName: string) => void;
 export declare const checkFirstCheckBox: (key: string, form?: string) => void;
+declare const initializeCustomCommands: () => void;
+export default initializeCustomCommands;

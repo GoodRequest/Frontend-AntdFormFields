@@ -9,6 +9,8 @@ const utc_1 = __importDefault(require("dayjs/plugin/utc"));
 const timezone_1 = __importDefault(require("dayjs/plugin/timezone"));
 const isBetween_1 = __importDefault(require("dayjs/plugin/isBetween"));
 const minMax_1 = __importDefault(require("dayjs/plugin/minMax"));
+// cypress commands
+const cypressCommands_1 = require("./commands/cypressCommands");
 // dayjs extended plugins
 dayjs_1.default.extend(isBetween_1.default);
 dayjs_1.default.extend(utc_1.default);
@@ -50,4 +52,21 @@ var TimeRangeField_1 = require("./atoms/TimeRangeField");
 Object.defineProperty(exports, "TimeRangeField", { enumerable: true, get: function () { return __importDefault(TimeRangeField_1).default; } });
 var ToggleField_1 = require("./atoms/ToggleField");
 Object.defineProperty(exports, "ToggleField", { enumerable: true, get: function () { return __importDefault(ToggleField_1).default; } });
+// add all custom test commands for cypress
+const initializeCustomCommands = () => {
+    Cypress.Commands.addAll({
+        apiAuth: cypressCommands_1.apiAuth,
+        setInputValue: cypressCommands_1.setInputValue,
+        selectOptionDropdown: cypressCommands_1.selectOptionDropdown,
+        setSearchBoxValueAndSelectFirstOption: cypressCommands_1.setSearchBoxValueAndSelectFirstOption,
+        clickButton: cypressCommands_1.clickButton,
+        clickDeleteButtonWithConf: cypressCommands_1.clickDeleteButtonWithConf,
+        uploadFile: cypressCommands_1.uploadFile,
+        checkSuccessToastMessage: cypressCommands_1.checkSuccessToastMessage,
+        clearDropdownSelection: cypressCommands_1.clearDropdownSelection,
+        checkFirstCheckBox: cypressCommands_1.checkFirstCheckBox
+    });
+};
+// init all commands
+initializeCustomCommands();
 //# sourceMappingURL=index.js.map

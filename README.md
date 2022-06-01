@@ -1,10 +1,10 @@
 # antd-form-fields
 
-From this package you can import all basic form fields components and also wrappers for regres testing using cypress framework.
+From this package you can import all basic form fields components and also wrappers for regression testing using cypress framework.
 
 ## Implementation
 
-First you need to install the module as dev dependency into you project.
+First you need to install the module as dev dependency into your project.
 ```sh
 npm install --save-dev GoodRequest/antd-form-fields
 ```

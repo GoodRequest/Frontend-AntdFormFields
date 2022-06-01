@@ -36,7 +36,7 @@ import { InputField } from 'antd-form-fields'
 | CheckboxField, CheckboxGroupField, RadioGroupField | cy.checkFirstCheckBox() |
 
 ##### Usage
-If you want use form fields selector for cypress tests you need import package and initialize method to  `cypress/support/commands.ts` file
+If you want to use form fields selector for cypress tests you need import package and initialize method to  `cypress/support/commands.ts` file
 ```
 import 'antd-form-fields'
 import initializeCustomCommands from 'antd-form-fields/dist/commands/cypressCommands'

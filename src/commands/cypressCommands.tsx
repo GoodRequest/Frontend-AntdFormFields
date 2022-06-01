@@ -95,3 +95,21 @@ export const checkFirstCheckBox = (key: string, form?: string,) => {
     const elementId: string = generateElementId(key, form)
     cy.get(elementId).first().check()
 }
+
+
+// add all custom test commands for cypress
+const initializeCustomCommands = () => {
+    Cypress.Commands.addAll({
+        apiAuth,
+        setInputValue,
+        selectOptionDropdown,
+        setSearchBoxValueAndSelectFirstOption,
+        clickButton,
+        clickDeleteButtonWithConf,
+        uploadFile,
+        checkSuccessToastMessage,
+        clearDropdownSelection,
+        checkFirstCheckBox
+    })
+}
+export default initializeCustomCommands

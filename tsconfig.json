@@ -14,7 +14,8 @@
     "jsx": "react-jsx",
     "typeRoots" : [
       "./src/types",
-    ]
+    ],
+    "types": ["cypress", "cypress-file-upload", "cypress-localstorage-commands"]
   },
   "include": [
     "src/**/*",

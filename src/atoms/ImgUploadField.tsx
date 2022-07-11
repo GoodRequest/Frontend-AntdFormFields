@@ -76,7 +76,7 @@ const ImgUploadField: FC<Props> = (props) => {
 				description: info.file.error.message || text.errMessageFileMAxUpload
 			})
 		}
-		if (info.file.status === 'success' || info.file.status === 'removed') {
+		if (info.file.status === 'done') {
 			const values = getImagesFormValues(info.fileList, imagesUrls.current)
 			input.onChange(values)
 		}

@@ -36,7 +36,7 @@ const ImgUploadField = (props) => {
                 description: info.file.error.message || text_json_1.default.errMessageFileMAxUpload
             });
         }
-        if (info.file.status === 'done' || info.file.status === 'removed') {
+        if (info.file.status === 'success' || info.file.status === 'removed') {
             const values = (0, helper_1.getImagesFormValues)(info.fileList, imagesUrls.current);
             input.onChange(values);
         }

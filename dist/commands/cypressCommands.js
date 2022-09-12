@@ -22,13 +22,13 @@ const apiAuth = (email, password, url) => {
     });
 };
 exports.apiAuth = apiAuth;
-const setInputValue = (form, key, value, clear) => {
+const setInputValue = (form, key, value, force = false, clear) => {
     const elementId = (0, helper_1.generateElementId)(key, form);
     if (clear) {
-        cy.get(elementId).clear().type(value).should('have.value', value);
+        cy.get(elementId).clear({ force }).type(value, { force }).should('have.value', value);
     }
     else {
-        cy.get(elementId).type(value).should('have.value', value);
+        cy.get(elementId).type(value, { force }).should('have.value', value);
     }
 };
 exports.setInputValue = setInputValue;
@@ -52,13 +52,13 @@ const selectOptionDropdown = (form, key, value) => {
     }
 };
 exports.selectOptionDropdown = selectOptionDropdown;
-const setSearchBoxValueAndSelectFirstOption = (key, value, selectListKey, form, googleGeocoding, clear) => {
+const setSearchBoxValueAndSelectFirstOption = (key, value, selectListKey, form, googleGeocoding, clear, timeout) => {
     const elementId = (0, helper_1.generateElementId)(key, form);
     if (clear) {
-        cy.get(elementId).clear().type(value).should('have.value', value);
+        cy.get(elementId).clear().type(value, { timeout }).should('have.value', value);
     }
     else {
-        cy.get(elementId).type(value).should('have.value', value);
+        cy.get(elementId).type(value, { timeout }).should('have.value', value);
     }
     cy.get(selectListKey, { timeout: 10000 }).should('be.visible');
     // select option for google geocoding list

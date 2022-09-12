@@ -12,7 +12,7 @@ declare namespace Cypress {
          * attribute clear input value before its set
          * @example cy.setInputValue('LOGIN', 'email', 'test@test.com')
          */
-        setInputValue(form: string, key: string, value: string, clear?: boolean): Chainable<Element>
+        setInputValue(form: string, key: string, value: string, force = false, clear?: boolean): Chainable<Element>
         /**
          * Command to get dropdown and select option
          * default selecting first option
@@ -24,7 +24,7 @@ declare namespace Cypress {
          * attribute clear input value before its set
          * @example cy.setSearchBoxValueAndSelectFirstOption('email', 'test@test.com', 'LOGIN')
          */
-        setSearchBoxValueAndSelectFirstOption(key: string, value: string, elementKey: string, form?: string, googleGeocoding?: boolean, clear?: boolean): Chainable<Element>
+        setSearchBoxValueAndSelectFirstOption(key: string, value: string, elementKey: string, form?: string, googleGeocoding?: boolean, clear?: boolean, timeout?: number): Chainable<Element>
         /**
          * Command to upload file
          * @example cy.uploadFile('image', '../images/test.jpg', 'SALON')

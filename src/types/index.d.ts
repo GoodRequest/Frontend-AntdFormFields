@@ -1,4 +1,4 @@
-declare module 'antd-form-fields'
+declare module '@goodrequest/antd-form-fields'
 
 declare namespace Cypress {
     interface Chainable {

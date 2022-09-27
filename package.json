@@ -60,5 +60,11 @@
     "react-scripts": "5.0.1",
     "storybook": "6.5.5",
     "webpack-cli": "3.3.8"
-  }
+  },
+  "description": "From this package you can import all basic form fields components and also wrappers for regression testing using cypress framework.",
+  "bugs": {
+    "url": "https://github.com/GoodRequest/i18nextJsonToCsv/issues"
+  },
+  "homepage": "https://github.com/GoodRequest/i18nextJsonToCsv#readme",
+  "main": "config-overrides.js"
 }

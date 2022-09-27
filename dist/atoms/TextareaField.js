@@ -41,7 +41,8 @@ const TextareaField = (props) => {
         }
     }, [focusRow, input, setSutoSizeState]);
     const lettersCount = (0, react_1.useMemo)(() => {
-        return ((0, jsx_runtime_1.jsxs)(antd_1.Row, Object.assign({ className: 'justify-between w-full pr-2' }, { children: [(0, jsx_runtime_1.jsx)("span", { children: label }), (0, jsx_runtime_1.jsx)("i", Object.assign({ className: 'xs-regular letters-count', style: { lineHeight: '22px' } }, { children: `${input.value.length}/${maxLength}` }))] })));
+        var _a;
+        return ((0, jsx_runtime_1.jsxs)(antd_1.Row, Object.assign({ className: 'justify-between w-full pr-2' }, { children: [(0, jsx_runtime_1.jsx)("span", { children: label }), (0, jsx_runtime_1.jsx)("i", Object.assign({ className: 'xs-regular letters-count', style: { lineHeight: '22px' } }, { children: `${(_a = input === null || input === void 0 ? void 0 : input.value) === null || _a === void 0 ? void 0 : _a.length}/${maxLength}` }))] })));
     }, [maxLength, input, label]);
     return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, Object.assign({ label: showLettersCount ? lettersCount : label, required: required, style: style, help: touched && error, className: (0, classnames_1.default)(className, { 'form-item-disabled': disabled, readOnly }), validateStatus: error && touched ? 'error' : undefined }, { children: (0, jsx_runtime_1.jsx)(antd_1.Input.TextArea, Object.assign({}, input, { onFocus: onFocus, onBlur: onBlur, onChange: onChange, className: 'textarea', value: input.value, placeholder: placeholder, prefix: prefix, disabled: disabled, rows: rows, autoSize: autoSizeState || autoSize, allowClear: allowClear, maxLength: maxLength, ref: ref, size: size })) })));
 };

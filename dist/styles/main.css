@@ -1,0 +1,165 @@
+/*@tailwind base; !* Zakladne CSS pre pracu roznych prehliadacoch - moze prepisat nieco z antu *!*/
+
+.container {
+  width: 100%
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px
+  }
+}
+
+/* dekorator pre custom css komponenty - apply css1 css2 css3.... */
+
+#tailwind .pointer-events-none {
+  pointer-events: none
+}
+
+#tailwind .visible {
+  visibility: visible
+}
+
+#tailwind .absolute {
+  position: absolute
+}
+
+#tailwind .m-auto {
+  margin: auto
+}
+
+#tailwind .m-4 {
+  margin: 1rem
+}
+
+#tailwind .my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem
+}
+
+#tailwind .mb-2 {
+  margin-bottom: 0.5rem
+}
+
+#tailwind .ml-2 {
+  margin-left: 0.5rem
+}
+
+#tailwind .block {
+  display: block
+}
+
+#tailwind .flex {
+  display: flex
+}
+
+#tailwind .inline-flex {
+  display: inline-flex
+}
+
+#tailwind .contents {
+  display: contents
+}
+
+#tailwind .h-12 {
+  height: 3rem
+}
+
+#tailwind .w-full {
+  width: 100%
+}
+
+#tailwind .w-1\/2 {
+  width: 50%
+}
+
+#tailwind .w-11\/12 {
+  width: 91.666667%
+}
+
+#tailwind .w-2\/12 {
+  width: 16.666667%
+}
+
+#tailwind .cursor-pointer {
+  cursor: pointer
+}
+
+#tailwind .flex-wrap {
+  flex-wrap: wrap
+}
+
+#tailwind .items-center {
+  align-items: center
+}
+
+#tailwind .justify-end {
+  justify-content: flex-end
+}
+
+#tailwind .justify-between {
+  justify-content: space-between
+}
+
+#tailwind .rounded-full {
+  border-radius: 9999px
+}
+
+#tailwind .pr-2 {
+  padding-right: 0.5rem
+}
+
+#tailwind .text-right {
+  text-align: right
+}
+
+#tailwind .text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
+#tailwind .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem
+}
+
+#tailwind .blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+#tailwind .filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+/* utilky pre CSS classy - marginy, apdding, colors, spacing... */
+
+@media (min-width: 640px) {
+  #tailwind .sm\:w-4\/12 {
+    width: 33.333333%
+  }
+}

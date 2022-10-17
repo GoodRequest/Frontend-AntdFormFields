@@ -62,8 +62,13 @@ export const Error = Template.bind({})
 export const WithoutLabel = Template.bind({})
 export const Filled = Template.bind({})
 export const Disabled = Template.bind({})
+export const ClassName = Template.bind({})
 
 // arguments
+ClassName.args = {
+	className: 'base-input'
+}
+
 WithLabel.args = {
 	label: 'Label'
 }

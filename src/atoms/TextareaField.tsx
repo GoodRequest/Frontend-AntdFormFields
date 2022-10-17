@@ -100,8 +100,6 @@ const TextareaField = (props: Props) => {
 		>
 			<Input.TextArea
 				{...input}
-				onFocus={onFocus}
-				onBlur={onBlur}
 				onChange={onChange}
 				className={'textarea'}
 				value={input.value}

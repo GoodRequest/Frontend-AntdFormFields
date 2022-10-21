@@ -304,7 +304,14 @@ module.exports = {
       lg: 'var(--border-width-lg)',
     },
     boxShadow: {
-		none: 'none',
+      none: 'none',
+      xs: 'var(--shadow-xs)',
+      sm: 'var(--shadow-sm)',
+      md: 'var(--shadow-md)',
+      lg: 'var(--shadow-lg)',
+      xl: 'var(--shadow-xl)',
+      xxl: 'var(--shadow-xxl)',
+      inner: 'var(--shadow-inner)'
     },
     boxShadowColor: ({ theme }) => theme('colors'),
     caretColor: ({ theme }) => theme('colors'),

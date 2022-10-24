@@ -56,3 +56,7 @@ For production release:
 ```sh
 npm run build
 ```
+
+### Tailwind-styles
+
+Tailwind styles are set though variables in consumer (+ only in form), which is why they will not be applied in storybook.

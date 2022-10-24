@@ -53,6 +53,8 @@ const TextareaField = (props: Props) => {
 		[input]
 	)
 
+	// TODO typescript build
+
 	const onFocus = useCallback(
 		(e: any) => {
 			if (input.onFocus) {
@@ -60,7 +62,7 @@ const TextareaField = (props: Props) => {
 			}
 			if (focusRow) {
 				setSutoSizeState({ minRows: focusRow, maxRows: 10 })
-				ref?.current?.resizableTextArea?.resizeOnNextFrame()
+				// ref?.current?.resizableTextArea?.resizeOnNextFrame()
 			}
 		},
 		[focusRow, input, setSutoSizeState]
@@ -74,7 +76,7 @@ const TextareaField = (props: Props) => {
 			}
 			if (focusRow) {
 				setSutoSizeState({ minRows: 1, maxRows: 10 })
-				ref?.current?.resizableTextArea?.resizeOnNextFrame()
+				// ref?.current?.resizableTextArea?.resizeOnNextFrame()
 			}
 		},
 		[focusRow, input, setSutoSizeState]

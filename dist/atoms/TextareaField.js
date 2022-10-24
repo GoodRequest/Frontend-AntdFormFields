@@ -20,24 +20,22 @@ const TextareaField = (props) => {
         }
     }, [input]);
     const onFocus = (0, react_1.useCallback)((e) => {
-        var _a, _b;
         if (input.onFocus) {
             input.onFocus(e);
         }
         if (focusRow) {
             setSutoSizeState({ minRows: focusRow, maxRows: 10 });
-            (_b = (_a = ref === null || ref === void 0 ? void 0 : ref.current) === null || _a === void 0 ? void 0 : _a.resizableTextArea) === null || _b === void 0 ? void 0 : _b.resizeOnNextFrame();
+            // ref?.current?.resizableTextArea?.resizeOnNextFrame()
         }
     }, [focusRow, input, setSutoSizeState]);
     const onBlur = (0, react_1.useCallback)((e) => {
-        var _a, _b;
         if (input.onBlur) {
             const val = parseValue((0, lodash_1.get)(e, 'target.value'));
             input.onBlur(val, e.target.name);
         }
         if (focusRow) {
             setSutoSizeState({ minRows: 1, maxRows: 10 });
-            (_b = (_a = ref === null || ref === void 0 ? void 0 : ref.current) === null || _a === void 0 ? void 0 : _a.resizableTextArea) === null || _b === void 0 ? void 0 : _b.resizeOnNextFrame();
+            // ref?.current?.resizableTextArea?.resizeOnNextFrame()
         }
     }, [focusRow, input, setSutoSizeState]);
     const lettersCount = (0, react_1.useMemo)(() => {

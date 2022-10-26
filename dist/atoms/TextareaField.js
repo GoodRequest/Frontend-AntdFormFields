@@ -19,6 +19,7 @@ const TextareaField = (props) => {
             input.onChange(val, e.target.name);
         }
     }, [input]);
+    // TODO typescript build
     const onFocus = (0, react_1.useCallback)((e) => {
         if (input.onFocus) {
             input.onFocus(e);

@@ -23,7 +23,7 @@ const enums_1 = require("../utils/enums");
 const helper_1 = require("../utils/helper");
 const { Item } = antd_1.Form;
 const InputField = (props) => {
-    const { input, size, placeholder, label, required, type, prefix, disabled, style, customOnBlur, meta: { form, error, touched }, hideHelp, maxLength, fieldMode = enums_1.FIELD_MODE.INPUT, readOnly, className, customOnChange, allowClear, suffix, addonBefore, focused } = props;
+    const { input, size, placeholder, label, required, type, prefix, disabled, style, customOnBlur, meta: { form, error, touched, valid }, hideHelp, maxLength, fieldMode = enums_1.FIELD_MODE.INPUT, readOnly, className, customOnChange, allowClear, suffix, addonBefore, focused } = props;
     const inputRef = (0, react_1.useRef)(null);
     (0, react_1.useEffect)(() => {
         if (inputRef.current && focused) {
@@ -52,7 +52,7 @@ const InputField = (props) => {
             input.onFocus(val);
         }
     }), [input]);
-    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, className: (0, classnames_1.default)(className, { 'form-item-disabled': disabled, readOnly }), help: hideHelp ? undefined : touched && error, validateStatus: error && touched ? 'error' : undefined }, { children: (0, jsx_runtime_1.jsx)(antd_1.Input, Object.assign({}, input, { id: (0, helper_1.formFieldID)(form, input.name), className: (0, classnames_1.default)('input', { 'input-filter': fieldMode === enums_1.FIELD_MODE.FILTER }), onChange: onChange, onBlur: onBlur, addonBefore: addonBefore, size: size || 'middle', onFocus: onFocus, value: input.value, placeholder: placeholder, type: type || 'text', 
+    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, className: (0, classnames_1.default)(className, { 'form-item-disabled': disabled, readOnly }), help: hideHelp ? undefined : touched && error, validateStatus: error && touched ? 'error' : touched && valid ? 'success' : undefined }, { children: (0, jsx_runtime_1.jsx)(antd_1.Input, Object.assign({}, input, { id: (0, helper_1.formFieldID)(form, input.name), className: (0, classnames_1.default)('input', { 'input-filter': fieldMode === enums_1.FIELD_MODE.FILTER }), onChange: onChange, onBlur: onBlur, addonBefore: addonBefore, size: size || 'middle', onFocus: onFocus, value: input.value, placeholder: placeholder, type: type || 'text', 
             // Ak je filter cez RemoveIcon zmaat string (ant ma pre input aj allowClear ale neda sa mu zmenit ikona tak ako napr v selecte preto to je takto robene)
             suffix: (allowClear || fieldMode === enums_1.FIELD_MODE.FILTER) && input.value ? ((0, jsx_runtime_1.jsx)(icons_1.CloseOutlined, { onClick: () => input.onChange('') })) : (suffix), prefix: fieldMode === enums_1.FIELD_MODE.FILTER ? (0, jsx_runtime_1.jsx)(icons_1.SearchOutlined, {}) : prefix, disabled: disabled, maxLength: maxLength, ref: inputRef })) })));
 };

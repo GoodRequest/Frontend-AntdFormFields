@@ -1,71 +1,95 @@
 @import 'tailwind-variables'
 
 .ant-form-item.base-input
-	// medium
-	.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-lg, .ant-input-affix-wrapper-sm)
-		border-radius: $borderRadius-xs
-		border: 1px solid
-		.ant-input-prefix, .ant-input-suffix
-			> svg
-				width: 18px
-				height: 18px
-				@apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
-	// large
-	.ant-input-affix-wrapper-lg
-		border-radius: $borderRadius-sm
-		border: 1px solid
-		.ant-input-prefix, .ant-input-suffix
-			> svg
-				width: 24px
-				height: 24px
-				@apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
-	// small
-	.ant-input-affix-wrapper-sm
-		border-radius: $borderRadius-xxs
-		border: 1px solid
-		.ant-input-prefix, .ant-input-suffix
-			> svg
-				width: 12px
-				height: 12px
-				@apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
+    // medium
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-lg, .ant-input-affix-wrapper-sm)
+        border-radius: $borderRadius-xs
+        border: 1px solid
+        .ant-input-prefix, .ant-input-suffix
+            > svg
+                width: 18px
+                height: 18px
+                @apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
+    // large
+    .ant-input-affix-wrapper-lg
+        border-radius: $borderRadius-sm
+        border: 1px solid
+        .ant-input-prefix, .ant-input-suffix
+            > svg
+                width: 24px
+                height: 24px
+                @apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
+    // small
+    .ant-input-affix-wrapper-sm
+        border-radius: $borderRadius-xxs
+        border: 1px solid
+        .ant-input-prefix, .ant-input-suffix
+            > svg
+                width: 12px
+                height: 12px
+                @apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
 
-	.ant-input, .ant-input-affix-wrapper
-		@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
-		@apply border-surface_tertiary_light dark:border-surface_tertiary_dark
-		@apply text-content_primary_light dark:text-content_primary_dark
+    .ant-input, .ant-input-affix-wrapper
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
+        @apply border-surface_tertiary_light dark:border-surface_tertiary_dark
+        @apply text-content_primary_light dark:text-content_primary_dark
 
-	.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover
-		@apply border-surface_quatenary_light dark:border-surface_quatenary_dark
-		@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-		.ant-input, .ant-input-affix-wrapper:not(.ant-form-item-has-error)
-			@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover
+        @apply border-surface_quatenary_light dark:border-surface_quatenary_dark
+        @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+        .ant-input, .ant-input-affix-wrapper
+            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
 
-	.ant-input-affix-wrapper-focused:not(.ant-input-affix-wrapper-status-error)
-		border: solid
-		border-width: 1px
-		@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-		@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-		.ant-input, .ant-input-affix-wrapper:not(.ant-form-item-has-error)
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+    .ant-input-affix-wrapper-focused
+        border: solid
+        box-shadow: none
+        border-width: 1px
+        @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+        @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+        .ant-input, .ant-input-affix-wrapper
+            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
 
-	.ant-input-disabled, .ant-input-affix-wrapper-disabled
-		opacity: 0.4
+    .ant-input-disabled, .ant-input-affix-wrapper-disabled
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+        ::placeholder
+            @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+        .ant-input-prefix, .ant-input-suffix
+            > svg
+                @apply stroke-content_quintary_light dark:stroke-content_quintary_dark #{!important}
 
-	.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper
-		@apply bg-state_error_bg_light dark:bg-state_error_bg_dark #{!important}
-		.ant-input
-			@apply bg-state_error_bg_light dark:bg-transparent #{!important}
-			@apply text-content_primary_light dark:text-content_primary_dark #{!important}
-		.ant-input-prefix, .ant-input-suffix
-			> svg
-				@apply stroke-state_error_fg_light dark:stroke-state_error_fg_dark #{!important}
+    .ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper
+        @apply border-state_error_fg_light dark:border-state_error_fg_dark
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
+        box-shadow: none
+        &:hover
+            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+        .ant-input-prefix, .ant-input-suffix
+            > svg
+                @apply stroke-state_error_fg_light dark:stroke-state_error_fg_dark
+
+    .ant-input-affix-wrapper-status-success:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper
+        @apply border-state_success_fg_light dark:border-state_success_fg_dark
+        .ant-input-prefix, .ant-input-suffix
+            > svg
+                @apply stroke-state_success_fg_light dark:stroke-state_success_fg_dark
 
 .ant-form-item-label
-	> label
-		@apply text-content_primary_light dark:text-content_primary_dark
+    > label
+        @apply text-content_primary_light dark:text-content_primary_dark
 
 .ant-form-item-has-error.base-input
-	.ant-form-item-row
-		.ant-form-item-label
-			> label
-				@apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+    .ant-form-item-row
+        .ant-form-item-label
+            > label
+                @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+
+.ant-form-item-has-success.base-input
+    .ant-form-item-row
+        .ant-form-item-label
+            > label
+                @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
+
+.form-item-disabled.base-input
+		.ant-form-item-row
+			.ant-form-item-label > label
+				@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}

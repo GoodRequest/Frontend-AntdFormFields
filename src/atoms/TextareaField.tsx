@@ -24,7 +24,7 @@ const TextareaField = (props: Props) => {
 		label,
 		placeholder,
 		required,
-		meta: { error, touched },
+		meta: { error, touched, valid },
 		rows,
 		autoSize,
 		allowClear,
@@ -98,13 +98,15 @@ const TextareaField = (props: Props) => {
 			style={style}
 			help={touched && error}
 			className={cx(className, { 'form-item-disabled': disabled, readOnly })}
-			validateStatus={error && touched ? 'error' : undefined}
+			validateStatus={error && touched ? 'error' : touched && valid ? 'success' : undefined}
 		>
 			<Input.TextArea
 				{...input}
 				onChange={onChange}
 				className={'textarea'}
 				value={input.value}
+				onFocus={onFocus}
+				onBlur={onBlur}
 				placeholder={placeholder}
 				prefix={prefix}
 				disabled={disabled}

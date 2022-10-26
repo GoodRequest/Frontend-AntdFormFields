@@ -35,7 +35,7 @@ const InputField = (props: Props) => {
 		disabled,
 		style,
 		customOnBlur,
-		meta: { form, error, touched },
+		meta: { form, error, touched, valid },
 		hideHelp,
 		maxLength,
 		fieldMode = FIELD_MODE.INPUT,
@@ -98,7 +98,7 @@ const InputField = (props: Props) => {
 			style={style}
 			className={cx(className, { 'form-item-disabled': disabled, readOnly })}
 			help={hideHelp ? undefined : touched && error}
-			validateStatus={error && touched ? 'error' : undefined}
+			validateStatus={error && touched ? 'error' : touched && valid ? 'success' : undefined}
 		>
 			<Input
 				{...input}

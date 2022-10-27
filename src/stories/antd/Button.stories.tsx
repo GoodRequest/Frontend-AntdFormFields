@@ -1,11 +1,19 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react'
 import { withDesign } from 'storybook-addon-designs'
-import { Button } from 'antd'
+// import { Button } from 'antd'
+import Button from '../../atoms/Button'
 import { ComponentStory } from '@storybook/react'
 import { SearchOutlined } from '@ant-design/icons'
+
+export default {
+	title: 'Antd/Button',
+	component: Button,
+	decorators: [withDesign],
+	args: {}
+}
+
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>Button</Button>
-// const TemplateEmpty: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 // stories
 export const ButtonPrimary = Template.bind({})

@@ -491,7 +491,7 @@ const SelectField = (props: Props) => {
 				onSelect={onSelectWrap}
 				showArrow={showArrow}
 				menuItemSelectedIcon={renderMenuItemSelectedIcon(mode, menuItemSelectedIcon, disableMenuItemSelectedIcon)}
-				dropdownClassName={cx(`select-dropdown ${dropdownClassName}`, { 'dropdown-match-select-width': dropdownMatchSelectWidth })}
+				popupClassName={cx(`select-dropdown ${dropdownClassName}`, { 'dropdown-match-select-width': dropdownMatchSelectWidth })}
 				dropdownStyle={dropdownStyle}
 				dropdownMatchSelectWidth={dropdownMatchSelectWidth}
 				listHeight={listHeight}

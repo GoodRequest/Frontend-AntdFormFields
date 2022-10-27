@@ -1,0 +1,311 @@
+@import 'tailwind-variables'
+
+.ant-btn.base-btn
+	&.ant-btn-primary:not(.ant-btn-dangerous)
+		@apply bg-action_primary_default_light dark:bg-action_primary_default_dark
+		@apply border-action_primary_default_light dark:border-action_primary_default_dark
+		@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+		height: 32px
+		border-radius: $borderRadius-xs
+		> svg
+			width: 20px
+			height: 20px
+			@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark
+
+		> span
+			margin-left: 8px
+			margin-right: 8px
+
+		&:not(:disabled):hover
+			@apply border-action_primary_hover_light dark:border-action_primary_hover_dark
+			@apply bg-action_primary_hover_light dark:bg-action_primary_hover_dark
+
+		&:focus-within:not(:disabled)
+			@apply shadow-focusring_primary_light dark:shadow-focusring_primary_dark
+
+		&:disabled
+			opacity: 0.3
+			border: 0px !important
+			@apply bg-action_primary_disable_light dark:bg-action_primary_disable_dark
+			@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark
+
+		&::after
+			@apply bg-action_primary_active_light dark:bg-action_primary_active_dark #{!important}
+
+		&.ant-btn-icon-only
+			border-radius: $borderRadius-xl
+
+		&.extra-large
+			height: 56px
+			border-radius: $borderRadius-sm
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 56px
+
+		&.ant-btn-lg:not(.extra-large)
+			border-radius: $borderRadius-sm
+			height: 40px
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 40px
+
+		&.ant-btn-sm
+			border-radius: $borderRadius-xxs
+			height: 24px
+			> svg
+				width: 16px
+				height: 16px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				height: 24px
+
+	&.ant-btn-default
+		@apply bg-action_secondary_default_light dark:bg-action_secondary_default_dark
+		@apply border-action_secondary_default_light dark:border-action_secondary_default_dark
+		@apply text-content_primary_light dark:text-content_primary_dark
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+		height: 32px
+		border-radius: $borderRadius-xs
+		> svg
+			width: 20px
+			height: 20px
+			@apply stroke-content_primary_light dark:stroke-content_primary_dark
+
+		> span
+			margin-left: 8px
+			margin-right: 8px
+
+		&:not(:disabled):hover
+			@apply border-action_secondary_hover_light dark:border-action_secondary_hover_dark
+			@apply bg-action_secondary_hover_light dark:bg-action_secondary_hover_dark
+
+		&:focus-within:not(:disabled)
+			@apply shadow-focusring_secondary_light dark:shadow-focusring_secondary_dark
+
+		&:disabled
+			opacity: 0.3
+			border: 0px !important
+			@apply text-content_primary_light dark:text-content_primary_dark
+
+			> svg
+				@apply stroke-content_primary_light dark:stroke-content_primary_dark #{!important}
+
+		&::after
+			@apply bg-action_secondary_active_dark dark:bg-action_secondary_active_dark #{!important}
+
+		&.ant-btn-icon-only
+			border-radius: $borderRadius-xl
+
+		&.extra-large
+			height: 56px
+			border-radius: $borderRadius-sm
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 56px
+
+		&.ant-btn-lg:not(.extra-large)
+			border-radius: $borderRadius-sm
+			height: 40px
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 40px
+
+		&.ant-btn-sm
+			border-radius: $borderRadius-xxs
+			height: 24px
+			> svg
+				width: 16px
+				height: 16px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				height: 24px
+
+	&.ant-btn-dangerous
+		@apply bg-destructive_default_light dark:bg-destructive_default_dark
+		@apply border-destructive_default_light dark:border-destructive_default_dark
+		@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+		height: 32px
+		border-radius: $borderRadius-xs
+		> svg
+			width: 20px
+			height: 20px
+			@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark
+
+		> span
+			margin-left: 8px
+			margin-right: 8px
+
+		&:not(:disabled):hover,
+			@apply border-state_error_fg_light dark:border-state_error_fg_dark
+			@apply bg-state_error_fg_light dark:bg-state_error_fg_dark
+
+		&:focus-within:not(:disabled)
+			@apply shadow-focusring_destructive_light dark:shadow-focusring_destructive_dark
+
+		&:disabled
+			opacity: 0.3
+			border: 0px !important
+			@apply bg-destructive_disable_light dark:bg-destructive_disable_dark #{!important}
+			@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark #{!important}
+
+		&::after
+			@apply bg-destructive_active_light dark:bg-destructive_active_dark #{!important}
+
+		&.ant-btn-icon-only
+			border-radius: $borderRadius-xl
+
+		&.extra-large
+			height: 56px
+			border-radius: $borderRadius-sm
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 56px
+
+		&.ant-btn-lg:not(.extra-large)
+			border-radius: $borderRadius-sm
+			height: 40px
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 40px
+
+		&.ant-btn-sm
+			border-radius: $borderRadius-xxs
+			height: 24px
+			> svg
+				width: 16px
+				height: 16px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				height: 24px
+
+	&.ant-btn-text
+		@apply text-action_primary_default_light dark:text-action_primary_default_dark
+		@apply bg-transparent
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+		height: 32px
+		border-radius: $borderRadius-xs
+
+		> svg
+			width: 20px
+			height: 20px
+			@apply stroke-action_primary_default_light dark:stroke-action_primary_default_dark
+
+		> span
+			margin-left: 8px
+			margin-right: 8px
+
+		&:not(:disabled):hover
+			@apply text-action_primary_hover_light dark:text-action_primary_hover_dark
+			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark
+			> svg
+				@apply stroke-action_primary_hover_light dark:stroke-action_primary_hover_dark
+
+		&:focus-within:not(:disabled)
+			@apply shadow-focusring_primary_light dark:shadow-focusring_primary_dark
+
+		&:disabled
+			opacity: 0.3
+			@apply text-action_primary_default_light dark:text-action_primary_default_dark
+
+		&::after
+			@apply text-action_primary_active_light dark:text-action_primary_active_dark #{!important}
+
+		&.ant-btn-icon-only
+			border-radius: $borderRadius-xl
+
+		&.extra-large
+			height: 56px
+			border-radius: $borderRadius-sm
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 56px
+
+		&.ant-btn-lg:not(.extra-large)
+			border-radius: $borderRadius-sm
+			height: 40px
+			> svg
+				width: 24px
+				height: 24px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				width: 40px
+
+		&.ant-btn-sm
+			border-radius: $borderRadius-xxs
+			height: 24px
+			> svg
+				width: 16px
+				height: 16px
+
+			&.ant-btn-icon-only
+				border-radius: $borderRadius-xl
+				height: 24px
+
+	&.ant-btn-loading
+		.ant-btn-loading-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-left: 0 !important
+			margin-right: 0 !important
+
+		&.ant-btn-sm
+			.ant-btn-loading-icon
+				width: 16px !important
+
+		&:not(.ant-btn-lg):not(.ant-btn-sm)
+			.ant-btn-loading-icon
+				width: 20px !important
+
+		&:before
+			background: transparent !important

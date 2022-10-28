@@ -16,11 +16,12 @@ const CheckboxField = (props: Props) => {
 		disabled,
 		meta: { form, error, touched },
 		placeholder,
+		className,
 		style
 	} = props
 
 	return (
-		<Item required={required} label={label} help={touched && error} validateStatus={error && touched ? 'error' : undefined} style={style}>
+		<Item required={required} label={label} help={touched && error} className={className} validateStatus={error && touched ? 'error' : undefined} style={style}>
 			<Row>
 				<Checkbox {...input} id={formFieldID(form, input.name)} checked={!!input.value} disabled={disabled}>
 					{placeholder}

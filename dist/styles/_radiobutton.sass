@@ -2,9 +2,14 @@
 
 .ant-form-item.base-radiobutton
 	.ant-radio-wrapper
-		@apply bg-surface_primary_light dark:bg-surface_primary_dark
+		@apply text-content_primary_light dark:text-content_primary_dark
 		.ant-radio-inner
 			@apply border-content_quartenary_light dark:border-content_quartenary_dark #{!important}
+			@apply bg-surface_primary_light dark:bg-surface_primary_dark
+
+		.ant-radio-disabled
+			.ant-radio-inner
+				@apply bg-content_primary_inverse_light dark:bg-content_primary_inverse_dark
 
 	.ant-radio-wrapper:not(.ant-radio-wrapper-disabled):hover .ant-radio-inner,
 	.ant-radio:not(.ant-radio-disabled):hover .ant-radio-inner

@@ -290,22 +290,56 @@
 			&.ant-btn-icon-only
 				border-radius: $borderRadius-xl
 				height: 24px
+				
+	&.ant-btn-loading
+		.ant-btn-loading-icon
+			display: none
 
-	// &.ant-btn-loading
-	// 	.ant-btn-loading-icon
-	// 		display: flex
-	// 		align-items: center
-	// 		justify-content: center
-	// 		margin-left: 0 !important
-	// 		margin-right: 0 !important
+		.loading-icon
+			display: block !important
+			align-items: center
+			justify-content: center
+			margin-left: 0 !important
+			margin-right: 0 !important
+			> svg
+				width: 20px
+				height: 20px
+				@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark #{!important}
+				animation: loading-spinner 1s linear infinite
 
-	// 	&.ant-btn-sm
-	// 		.ant-btn-loading-icon
-	// 			width: 16px !important
+				@keyframes loading-spinner
+					from
+						transform: rotate(0deg)
+					to
+						transform: rotate(360deg)
+				> g > rect
+					@apply fill-content_primary_inverse_light dark:fill-content_primary_inverse_dark #{!important}
 
-	// 	&:not(.ant-btn-lg):not(.ant-btn-sm)
-	// 		.ant-btn-loading-icon
-	// 			width: 20px !important
+		&.ant-btn-lg, &.extra-large
+			.loading-icon
+				> svg
+					width: 24px !important
+					height: 24px !important
 
-	// 	&:before
-	// 		background: transparent !important
+		&.ant-btn-sm
+			.loading-icon
+				> svg
+					width: 16px !important
+					height: 16px !important
+
+		&:before
+			background: transparent !important
+
+		&.ant-btn-default
+			.loading-icon
+				> svg
+					@apply stroke-content_primary_light dark:stroke-content_primary_dark #{!important}
+					> g > rect
+						@apply fill-content_primary_light dark:fill-content_primary_dark #{!important}
+
+		&.ant-btn-text
+			.loading-icon
+				> svg
+					@apply stroke-action_primary_default_light dark:stroke-action_primary_default_dark #{!important}
+					> g > rect
+						@apply fill-action_primary_default_light dark:fill-action_primary_default_dark #{!important}

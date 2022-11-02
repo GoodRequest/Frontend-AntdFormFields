@@ -1,7 +1,5 @@
 @import 'tailwind-variables'
 
-// TODO okolo checknuteho checkboxu na hover sa spravy divny miniministvorec,
-
 .ant-form-item.base-checkbox
 	.ant-checkbox-wrapper
 		margin-left: 0 !important
@@ -22,7 +20,7 @@
 
 	.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover .ant-checkbox-inner,
 	.ant-checkbox:not(.ant-checkbox-disabled):hover .ant-checkbox-inner
-		@apply bg-action_primary_bg_light dark:bg-action_primary_bg_dark #{!important}
+		@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark #{!important}
 		@apply border-action_primary_hover_light dark:border-action_primary_hover_dark #{!important}
 
 	.ant-checkbox-wrapper:focus-within .ant-checkbox-inner,
@@ -36,3 +34,9 @@
 
 	.ant-checkbox-checked .ant-checkbox-inner:after
 		@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+
+	.ant-checkbox-checked::after
+		border-radius: $borderRadius-xxs !important
+		border-width: 1px
+		border-style: solid
+		@apply border-action_primary_hover_light dark:border-action_primary_hover_dark #{!important}

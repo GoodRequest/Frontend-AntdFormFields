@@ -1,6 +1,12 @@
 @import 'tailwind-variables'
 
 .ant-btn.base-btn
+	.loading-icon
+		display: none !important
+
+	.ant-btn-loading-icon
+		display: none !important
+
 	&.ant-btn-primary:not(.ant-btn-dangerous)
 		@apply bg-action_primary_default_light dark:bg-action_primary_default_dark
 		@apply border-action_primary_default_light dark:border-action_primary_default_dark
@@ -17,7 +23,7 @@
 			height: 20px
 			@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark
 
-		> span
+		> span:not(.loading-icon)
 			margin-left: 8px
 			margin-right: 8px
 
@@ -292,20 +298,82 @@
 				height: 24px
 
 	&.ant-btn-loading
+		> svg
+			display: none
+
 		.ant-btn-loading-icon
-			display: flex
+			display: none !important
+
+		.loading-icon
+			display: block !important
 			align-items: center
 			justify-content: center
-			margin-left: 0 !important
-			margin-right: 0 !important
+			margin-right: 0
+			margin-left: 0
+			> svg
+				width: 20px
+				height: 20px
+				@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark #{!important}
+				animation: loading-spinner 1s linear infinite
+
+				@keyframes loading-spinner
+					from
+						transform: rotate(0deg)
+					to
+						transform: rotate(360deg)
+				> g > rect
+					@apply fill-content_primary_inverse_light dark:fill-content_primary_inverse_dark #{!important}
+
+		&:not(.ant-btn-icon-only)
+			.loading-icon
+				margin-left: 14px !important
+				transition: margin-left 0.2s ease-in-out !important
+			> span
+				&:not(.loading-icon)
+					margin-right: 14px !important
+					transition: margin-right 0.2s ease-in-out  !important
+			&.ant-btn-lg, &.extra-large
+				.loading-icon
+					margin-left: 16px !important
+					transition: margin-left 0.2s ease-in-out !important
+				> span
+					&:not(.loading-icon)
+						margin-right: 16px !important
+						transition: margin-right 0.2s ease-in-out  !important
+			&.ant-btn-sm
+				.loading-icon
+					margin-left: 12px !important
+					transition: margin-left 0.2s ease-in-out !important
+				> span
+					&:not(.loading-icon)
+						margin-right: 12px !important
+						transition: margin-right 0.2s ease-in-out  !important
+
+		&.ant-btn-lg, &.extra-large
+			.loading-icon
+				> svg
+					width: 24px !important
+					height: 24px !important
 
 		&.ant-btn-sm
-			.ant-btn-loading-icon
-				width: 16px !important
-
-		&:not(.ant-btn-lg):not(.ant-btn-sm)
-			.ant-btn-loading-icon
-				width: 20px !important
+			.loading-icon
+				> svg
+					width: 16px !important
+					height: 16px !important
 
 		&:before
-			background: transparent !important
+			display: none
+
+		&.ant-btn-default
+			.loading-icon
+				> svg
+					@apply stroke-content_primary_light dark:stroke-content_primary_dark #{!important}
+					> g > rect
+						@apply fill-content_primary_light dark:fill-content_primary_dark #{!important}
+
+		&.ant-btn-text
+			.loading-icon
+				> svg
+					@apply stroke-action_primary_default_light dark:stroke-action_primary_default_dark #{!important}
+					> g > rect
+						@apply fill-action_primary_default_light dark:fill-action_primary_default_dark #{!important}

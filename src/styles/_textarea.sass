@@ -1,6 +1,11 @@
 @import 'tailwind-variables'
+@import 'typography'
 
 .ant-form-item.base-textarea
+	&:not(.ant-form-item-label)
+		@apply text-md-regular
+	.ant-form-item-explain
+		@apply text-sm-regular
 	.ant-input
 		resize: none
 		border-radius: $borderRadius-md

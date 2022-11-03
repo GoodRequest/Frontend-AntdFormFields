@@ -1,6 +1,9 @@
 @import 'tailwind-variables'
+@import 'typography'
 
 .ant-form-item.base-radiobutton
+	&:not(.ant-form-item-label)
+		@apply text-md-medium
 	.ant-radio-wrapper
 		@apply text-content_primary_light dark:text-content_primary_dark
 		.ant-radio-inner

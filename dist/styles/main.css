@@ -105,6 +105,10 @@
   width: 16.666667%
 }
 
+#tailwind .transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
 #tailwind .cursor-pointer {
   cursor: pointer
 }
@@ -135,16 +139,6 @@
 
 #tailwind .text-right {
   text-align: right
-}
-
-#tailwind .text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem
-}
-
-#tailwind .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem
 }
 
 #tailwind .blur {

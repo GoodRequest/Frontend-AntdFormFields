@@ -1,7 +1,9 @@
 @import 'tailwind-variables'
+@import 'typography'
 
 .ant-menu-horizontal.base-menu
 	background-color: transparent
+	@apply text-sm-semibold
 	&.primary
 		border-bottom: 0 !important
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}

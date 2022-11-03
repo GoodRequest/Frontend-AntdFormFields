@@ -1,6 +1,9 @@
 @import 'tailwind-variables'
+@import 'typography'
 
 .ant-form-item.base-checkbox
+	&:not(.ant-form-item-label)
+		@apply text-md-medium
 	.ant-checkbox-wrapper
 		margin-left: 0 !important
 		align-items: center

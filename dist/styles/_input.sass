@@ -1,6 +1,11 @@
 @import 'tailwind-variables'
+@import 'typography'
 
 .ant-form-item.base-input
+    &:not(.ant-form-item-label)
+        @apply text-md-regular
+    .ant-form-item-explain
+        @apply text-sm-regular
     // medium
     .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-lg, .ant-input-affix-wrapper-sm)
         border-radius: $borderRadius-xs

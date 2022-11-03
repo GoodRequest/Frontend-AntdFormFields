@@ -20,7 +20,7 @@ const lodash_1 = require("lodash");
 const helper_1 = require("../utils/helper");
 const { Item } = antd_1.Form;
 const InputPasswordField = (props) => {
-    const { input, size, placeholder, label, required, type, prefix, disabled, style, customOnBlur, meta: { form, error, touched }, hideHelp, maxLength, readOnly, className, tooltip, icon, hideIcon } = props;
+    const { input, size, placeholder, label, required, type, prefix, disabled, style, customOnBlur, meta: { form, error, touched, valid }, hideHelp, maxLength, readOnly, className, tooltip, icon, hideIcon } = props;
     const onChange = (0, react_1.useCallback)((e) => {
         // NOTE: prevent to have "" empty string as empty value
         const val = e.target.value ? e.target.value : null;
@@ -48,7 +48,7 @@ const InputPasswordField = (props) => {
         }
         return hideIcon;
     };
-    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, className: (0, classnames_1.default)(className, { 'form-item-disabled': disabled, readOnly }), help: hideHelp ? undefined : touched && error, validateStatus: error && touched ? 'error' : undefined, tooltip: tooltip }, { children: (0, jsx_runtime_1.jsx)(antd_1.Input.Password, Object.assign({}, input, { id: (0, helper_1.formFieldID)(form, input.name), className: (0, classnames_1.default)('input-password'), onChange: onChange, onBlur: onBlur, size: size || 'middle', onFocus: onFocus, value: input.value, iconRender: renderToggleIcon, placeholder: placeholder, type: type || 'text', prefix: prefix, disabled: disabled, maxLength: maxLength })) })));
+    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, className: (0, classnames_1.default)(className, { 'form-item-disabled': disabled, readOnly }), help: hideHelp ? undefined : touched && error, validateStatus: error && touched ? 'error' : touched && valid ? 'success' : undefined, tooltip: tooltip }, { children: (0, jsx_runtime_1.jsx)(antd_1.Input.Password, Object.assign({}, input, { id: (0, helper_1.formFieldID)(form, input.name), className: (0, classnames_1.default)('input-password'), onChange: onChange, onBlur: onBlur, size: size || 'middle', onFocus: onFocus, value: input.value, iconRender: renderToggleIcon, placeholder: placeholder, type: type || 'text', prefix: prefix, disabled: disabled, maxLength: maxLength })) })));
 };
 exports.default = (0, react_1.memo)(InputPasswordField);
 //# sourceMappingURL=InputPasswordField.js.map

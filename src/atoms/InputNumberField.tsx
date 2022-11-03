@@ -32,12 +32,13 @@ const InputNumberField = (props: Props) => {
 		required,
 		disabled,
 		style,
-		meta: { form, error, touched },
+		meta: { form, error, touched, valid },
 		min = -99999999,
 		max = 999999999,
 		precision,
 		step,
 		parser,
+		prefix,
 		maxChars = 9, // NOTE: Kazde 9 ciferne cislo je bezpecne pre Postgres Integer typ
 		smallInput,
 		defaultValue,
@@ -86,13 +87,20 @@ const InputNumberField = (props: Props) => {
 		[min, max, precision, notNullValue, input]
 	)
 
+	let inputSizeClassName = ''
+	if (size && size === 'large') {
+		inputSizeClassName = 'ant-input-number-affix-wrapper-large'
+	} else if (size && size === 'small') {
+		inputSizeClassName = 'ant-input-number-affix-wrapper-small'
+	}
+
 	return (
 		<Item
 			label={label}
 			required={required}
 			style={style}
 			help={touched && !hideHelp && error}
-			validateStatus={error && touched ? 'error' : undefined}
+			validateStatus={error && touched ? 'error' : touched && valid ? 'success' : undefined}
 			className={cx(className, { 'small-input': smallInput, 'form-item-disabled': disabled, readOnly })}
 		>
 			<InputNumber
@@ -108,9 +116,10 @@ const InputNumberField = (props: Props) => {
 				placeholder={placeholder}
 				disabled={disabled}
 				precision={precision}
+				prefix={prefix}
 				step={step}
 				type={type || 'text'}
-				className={cx('input-number', { 'rounded-full': rounded })}
+				className={`${cx('input-number', { 'rounded-full': rounded })} ${inputSizeClassName}`}
 				onFocus={onFocus}
 				decimalSeparator=','
 				parser={maxChars && maxChars > 0 ? maxCharsParser : parser}

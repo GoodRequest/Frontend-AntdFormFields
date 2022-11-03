@@ -32,7 +32,7 @@ const InputPasswordField = (props: Props) => {
 		disabled,
 		style,
 		customOnBlur,
-		meta: { form, error, touched },
+		meta: { form, error, touched, valid },
 		hideHelp,
 		maxLength,
 		readOnly,
@@ -91,7 +91,7 @@ const InputPasswordField = (props: Props) => {
 			style={style}
 			className={cx(className, { 'form-item-disabled': disabled, readOnly })}
 			help={hideHelp ? undefined : touched && error}
-			validateStatus={error && touched ? 'error' : undefined}
+			validateStatus={error && touched ? 'error' : touched && valid ? 'success' : undefined}
 			tooltip={tooltip}
 		>
 			<Input.Password

@@ -51,14 +51,21 @@
 		@apply border-surface_tertiary_light dark:border-surface_tertiary_dark #{!important}
 		@apply text-content_primary_light dark:text-content_primary_dark
 		&:hover
-			@apply border-surface_quatenary_light dark:border-x-surface_quatenary_light
+			@apply border-surface_quatenary_light dark:border-surface_quatenary_dark
 			@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+			.ant-input-number
+				@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
 
 	.ant-input-number-affix-wrapper-status-success
 		&.ant-input-number-affix-wrapper
 			border: solid #{!important}
 			border-width: 1px #{!important}
 			@apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
+
+			&:hover
+				@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+				.ant-input-number
+					@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
 		.ant-input-number-prefix
 			> svg
 				@apply stroke-state_success_fg_light dark:stroke-state_success_fg_dark #{!important}

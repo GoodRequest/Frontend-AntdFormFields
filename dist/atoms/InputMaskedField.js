@@ -10,7 +10,7 @@ const react_input_mask_1 = __importDefault(require("react-input-mask"));
 const classnames_1 = __importDefault(require("classnames"));
 const { Item } = antd_1.Form;
 const InputMaskedField = (props) => {
-    const { input, label, required, disabled, style, meta: { error, touched }, mask, uppercaseOnChange, placeholder, size } = props;
+    const { input, label, required, disabled, style, meta: { error, touched, valid }, mask, uppercaseOnChange, placeholder, size } = props;
     const handleChange = (0, react_1.useCallback)((e) => {
         // NOTE: prevent to have "" empty string as empty value
         let val = e.target.value ? e.target.value : null;
@@ -19,7 +19,7 @@ const InputMaskedField = (props) => {
         }
         input.onChange(val);
     }, [input, uppercaseOnChange]);
-    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, help: touched && error, validateStatus: error && touched ? 'error' : undefined }, { children: (0, jsx_runtime_1.jsx)(react_input_mask_1.default, Object.assign({}, input, { className: (0, classnames_1.default)('ant-input', 'input', 'input-masked', { 'input-masked--large': size === 'large' }), mask: mask, onChange: handleChange, value: input.value, disabled: disabled, placeholder: placeholder })) })));
+    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, help: touched && error, validateStatus: error && touched ? 'error' : touched && valid ? 'success' : undefined }, { children: (0, jsx_runtime_1.jsx)(react_input_mask_1.default, Object.assign({}, input, { className: (0, classnames_1.default)('ant-input', 'input', 'input-masked', { 'input-masked--large': size === 'large' }), mask: mask, onChange: handleChange, value: input.value, disabled: disabled, placeholder: placeholder })) })));
 };
 exports.default = (0, react_1.memo)(InputMaskedField);
 //# sourceMappingURL=InputMaskedField.js.map

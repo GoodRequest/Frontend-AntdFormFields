@@ -22,7 +22,7 @@ const antd_1 = require("antd");
 const helper_1 = require("../utils/helper");
 const { Item } = antd_1.Form;
 const InputNumberField = (props) => {
-    const { input, size, placeholder, label, required, disabled, style, meta: { form, error, touched }, min = -99999999, max = 999999999, precision, step, parser, maxChars = 9, // NOTE: Kazde 9 ciferne cislo je bezpecne pre Postgres Integer typ
+    const { input, size, placeholder, label, required, disabled, style, meta: { form, error, touched, valid }, min = -99999999, max = 999999999, precision, step, parser, prefix, maxChars = 9, // NOTE: Kazde 9 ciferne cislo je bezpecne pre Postgres Integer typ
     smallInput, defaultValue, type = 'text', rounded, hideHelp, className, notNullValue = false, onPressEnter, readOnly } = props;
     const maxCharsParser = (displayValue) => {
         if (maxChars && maxChars > 0 && displayValue && displayValue.length > maxChars) {
@@ -50,7 +50,14 @@ const InputNumberField = (props) => {
         // NOTE: wait until redux-form "BLUR" action is finished
         yield input.onBlur(val);
     }), [min, max, precision, notNullValue, input]);
-    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, help: touched && !hideHelp && error, validateStatus: error && touched ? 'error' : undefined, className: (0, classnames_1.default)(className, { 'small-input': smallInput, 'form-item-disabled': disabled, readOnly }) }, { children: (0, jsx_runtime_1.jsx)(antd_1.InputNumber, Object.assign({}, input, { ref: inputRef, style: { width: '100%' }, id: (0, helper_1.formFieldID)(form, input.name), min: min, max: max, size: size || 'middle', defaultValue: defaultValue, value: input.value, placeholder: placeholder, disabled: disabled, precision: precision, step: step, type: type || 'text', className: (0, classnames_1.default)('input-number', { 'rounded-full': rounded }), onFocus: onFocus, decimalSeparator: ',', parser: maxChars && maxChars > 0 ? maxCharsParser : parser, 
+    let inputSizeClassName = '';
+    if (size && size === 'large') {
+        inputSizeClassName = 'ant-input-number-affix-wrapper-large';
+    }
+    else if (size && size === 'small') {
+        inputSizeClassName = 'ant-input-number-affix-wrapper-small';
+    }
+    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, help: touched && !hideHelp && error, validateStatus: error && touched ? 'error' : touched && valid ? 'success' : undefined, className: (0, classnames_1.default)(className, { 'small-input': smallInput, 'form-item-disabled': disabled, readOnly }) }, { children: (0, jsx_runtime_1.jsx)(antd_1.InputNumber, Object.assign({}, input, { ref: inputRef, style: { width: '100%' }, id: (0, helper_1.formFieldID)(form, input.name), min: min, max: max, size: size || 'middle', defaultValue: defaultValue, value: input.value, placeholder: placeholder, disabled: disabled, precision: precision, prefix: prefix, step: step, type: type || 'text', className: `${(0, classnames_1.default)('input-number', { 'rounded-full': rounded })} ${inputSizeClassName}`, onFocus: onFocus, decimalSeparator: ',', parser: maxChars && maxChars > 0 ? maxCharsParser : parser, 
             // NOTE: Prevent proti posielaniu BLUR akcie so string payloadom - posiela Ant na pozadi
             onBlur: onBlur, onPressEnter: onPressEnterWrap, onChange: input.onChange })) })));
 };

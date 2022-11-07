@@ -22,7 +22,7 @@ const InputMaskedField = (props: Props) => {
 		required,
 		disabled,
 		style,
-		meta: { error, touched },
+		meta: { error, touched, valid },
 		mask,
 		uppercaseOnChange,
 		placeholder,
@@ -42,7 +42,7 @@ const InputMaskedField = (props: Props) => {
 	)
 
 	return (
-		<Item label={label} required={required} style={style} help={touched && error} validateStatus={error && touched ? 'error' : undefined}>
+		<Item label={label} required={required} style={style} help={touched && error} validateStatus={error && touched ? 'error' : touched && valid ? 'success' : undefined}>
 			<InputMask
 				{...input}
 				className={cx('ant-input', 'input', 'input-masked', { 'input-masked--large': size === 'large' })}

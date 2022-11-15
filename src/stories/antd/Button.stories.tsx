@@ -5,6 +5,7 @@ import { withDesign } from 'storybook-addon-designs'
 import Button from '../../atoms/Button'
 import { ComponentStory } from '@storybook/react'
 import { SearchOutlined } from '@ant-design/icons'
+import '../../styles/global.sass'
 
 export default {
 	title: 'Antd/Button',
@@ -27,6 +28,7 @@ export const ButtonPrimaryIcon = Template.bind({})
 
 // arguments
 ButtonPrimary.args = {
+	className: 'base-btn',
 	type: 'primary'
 }
 

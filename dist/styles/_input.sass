@@ -80,43 +80,43 @@
 
 // without prefix || suffix
 .ant-form-item.base-input
-	.ant-input
-		border-radius: $borderRadius-xs
-		&:hover:not(.ant-input-disabled)
-			@apply border-surface_quatenary_light dark:border-surface_quatenary_dark
-			@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-		&:focus-within
-			box-shadow: none
-			@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-	.ant-input-lg
-		border-radius: $borderRadius-sm
-	.ant-input-sm
-		border-radius: $borderRadius-xxs
+    .ant-input
+        border-radius: $borderRadius-xs
+        &:hover:not(.ant-input-disabled)
+            @apply border-surface_quatenary_light dark:border-surface_quatenary_dark
+            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+        &:focus-within
+            box-shadow: none
+            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+    .ant-input-lg
+        border-radius: $borderRadius-sm
+    .ant-input-sm
+        border-radius: $borderRadius-xxs
 
-	.ant-input-disabled:hover
-			border-color: transparent
-	.ant-input-disabled::placeholder
-		@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
-	.ant-input-status-success
-		@apply border-state_success_fg_light dark:border-state_success_fg_dark
-		&:hover
-			@apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
-		&:focus-within
-			@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-	.ant-input-status-error
-		@apply border-state_error_fg_light dark:border-state_error_fg_dark
-		@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
-		&:hover
-			@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
-			@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
-		&:focus-within
-			box-shadow: none !important
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-			@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-	.ant-input-affix-wrapper
-		.ant-input
-			border-radius: 0px !important
+    .ant-input-disabled:hover
+            border-color: transparent
+    .ant-input-disabled::placeholder
+        @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+    .ant-input-status-success
+        @apply border-state_success_fg_light dark:border-state_success_fg_dark
+        &:hover
+            @apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
+        &:focus-within
+            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+    .ant-input-status-error
+        @apply border-state_error_fg_light dark:border-state_error_fg_dark
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+        &:hover
+            @apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
+        &:focus-within
+            box-shadow: none !important
+            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+    .ant-input-affix-wrapper
+        .ant-input
+            border-radius: 0px !important
 
 .ant-form-item-label
     > label
@@ -135,6 +135,6 @@
                 @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
 
 .form-item-disabled.base-input
-		.ant-form-item-row
-			.ant-form-item-label > label
-				@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+        .ant-form-item-row
+            .ant-form-item-label > label
+                @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}

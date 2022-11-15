@@ -29,6 +29,15 @@ module.exports = {
         })
         return config
     },
+    webpackFinal: async (config) => {
+        config.module.rules.push({
+            test: /\.sass$/,
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+            include: path.resolve(__dirname, '../'),
+          })
+    
+          return config;
+    },
     "framework": "@storybook/react",
     "core": {
         "builder": "@storybook/builder-webpack5"

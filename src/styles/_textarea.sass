@@ -2,51 +2,51 @@
 @import 'typography'
 
 .ant-form-item.base-textarea
-	&:not(.ant-form-item-label)
-		@apply text-md-regular
-	.ant-form-item-explain
-		@apply text-sm-regular
-	.ant-input
-		resize: none
-		border-radius: $borderRadius-md
-		border-color: transparent
-		@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
+    &:not(.ant-form-item-label)
+        @apply text-md-regular
+    .ant-form-item-explain
+        @apply text-sm-regular
+    .ant-input
+        resize: none
+        border-radius: $borderRadius-md
+        border-color: transparent
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
 
-		&:hover:not(.ant-input-disabled)
-			@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+        &:hover:not(.ant-input-disabled)
+            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
 
-		&.ant-input-status-error:not(.ant-input-disabled)
-			border: solid
-			border-width: 1px
-			@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
-			@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
-			box-shadow: none
-			&:hover
-				@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
-			&:focus
-				@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-				@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-				box-shadow: none
+        &.ant-input-status-error:not(.ant-input-disabled)
+            border: solid
+            border-width: 1px
+            @apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+            @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+            box-shadow: none
+            &:hover
+                @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
+            &:focus
+                @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+                @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+                box-shadow: none
 
-		&.ant-input-status-success:not(.ant-input-disabled)
-			border: solid
-			border-width: 1px
-			@apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
-			@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
-			box-shadow: none
-			&:hover
-				@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
-			&:focus
-				@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-				@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-				box-shadow: none
+        &.ant-input-status-success:not(.ant-input-disabled)
+            border: solid
+            border-width: 1px
+            @apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
+            @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+            box-shadow: none
+            &:hover
+                @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
+            &:focus
+                @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+                @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+                box-shadow: none
 
-		&:focus
-			border: solid
-			box-shadow: none
-			border-width: 1px
-			@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+        &:focus
+            border: solid
+            box-shadow: none
+            border-width: 1px
+            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
 
 
 .ant-form-item-has-error.base-textarea
@@ -60,6 +60,6 @@
                 @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
 
 .form-item-disabled.base-textarea
-	.ant-form-item-row
-		.ant-form-item-label > label
-			@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+    .ant-form-item-row
+        .ant-form-item-label > label
+            @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}

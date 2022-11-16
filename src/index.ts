@@ -5,7 +5,6 @@ import isBetween from 'dayjs/plugin/isBetween'
 import minMax from 'dayjs/plugin/minMax'
 
 import './styles/main.css'
-import './styles/global.sass'
 
 // dayjs extended plugins
 dayjs.extend(isBetween)

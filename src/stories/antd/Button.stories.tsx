@@ -5,7 +5,7 @@ import { withDesign } from 'storybook-addon-designs'
 import Button from '../../atoms/Button'
 import { ComponentStory } from '@storybook/react'
 import { SearchOutlined } from '@ant-design/icons'
-import '../../styles/global.sass'
+// import '!style-loader!css-loader!sass-loader!../../../src/styles/_global.sass'
 
 export default {
 	title: 'Antd/Button',

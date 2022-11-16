@@ -1,4 +1,6 @@
 /* Converted Tailwind Config to sass */
+@use "sass:math"
+
 $columns-1: 1
 $columns-2: 2
 $columns-3: 3
@@ -33,8 +35,8 @@ $animation-pulse: (pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite)
 $animation-bounce: bounce 1s infinite
 
 $aspectRatio-auto: auto
-$aspectRatio-square: 1 / 1
-$aspectRatio-video: 16 / 9
+$aspectRatio-square: math.div(1, 1)
+$aspectRatio-video: math.div(16, 9)
 
 $backdropBlur-0: 0
 $backdropBlur-none: 0
@@ -1363,7 +1365,7 @@ $gridColumn-span-9: span 9 / span 9
 $gridColumn-span-10: span 10 / span 10
 $gridColumn-span-11: span 11 / span 11
 $gridColumn-span-12: span 12 / span 12
-$gridColumn-span-full: 1 / -1
+$gridColumn-span-full: math.div(1, -1)
 
 $gridColumnEnd-1: 1
 $gridColumnEnd-2: 2
@@ -1402,7 +1404,7 @@ $gridRow-span-3: span 3 / span 3
 $gridRow-span-4: span 4 / span 4
 $gridRow-span-5: span 5 / span 5
 $gridRow-span-6: span 6 / span 6
-$gridRow-span-full: 1 / -1
+$gridRow-span-full: math.div(1, -1)
 
 $gridRowStart-1: 1
 $gridRowStart-2: 2

@@ -10,7 +10,6 @@ const timezone_1 = __importDefault(require("dayjs/plugin/timezone"));
 const isBetween_1 = __importDefault(require("dayjs/plugin/isBetween"));
 const minMax_1 = __importDefault(require("dayjs/plugin/minMax"));
 require("./styles/main.css");
-require("./styles/global.sass");
 // dayjs extended plugins
 dayjs_1.default.extend(isBetween_1.default);
 dayjs_1.default.extend(utc_1.default);

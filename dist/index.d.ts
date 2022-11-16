@@ -1,5 +1,4 @@
 import './styles/main.css';
-import './styles/global.sass';
 export { default as CheckboxField } from './atoms/CheckboxField';
 export { default as CheckboxGroupField } from './atoms/CheckboxGroupField';
 export { default as DateField } from './atoms/DateField';

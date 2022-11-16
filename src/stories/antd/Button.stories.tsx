@@ -33,30 +33,36 @@ ButtonPrimary.args = {
 }
 
 ButtonSecondary.args = {
+	className: 'base-btn',
 	type: 'default'
 }
 
 ButtonPrimaryDisabled.args = {
+	className: 'base-btn',
 	type: 'primary',
 	disabled: true
 }
 
 ButtonSecondaryDisabled.args = {
+	className: 'base-btn',
 	type: 'default',
 	disabled: true
 }
 
 ButtonDanger.args = {
+	className: 'base-btn',
 	type: 'default',
 	danger: true
 }
 
 ButtonPrimaryLoading.args = {
+	className: 'base-btn',
 	type: 'primary',
 	loading: true
 }
 
 ButtonPrimaryIcon.args = {
+	className: 'base-btn',
 	type: 'primary',
 	icon: <SearchOutlined />
 }

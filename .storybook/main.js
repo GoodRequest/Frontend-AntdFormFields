@@ -11,11 +11,11 @@ module.exports = {
         "@storybook/addon-interactions",
         "@storybook/preset-scss"
     ],
-    "sassOptions": {
-        "includePaths": [path.join(__dirname, '../src/styles')]
-    },
+    // "sassOptions": {
+    //     "includePaths": [path.join(__dirname, '../src/styles')]
+    // },
     //  "plugins": [require("postcss-import"), require("tailwindcss"), require("autoprefixer")],
-    webpackFinal: async (config) => {
+    // webpackFinal: async (config) => {
         // config.module.rules.push({
         //     test: /\.s[ac]ss$/i,
         //     include: path.resolve(__dirname, '../'),
@@ -38,26 +38,26 @@ module.exports = {
         //     include: path.resolve(__dirname, "../")
         // })
 
-        config.module.rules.push({
-            test: /\,css$/,
-            use: [
-                {
-                    loader: 'postcss-loader',
-                    options: {
-                        ident: 'postcss',
-                        plugins: [
-                            require('tailwindcss'),
-                            require('autoprefixer'),
-                            // require('postcss-import')
-                        ]
-                    }
-                }
-            ],
-            include: path.resolve(__dirname, '../')
-        })
+        // config.module.rules.push({
+        //     test: /\,css$/,
+        //     use: [
+        //         {
+        //             loader: 'postcss-loader',
+        //             options: {
+        //                 ident: 'postcss',
+        //                 plugins: [
+        //                     require('tailwindcss'),
+        //                     require('autoprefixer'),
+        //                     // require('postcss-import')
+        //                 ]
+        //             }
+        //         }
+        //     ],
+        //     include: path.resolve(__dirname, '../')
+        // })
 
-        return config
-    },
+        // return config
+    // },
     "framework": "@storybook/react",
     "core": {
         "builder": "@storybook/builder-webpack5"

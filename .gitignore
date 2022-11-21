@@ -16,3 +16,7 @@ storybook-static
 
 src/styles/main.css
 src/styles/tailwind-variables.sass
+src/styles/_generated-variables.scss
+src/styles/_theme.sass
+src/dist/_generated-variables.scss
+src/dist/_theme.sass

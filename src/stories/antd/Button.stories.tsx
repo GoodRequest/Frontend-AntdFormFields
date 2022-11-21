@@ -1,11 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react'
 import { withDesign } from 'storybook-addon-designs'
-// import { Button } from 'antd'
 import Button from '../../atoms/Button'
 import { ComponentStory } from '@storybook/react'
 import { SearchOutlined } from '@ant-design/icons'
-// import '!style-loader!css-loader!sass-loader!../../../src/styles/_global.sass'
 
 export default {
 	title: 'Antd/Button',

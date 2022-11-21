@@ -18,6 +18,7 @@ module.exports = {
           },
         },
     ],
+    "staticDirs": ['../dist/assets/fonts'],
     webpackFinal: async (config) => {
       config.module.rules.push({
         test: /\.sass$/,

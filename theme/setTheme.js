@@ -1,13 +1,13 @@
 const fs = require('fs')
 
 try {
-    fs.unlinkSync(_dirname + `/../src/styles/_theme.sass`)
+    fs.unlinkSync(__dirname + '/../src/styles/_theme.sass')
 } catch {
     console.log('no theme to unlink')
 }
 
 try {
-    fs.unlinkSync(_dirname + `../src/styles/_generated-variables.scss`)
+    fs.unlinkSync(__dirname + '/../src/styles/_generated-variables.scss')
 } catch {
     console.log('no variables to unlink')
 }

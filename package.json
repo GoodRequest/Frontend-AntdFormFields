@@ -10,7 +10,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "node ./theme/setTheme.js && build-storybook",
-    "build": "rm -rf dist && tsc --project tsconfig.json && cp -r ./src/styles ./dist/styles",
+    "build": "rm -rf dist && tsc --project tsconfig.json && cp -r ./src/styles ./dist/styles && cp -r ./src/assets ./dist/assets",
     "sass": "sass --watch ./src/styles/global.sass ./.storybook/main.css",
     "prepublish": "npm run build",
     "export-tailwind-config": "tailwindcss-export-config --config=tailwind.config.js --destination=src/styles/tailwind-variables --flat=true --format=sass --quoted-keys=true",

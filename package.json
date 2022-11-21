@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "node ./theme/setTheme.js && build-storybook",
     "build": "rm -rf dist && tsc --project tsconfig.json && cp -r ./src/styles ./dist/styles",
     "sass": "sass --watch ./src/styles/global.sass ./.storybook/main.css",
     "prepublish": "npm run build",

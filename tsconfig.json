@@ -23,7 +23,7 @@
     "node_modules/cypress/types/cypress-global-vars.d.ts"
   ],
   "exclude": [
-    "dist" //,
+    "dist", //,
     // "src/stories"
   ]
 }

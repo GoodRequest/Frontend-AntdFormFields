@@ -1,21 +1,21 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react'
 import { withDesign } from 'storybook-addon-designs'
-import Button from '../../atoms/Button'
+import Button from '../../../atoms/Button'
 import { ComponentStory } from '@storybook/react'
-import Brush from '../../assets/icons/Brush'
-import Plus from '../../assets/icons/Plus'
+import Brush from '../../../assets/icons/Brush'
+import Plus from '../../../assets/icons/Plus'
 
 export default {
-	title: 'Antd/Button',
+	title: 'Antd/Buttons/Primary',
 	component: Button,
 	decorators: [withDesign],
-	args: {},
+	args: {}
 }
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}></Button>
 
-// stories
+//stories
 export const ButtonPrimaryLarge = Template.bind({})
 export const ButtonPrimaryLargeWithIcons = Template.bind({})
 export const ButtonPrimaryLargeIconOnly = Template.bind({})
@@ -44,13 +44,8 @@ ButtonPrimaryLargeWithIcons.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'large',
-	children: (
-		<>
-			<span>Button</span>
-			<Brush />
-		</>
-	),
-	icon: <Brush />,
+	children: [<span>Button</span>, <Brush />],
+	icon: <Brush />
 }
 
 ButtonPrimaryLargeIconOnly.args = {
@@ -64,80 +59,90 @@ ButtonPrimaryLargeLoading.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'large',
-	loading: true
+	loading: true,
+	children: <span>Button</span>
 }
 
 ButtonPrimaryLargeDisabled.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'large',
-	disabled: true
+	disabled: true,
+	children: <span>Button</span>
 }
 
 ButtonPrimaryMiddle.args = {
 	className: 'base-btn',
 	type: 'primary',
-	size: 'middle'
+	size: 'middle',
+	children: <span>Button</span>
 }
 
 ButtonPrimaryMiddleWithIcons.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'middle',
-	// icon: {}
+	children: [<span>Button</span>, <Brush />],
+	icon: <Brush />
 }
 
 ButtonPrimaryMiddleIconOnly.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'middle',
-	// icon: {}
+	icon: <Plus />
 }
 
 ButtonPrimaryMiddleLoading.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'middle',
-	loading: true
+	loading: true,
+	children: <span>Button</span>
 }
 
 ButtonPrimaryMiddleDisabled.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'middle',
-	disabled: true
+	disabled: true,
+	children: <span>Button</span>
 }
 
 ButtonPrimarySmall.args = {
 	className: 'base-btn',
 	type: 'primary',
-	size: 'small'
+	size: 'small',
+	children: <span>Button</span>
 }
 
 ButtonPrimarySmallWithIcons.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'small',
-	// icon: {}
+	children: [<span>Button</span>, <Brush />],
+	icon: <Brush />
 }
 
 ButtonPrimarySmallIconOnly.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'small',
-	// icon: {}
+	icon: <Plus />
 }
 
 ButtonPrimarySmallLoading.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'small',
-	loading: true
+	loading: true,
+	children: <span>Button</span>
 }
 
 ButtonPrimarySmallDisabled.args = {
 	className: 'base-btn',
 	type: 'primary',
 	size: 'small',
-	disabled: true
+	disabled: true,
+	children: <span>Button</span>
 }

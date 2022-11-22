@@ -3,7 +3,6 @@
 
 .ant-menu-horizontal.base-menu
 	background-color: transparent
-	@apply text-sm-semibold
 	&.primary
 		border-bottom: 0 !important
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
@@ -76,6 +75,7 @@
 		align-items: center
 		padding-left: 6px
 		padding-right: 6px
+		border-radius: 6px
 
 		&.small
 			height: 44px !important
@@ -113,8 +113,10 @@
 		justify-content: center
 
 	&.small
+		@apply text-sm-semibold
 		.ant-menu-item
 			height: 36px !important
 	&.medium
+		@apply text-md-semibold #{!important}
 		.ant-menu-item
 			height: 44px !important

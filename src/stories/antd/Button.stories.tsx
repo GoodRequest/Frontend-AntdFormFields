@@ -3,118 +3,141 @@ import React from 'react'
 import { withDesign } from 'storybook-addon-designs'
 import Button from '../../atoms/Button'
 import { ComponentStory } from '@storybook/react'
-import { SearchOutlined } from '@ant-design/icons'
+import Brush from '../../assets/icons/Brush'
+import Plus from '../../assets/icons/Plus'
 
 export default {
 	title: 'Antd/Button',
 	component: Button,
 	decorators: [withDesign],
-	args: {}
+	args: {},
 }
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>Button</Button>
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args}></Button>
 
 // stories
-export const ButtonPrimary = Template.bind({})
-export const ButtonSecondary = Template.bind({})
-export const ButtonPrimaryDisabled = Template.bind({})
-export const ButtonSecondaryDisabled = Template.bind({})
-export const ButtonDanger = Template.bind({})
-export const ButtonPrimaryLoading = Template.bind({})
-export const ButtonPrimaryIcon = Template.bind({})
-// export const ButtonPrimaryIconOnly = TemplateEmpty.bind({})
+export const ButtonPrimaryLarge = Template.bind({})
+export const ButtonPrimaryLargeWithIcons = Template.bind({})
+export const ButtonPrimaryLargeIconOnly = Template.bind({})
+export const ButtonPrimaryLargeLoading = Template.bind({})
+export const ButtonPrimaryLargeDisabled = Template.bind({})
+export const ButtonPrimaryMiddle = Template.bind({})
+export const ButtonPrimaryMiddleWithIcons = Template.bind({})
+export const ButtonPrimaryMiddleIconOnly = Template.bind({})
+export const ButtonPrimaryMiddleLoading = Template.bind({})
+export const ButtonPrimaryMiddleDisabled = Template.bind({})
+export const ButtonPrimarySmall = Template.bind({})
+export const ButtonPrimarySmallWithIcons = Template.bind({})
+export const ButtonPrimarySmallIconOnly = Template.bind({})
+export const ButtonPrimarySmallLoading = Template.bind({})
+export const ButtonPrimarySmallDisabled = Template.bind({})
 
 // arguments
-ButtonPrimary.args = {
-	className: 'base-btn',
-	type: 'primary'
-}
-
-ButtonSecondary.args = {
-	className: 'base-btn',
-	type: 'default'
-}
-
-ButtonPrimaryDisabled.args = {
+ButtonPrimaryLarge.args = {
 	className: 'base-btn',
 	type: 'primary',
-	disabled: true
+	size: 'large',
+	children: <span>Button</span>
 }
 
-ButtonSecondaryDisabled.args = {
-	className: 'base-btn',
-	type: 'default',
-	disabled: true
-}
-
-ButtonDanger.args = {
-	className: 'base-btn',
-	type: 'default',
-	danger: true
-}
-
-ButtonPrimaryLoading.args = {
+ButtonPrimaryLargeWithIcons.args = {
 	className: 'base-btn',
 	type: 'primary',
+	size: 'large',
+	children: (
+		<>
+			<span>Button</span>
+			<Brush />
+		</>
+	),
+	icon: <Brush />,
+}
+
+ButtonPrimaryLargeIconOnly.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'large',
+	icon: <Plus />
+}
+
+ButtonPrimaryLargeLoading.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'large',
 	loading: true
 }
 
-ButtonPrimaryIcon.args = {
+ButtonPrimaryLargeDisabled.args = {
 	className: 'base-btn',
 	type: 'primary',
-	icon: <SearchOutlined />
+	size: 'large',
+	disabled: true
 }
 
-// ButtonPrimaryIconOnly.args = {
-// 	type: 'primary',
-// 	icon: <SearchIcon />
-// }
-
-// parameters
-ButtonPrimary.parameters = {
-	design: {
-		type: 'figma',
-		url: 'https://www.figma.com/file/HL0lsNm8yCHGGCkL1c3euX/Notino-B2B-Desktop-app?node-id=90%3A1868'
-	}
+ButtonPrimaryMiddle.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'middle'
 }
 
-ButtonSecondary.parameters = {
-	design: {
-		type: 'figma',
-		url: 'https://www.figma.com/file/HL0lsNm8yCHGGCkL1c3euX/Notino-B2B-Desktop-app?node-id=90%3A2354'
-	}
+ButtonPrimaryMiddleWithIcons.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'middle',
+	// icon: {}
 }
 
-ButtonPrimaryDisabled.parameters = {
-	design: {
-		type: 'figma',
-		url: 'https://www.figma.com/file/HL0lsNm8yCHGGCkL1c3euX/Notino-B2B-Desktop-app?node-id=90%3A1868'
-	}
-}
-ButtonSecondaryDisabled.parameters = {
-	design: {
-		type: 'figma',
-		url: 'https://www.figma.com/file/HL0lsNm8yCHGGCkL1c3euX/Notino-B2B-Desktop-app?node-id=90%3A2354'
-	}
+ButtonPrimaryMiddleIconOnly.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'middle',
+	// icon: {}
 }
 
-ButtonDanger.parameters = {
-	design: {
-		type: 'figma',
-		url: 'https://www.figma.com/file/HL0lsNm8yCHGGCkL1c3euX/Notino-B2B-Desktop-app?node-id=90%3A1868'
-	}
+ButtonPrimaryMiddleLoading.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'middle',
+	loading: true
 }
 
-ButtonPrimaryLoading.parameters = {
-	design: {
-		type: 'figma',
-		url: 'https://www.figma.com/file/HL0lsNm8yCHGGCkL1c3euX/Notino-B2B-Desktop-app?node-id=90%3A1868'
-	}
+ButtonPrimaryMiddleDisabled.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'middle',
+	disabled: true
 }
 
-ButtonPrimaryIcon.parameters = {
-	design: {
-		type: 'figma',
-		url: 'https://www.figma.com/file/HL0lsNm8yCHGGCkL1c3euX/Notino-B2B-Desktop-app?node-id=90%3A1868'
-	}
+ButtonPrimarySmall.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'small'
+}
+
+ButtonPrimarySmallWithIcons.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'small',
+	// icon: {}
+}
+
+ButtonPrimarySmallIconOnly.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'small',
+	// icon: {}
+}
+
+ButtonPrimarySmallLoading.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'small',
+	loading: true
+}
+
+ButtonPrimarySmallDisabled.args = {
+	className: 'base-btn',
+	type: 'primary',
+	size: 'small',
+	disabled: true
 }

@@ -20,11 +20,27 @@ module.exports = {
     ],
     "staticDirs": ['../dist/assets/fonts'],
     webpackFinal: async (config) => {
+
       config.module.rules.push({
         test: /\.sass$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       })
-  
+
+      config.module.rules = [
+        ...config.module.rules.map(rule => {
+          if (/svg/.test(rule.test)) {
+            return { ...rule, exclude: /\.svg$/ }
+          }
+      
+          return rule
+        }),
+        {
+          test: /\.svg$/,
+          use: ["@svgr/webpack"]
+        }
+      ]
+      
+      console.log(config.module.rules)
       return config
     },
     "framework": "@storybook/react",

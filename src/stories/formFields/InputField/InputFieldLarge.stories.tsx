@@ -70,7 +70,7 @@ InputLargeSuccess.args = {
     size: 'large',
     prefix: <Brush />,
     meta: {
-		valid: 'Success message',
+		valid: true,
 		touched: true
 	} as any
 }

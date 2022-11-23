@@ -36,7 +36,7 @@
 
     .ant-input, .ant-input-affix-wrapper
         @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
-        @apply border-surface_tertiary_light dark:border-surface_tertiary_dark
+        @apply border-surface_tertiary_light dark:border-surface_tertiary_dark #{!important}
         @apply text-content_primary_light dark:text-content_primary_dark
 
     .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover
@@ -44,15 +44,6 @@
         @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
         .ant-input, .ant-input-affix-wrapper
             @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-
-    .ant-input-affix-wrapper-focused
-        border: solid
-        box-shadow: none
-        border-width: 1px
-        @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-        @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-        .ant-input, .ant-input-affix-wrapper
-            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
 
     .ant-input-disabled, .ant-input-affix-wrapper-disabled
         @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
@@ -63,7 +54,7 @@
                 @apply stroke-content_quintary_light dark:stroke-content_quintary_dark #{!important}
 
     .ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper
-        @apply border-state_error_fg_light dark:border-state_error_fg_dark
+        @apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
         @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
         box-shadow: none
         &:hover
@@ -73,11 +64,19 @@
                 @apply stroke-state_error_fg_light dark:stroke-state_error_fg_dark
 
     .ant-input-affix-wrapper-status-success:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper
-        @apply border-state_success_fg_light dark:border-state_success_fg_dark
+        @apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
         .ant-input-prefix, .ant-input-suffix
             > svg
                 @apply stroke-state_success_fg_light dark:stroke-state_success_fg_dark
 
+    .ant-input-affix-wrapper-focused
+        border: solid
+        box-shadow: none
+        border-width: 1px
+        @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+        @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+        .ant-input, .ant-input-affix-wrapper
+            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
 // without prefix || suffix
 .ant-form-item.base-input
     .ant-input

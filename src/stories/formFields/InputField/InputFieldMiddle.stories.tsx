@@ -70,7 +70,7 @@ InputMiddleSuccess.args = {
     size: 'middle',
     prefix: <Brush />,
     meta: {
-		valid: 'Success message',
+		valid: true,
 		touched: true
 	} as any
 }

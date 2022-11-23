@@ -36,34 +36,39 @@
 
 	&.underlined-filled
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		::after
+			left: 0
+			right: 0
 		.ant-menu-item
-			border-width: 0 0 2px 0 !important
-			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-				@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
+		.ant-menu-item:hover::after
+			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 		.ant-menu-item-selected
 			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark
-		::after
-			border-bottom: 0 !important
+		.ant-menu-item-selected::after
+			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 	&.underlined
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		::after
+			left: 0
+			right: 0
 		.ant-menu-item
-			border-width: 0 0 2px 0 !important
-			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
+		.ant-menu-item:hover::after
+			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 		.ant-menu-item-selected
 			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
-		::after
-			border-bottom: 0 !important
+		.ant-menu-item-selected::after
+			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 	&.buttons
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}

@@ -10,7 +10,10 @@ export default {
 	title: 'Antd/Buttons/Text',
 	component: Button,
 	decorators: [withDesign],
-	args: {}
+	args: {
+		className: 'base-btn',
+		type: 'text'
+	}
 }
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}></Button>
@@ -34,114 +37,84 @@ export const ButtonTextSmallDisabled = Template.bind({})
 
 // arguments
 ButtonTextLarge.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'large',
 	children: <span>Button</span>
 }
 
 ButtonTextLargeWithIcons.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'large',
 	children: [<span>Button</span>, <Brush />],
 	icon: <Brush />
 }
 
 ButtonTextLargeIconOnly.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'large',
 	icon: <Plus />
 }
 
 ButtonTextLargeLoading.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'large',
 	loading: true,
 	children: <span>Button</span>
 }
 
 ButtonTextLargeDisabled.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'large',
 	disabled: true,
 	children: <span>Button</span>
 }
 
 ButtonTextMiddle.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'middle',
 	children: <span>Button</span>
 }
 
 ButtonTextMiddleWithIcons.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'middle',
 	children: [<span>Button</span>, <Brush />],
 	icon: <Brush />
 }
 
 ButtonTextMiddleIconOnly.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'middle',
 	icon: <Plus />
 }
 
 ButtonTextMiddleLoading.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'middle',
 	loading: true,
 	children: <span>Button</span>
 }
 
 ButtonTextMiddleDisabled.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'middle',
 	disabled: true,
 	children: <span>Button</span>
 }
 
 ButtonTextSmall.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'small',
 	children: <span>Button</span>
 }
 
 ButtonTextSmallWithIcons.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'small',
 	children: [<span>Button</span>, <Brush />],
 	icon: <Brush />
 }
 
 ButtonTextSmallIconOnly.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'small',
 	icon: <Plus />
 }
 
 ButtonTextSmallLoading.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'small',
 	loading: true,
 	children: <span>Button</span>
 }
 
 ButtonTextSmallDisabled.args = {
-	className: 'base-btn',
-	type: 'text',
 	size: 'small',
 	disabled: true,
 	children: <span>Button</span>

@@ -41,13 +41,11 @@ export const InputSmallFilled = Template.bind({})
 InputSmall.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'small',
     required: true
 }
 
 InputSmallWithSuffixPrefix.args = {
     className: 'base-input',
-    size: 'niddle',
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label'
@@ -56,7 +54,6 @@ InputSmallWithSuffixPrefix.args = {
 InputSmallError.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'small',
     prefix: <Brush />,
     meta: {
 		error: 'Error message',
@@ -67,7 +64,6 @@ InputSmallError.args = {
 InputSmallSuccess.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'small',
     prefix: <Brush />,
     meta: {
 		valid: true,
@@ -80,14 +76,12 @@ InputSmallDisabled.args = {
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label',
-    size: 'small',
     disabled: true
 }
 
 InputSmallFilled.args = {
     className: 'base-input',
     suffix: <Brush />,
-    size: 'small',
     input: {
 		...inputDefaultProps,
 		value: 'Filled text'

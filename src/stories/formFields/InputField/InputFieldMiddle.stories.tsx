@@ -41,13 +41,11 @@ export const InputMiddleFilled = Template.bind({})
 InputMiddle.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'middle',
     required: true
 }
 
 InputMiddleWithSuffixPrefix.args = {
     className: 'base-input',
-    size: 'niddle',
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label'
@@ -56,7 +54,6 @@ InputMiddleWithSuffixPrefix.args = {
 InputMiddleError.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'middle',
     prefix: <Brush />,
     meta: {
 		error: 'Error message',
@@ -67,7 +64,6 @@ InputMiddleError.args = {
 InputMiddleSuccess.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'middle',
     prefix: <Brush />,
     meta: {
 		valid: true,
@@ -80,14 +76,12 @@ InputMiddleDisabled.args = {
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label',
-    size: 'middle',
     disabled: true
 }
 
 InputMiddleFilled.args = {
     className: 'base-input',
     suffix: <Brush />,
-    size: 'middle',
     input: {
 		...inputDefaultProps,
 		value: 'Filled text'

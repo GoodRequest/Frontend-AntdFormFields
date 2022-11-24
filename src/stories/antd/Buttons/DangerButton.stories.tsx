@@ -10,7 +10,11 @@ export default {
 	title: 'Antd/Buttons/Danger',
 	component: Button,
 	decorators: [withDesign],
-	args: {}
+	args: {
+		className: 'base-btn',
+		type: 'primary',
+		danger: true
+	}
 }
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args}></Button>
@@ -34,130 +38,85 @@ export const ButtonDangerSmallDisabled = Template.bind({})
 
 // arguments
 ButtonDangerLarge.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'large',
-    danger: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerLargeWithIcons.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'large',
-    danger: true,
 	children: [<span>Button</span>, <Brush />],
 	icon: <Brush />
 }
 
 ButtonDangerLargeIconOnly.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'large',
-    danger: true,
 	icon: <Plus />
 }
 
 ButtonDangerLargeLoading.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'large',
-    danger: true,
 	loading: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerLargeDisabled.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'large',
-    danger: true,
 	disabled: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerMiddle.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'middle',
-    danger: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerMiddleWithIcons.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'middle',
-    danger: true,
 	children: [<span>Button</span>, <Brush />],
 	icon: <Brush />
 }
 
 ButtonDangerMiddleIconOnly.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'middle',
-    danger: true,
 	icon: <Plus />
 }
 
 ButtonDangerMiddleLoading.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'middle',
 	loading: true,
-    danger: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerMiddleDisabled.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'middle',
 	disabled: true,
-    danger: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerSmall.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'small',
-    danger: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerSmallWithIcons.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'small',
-    danger: true,
 	children: [<span>Button</span>, <Brush />],
 	icon: <Brush />
 }
 
 ButtonDangerSmallIconOnly.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'small',
-    danger: true,
 	icon: <Plus />
 }
 
 ButtonDangerSmallLoading.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'small',
-    danger: true,
 	loading: true,
 	children: <span>Button</span>
 }
 
 ButtonDangerSmallDisabled.args = {
-	className: 'base-btn',
-	type: 'primary',
 	size: 'small',
-    danger: true,
 	disabled: true,
 	children: <span>Button</span>
 }

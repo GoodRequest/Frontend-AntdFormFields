@@ -41,13 +41,11 @@ export const InputLargeFilled = Template.bind({})
 InputLarge.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'large',
     required: true
 }
 
 InputLargeWithSuffixPrefix.args = {
     className: 'base-input',
-    size: 'large',
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label'
@@ -56,7 +54,6 @@ InputLargeWithSuffixPrefix.args = {
 InputLargeError.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'large',
     prefix: <Brush />,
     meta: {
 		error: 'Error message',
@@ -67,7 +64,6 @@ InputLargeError.args = {
 InputLargeSuccess.args = {
     className: 'base-input',
     label: 'Label',
-    size: 'large',
     prefix: <Brush />,
     meta: {
 		valid: true,
@@ -80,14 +76,12 @@ InputLargeDisabled.args = {
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label',
-    size: 'large',
     disabled: true
 }
 
 InputLargeFilled.args = {
     className: 'base-input',
     suffix: <Brush />,
-    size: 'large',
     input: {
 		...inputDefaultProps,
 		value: 'Filled text'

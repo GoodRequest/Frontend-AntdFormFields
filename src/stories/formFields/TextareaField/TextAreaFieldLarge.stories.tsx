@@ -20,7 +20,9 @@ export default {
 		input: inputDefaultProps,
 		placeholder: 'Placeholder',
 		meta: { touched: false },
-		size: 'large'
+		size: 'large',
+		className: 'base-textarea',
+		label: 'Label',
 	}
 }
 
@@ -37,14 +39,10 @@ export const TextareaLargeDisabled = Template.bind({})
 export const TextareaLargeFilled = Template.bind({})
 
 TextareaLarge.args = {
-    className: 'base-textarea',
-    label: 'Label',
     required: true
 }
 
 TextareaLargeError.args = {
-    className: 'base-textarea',
-    label: 'Label',
     meta: {
 		error: 'Error message',
 		touched: true
@@ -52,8 +50,6 @@ TextareaLargeError.args = {
 }
 
 TextareaLargeSuccess.args = {
-    className: 'base-textarea',
-    label: 'Label',
     meta: {
 		valid: true,
 		touched: true
@@ -61,14 +57,10 @@ TextareaLargeSuccess.args = {
 }
 
 TextareaLargeDisabled.args = {
-    className: 'base-textarea',
-    label: 'Label',
     disabled: true
 }
 
 TextareaLargeFilled.args = {
-    className: 'base-textarea',
-    label: 'Label',
     input: {
 		...inputDefaultProps,
 		value: 'Filled text'

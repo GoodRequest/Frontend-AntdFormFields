@@ -56,8 +56,11 @@
 
 .ant-form-item-has-success.base-textarea
     .ant-form-item-row
-        .ant-form-item-label > label
+        .ant-form-item-label
+            > label
                 @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
+        .ant-form-item-explain-error
+            @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
 
 .form-item-disabled.base-textarea
     .ant-form-item-row

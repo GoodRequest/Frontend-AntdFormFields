@@ -22,6 +22,7 @@ export default {
 		placeholder: 'Placeholder',
 		meta: { touched: false },
 		className: 'base-input',
+		label: 'Label',
 		size: 'large'
 	}
 }
@@ -40,18 +41,15 @@ export const InputLargeDisabled = Template.bind({})
 export const InputLargeFilled = Template.bind({})
 
 InputLarge.args = {
-    label: 'Label',
     required: true
 }
 
 InputLargeWithSuffixPrefix.args = {
     suffix: <Brush />,
-    prefix: <Brush />,
-    label: 'Label'
+    prefix: <Brush />
 }
 
 InputLargeError.args = {
-    label: 'Label',
     prefix: <Brush />,
     meta: {
 		error: 'Error message',
@@ -60,7 +58,6 @@ InputLargeError.args = {
 }
 
 InputLargeSuccess.args = {
-    label: 'Label',
     prefix: <Brush />,
     meta: {
 		valid: true,
@@ -71,7 +68,6 @@ InputLargeSuccess.args = {
 InputLargeDisabled.args = {
     suffix: <Brush />,
     prefix: <Brush />,
-    label: 'Label',
     disabled: true
 }
 

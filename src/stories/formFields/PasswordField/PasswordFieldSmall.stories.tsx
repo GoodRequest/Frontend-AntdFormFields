@@ -24,6 +24,7 @@ export default {
         className: 'base-input',
         icon: <EyeInvisibleOutlined />,
         hideIcon: <EyeOutlined />,
+        label: 'Label',
 		size: 'small'
 	}
 }
@@ -41,7 +42,6 @@ export const InputPasswordSmallSuccess = Template.bind({})
 export const InputPasswordSmallDisabled = Template.bind({})
 
 InputPasswordSmall.args = {
-    label: 'Label',
     required: true
 }
 

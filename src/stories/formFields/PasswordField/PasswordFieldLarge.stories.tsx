@@ -24,6 +24,7 @@ export default {
         className: 'base-input',
         icon: <EyeInvisibleOutlined />,
         hideIcon: <EyeOutlined />,
+        label: 'Label',
 		size: 'large'
 	}
 }
@@ -41,7 +42,6 @@ export const InputPasswordLargeSuccess = Template.bind({})
 export const InputPasswordLargeDisabled = Template.bind({})
 
 InputPasswordLarge.args = {
-    label: 'Label',
     required: true
 }
 

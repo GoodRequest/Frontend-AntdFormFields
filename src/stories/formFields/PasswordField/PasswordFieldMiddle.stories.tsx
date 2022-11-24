@@ -24,6 +24,7 @@ export default {
         className: 'base-input',
         icon: <EyeInvisibleOutlined />,
         hideIcon: <EyeOutlined />,
+        label: 'Label',
 		size: 'middle'
 	}
 }
@@ -41,7 +42,6 @@ export const InputPasswordMiddleSuccess = Template.bind({})
 export const InputPasswordMiddleDisabled = Template.bind({})
 
 InputPasswordMiddle.args = {
-    label: 'Label',
     required: true
 }
 

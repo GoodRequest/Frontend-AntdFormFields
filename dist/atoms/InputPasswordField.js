@@ -43,6 +43,8 @@ const InputPasswordField = (props) => {
         }
     }), [input]);
     const renderToggleIcon = (visible) => {
+        if (disabled)
+            return;
         if (visible) {
             return icon;
         }

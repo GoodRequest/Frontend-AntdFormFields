@@ -78,6 +78,7 @@ const InputPasswordField = (props: Props) => {
 	)
 
 	const renderToggleIcon = (visible: boolean) => {
+		if (disabled) return
 		if (visible) {
 			return icon
 		}

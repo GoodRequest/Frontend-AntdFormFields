@@ -14,6 +14,7 @@
 
         &:hover:not(.ant-input-disabled)
             @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+            @apply border-surface_quatenary_light dark:bg-surface_quatenary_dark
 
         &.ant-input-status-error:not(.ant-input-disabled)
             border: solid
@@ -48,11 +49,29 @@
             @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
             @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
 
+    .ant-input-disabled
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+
+    .ant-input-disabled:hover
+        border-color: transparent
+    
+    .ant-input-disabled::placeholder
+        @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+
+    .ant-input-sm
+        padding-top: 2px
+        padding-bottom: 2px
+        padding-left: 8px
+        padding-right: 4px
 
 .ant-form-item-has-error.base-textarea
     .ant-form-item-row
-        .ant-form-item-label > label
+        .ant-form-item-label 
+            > label
                 @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+        .ant-form-item-explain-error
+            @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+
 
 .ant-form-item-has-success.base-textarea
     .ant-form-item-row

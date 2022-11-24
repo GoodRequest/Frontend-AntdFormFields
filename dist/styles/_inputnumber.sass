@@ -77,7 +77,7 @@
             border-width: 1px #{!important}
             box-shadow: none !important
             @apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
-
+            @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
             &:hover
                 @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
                 .ant-input-number
@@ -155,6 +155,8 @@
         .ant-form-item-label
             > label
                 @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+        .ant-form-item-explain-error
+            @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
 
 .ant-form-item-has-success.base-input-number
     .ant-form-item-row

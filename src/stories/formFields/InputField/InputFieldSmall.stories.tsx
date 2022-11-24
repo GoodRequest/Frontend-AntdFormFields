@@ -21,6 +21,7 @@ export default {
 		input: inputDefaultProps,
 		placeholder: 'Placeholder',
 		meta: { touched: false },
+		className: 'base-input',
 		size: 'small'
 	}
 }
@@ -39,20 +40,17 @@ export const InputSmallDisabled = Template.bind({})
 export const InputSmallFilled = Template.bind({})
 
 InputSmall.args = {
-    className: 'base-input',
     label: 'Label',
     required: true
 }
 
 InputSmallWithSuffixPrefix.args = {
-    className: 'base-input',
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label'
 }
 
 InputSmallError.args = {
-    className: 'base-input',
     label: 'Label',
     prefix: <Brush />,
     meta: {
@@ -62,7 +60,6 @@ InputSmallError.args = {
 }
 
 InputSmallSuccess.args = {
-    className: 'base-input',
     label: 'Label',
     prefix: <Brush />,
     meta: {
@@ -72,7 +69,6 @@ InputSmallSuccess.args = {
 }
 
 InputSmallDisabled.args = {
-    className: 'base-input',
     suffix: <Brush />,
     prefix: <Brush />,
     label: 'Label',
@@ -80,7 +76,6 @@ InputSmallDisabled.args = {
 }
 
 InputSmallFilled.args = {
-    className: 'base-input',
     suffix: <Brush />,
     input: {
 		...inputDefaultProps,

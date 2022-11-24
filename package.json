@@ -24,7 +24,6 @@
     "@svgr/webpack": "^6.5.1",
     "autoprefixer": "10.4.8",
     "css-loader": "^6.7.2",
-    "enhanced-resolve": "5.10.0",
     "file-loader": "^6.2.0",
     "postcss": "8.4.18",
     "react-input-mask": "2.0.4",

@@ -56,7 +56,14 @@ const CheckboxGroupField = (props: Props) => {
 	}
 
 	return (
-		<Item label={label} required={required} help={touched && error} className={className} validateStatus={error && touched ? 'error' : undefined} style={style}>
+		<Item 
+			label={label} 
+			required={required} 
+			help={touched && error} 
+			className={cx(className, 'radio', { 'checkbox-has-error': error && touched }, { 'form-item-disabled' : disabled})} 
+			validateStatus={error && touched ? 'error' : undefined} 
+			style={style}
+		>
 			<Checkbox.Group
 				// @ts-ignore
 				id={formFieldID(form, input.name)}

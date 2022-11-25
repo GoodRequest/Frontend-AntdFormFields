@@ -1,9 +1,10 @@
-import { Radio, Form } from 'antd'
+import { Radio, Form, RadioChangeEvent } from 'antd'
 import { WrappedFieldProps } from 'redux-form'
 import { InputProps } from 'antd/lib/input'
 import { FormItemLabelProps } from 'antd/lib/form/FormItemLabel'
 import { map } from 'lodash'
 import cx from 'classnames'
+import { useState } from 'react'
 
 const { Item } = Form
 
@@ -24,8 +25,10 @@ const RadioGroupField = (props: Props) => {
 		className,
 		style,
 		direction = 'horizontal',
-		disabled
+		disabled,
 	} = props
+	
+	const [value, setValue] = useState<number | string | undefined>(undefined)
 
 	const radioOptions = map(options, (option) => {
 		if (typeof option === 'string') {
@@ -43,6 +46,10 @@ const RadioGroupField = (props: Props) => {
 		)
 	})
 
+	const onChange = (e: RadioChangeEvent) => {
+		setValue(e?.target?.value)
+	}
+
 	return (
 		<Item
 			required={required}
@@ -50,9 +57,9 @@ const RadioGroupField = (props: Props) => {
 			help={touched && error}
 			validateStatus={error && touched ? 'error' : undefined}
 			style={style}
-			className={cx(className, 'radio', { 'radio-has-error': error && touched })}
+			className={cx(className, 'radio', { 'radio-has-error': error && touched }, { 'form-item-disabled' : disabled})}
 		>
-			<Radio.Group value={input.value || []} onChange={input.onChange} className={cx({ flex: direction === 'horizontal', block: direction === 'vertical' })} disabled={disabled}>
+			<Radio.Group value={value} onChange={onChange} className={cx({ flex: direction === 'horizontal', block: direction === 'vertical' })} disabled={disabled}>
 				{radioOptions}
 			</Radio.Group>
 		</Item>

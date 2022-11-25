@@ -15,14 +15,15 @@ const inputDefaultProps = {
 const options = ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5']
 
 export default {
-    title: 'Fields/CheckboxGroupField',
+    title: 'Fields/RadioGroupField',
     component: RadioGroupField,
     decorators: [withDesign],
     args: {
         input: inputDefaultProps,
-        // placeholder: 'Placeholder',
         meta: { touched: false },
-        size: 'large'
+        label: 'Label',
+        className: 'base-radiobutton',
+        direction: 'horizontal'
     }
 }
 
@@ -33,25 +34,16 @@ const Template: ComponentStory<typeof RadioGroupField> = (args) => (
 )
 
 // stories
-export const WithLabel = Template.bind({})
-export const Required = Template.bind({})
-export const Error = Template.bind({})
-export const Disabled = Template.bind({})
+export const RadioGroup = Template.bind({})
+export const RadioGroupError = Template.bind({})
+export const RadioGroupDisabled = Template.bind({})
 
 // arguments
-WithLabel.args = {
-    label: 'Label',
-    options
+RadioGroup.args = {
+    options: options
 }
 
-Required.args = {
-    label: 'Label',
-    required: true,
-    options
-}
-
-Error.args = {
-    label: 'Label',
+RadioGroupError.args = {
     options,
     meta: {
         error: 'Error message',
@@ -59,8 +51,7 @@ Error.args = {
     } as any
 }
 
-Disabled.args = {
-    label: 'Label',
+RadioGroupDisabled.args = {
     disabled: true,
     options
 }

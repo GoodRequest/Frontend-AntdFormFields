@@ -20,9 +20,10 @@ export default {
     decorators: [withDesign],
     args: {
         input: inputDefaultProps,
-        // placeholder: 'Placeholder',
         meta: { touched: false },
-        size: 'large'
+        label: 'Label',
+        className: 'base-checkbox',
+        direction: 'horizontal'
     }
 }
 
@@ -33,25 +34,16 @@ const Template: ComponentStory<typeof CheckboxGroupField> = (args) => (
 )
 
 // stories
-export const WithLabel = Template.bind({})
-export const Required = Template.bind({})
-export const Error = Template.bind({})
-export const Disabled = Template.bind({})
+export const CheckboxGroup = Template.bind({})
+export const CheckboxGroupError = Template.bind({})
+export const CheckboxGroupDisabled = Template.bind({})
 
 // arguments
-WithLabel.args = {
-    label: 'Label',
-    options
+CheckboxGroup.args = {
+    options: options
 }
 
-Required.args = {
-    label: 'Label',
-    required: true,
-    options
-}
-
-Error.args = {
-    label: 'Label',
+CheckboxGroupError.args = {
     options,
     meta: {
         error: 'Error message',
@@ -59,8 +51,7 @@ Error.args = {
     } as any
 }
 
-Disabled.args = {
-    label: 'Label',
+CheckboxGroupDisabled.args = {
     disabled: true,
     options
 }

@@ -4,7 +4,7 @@ import { CheckboxGroupProps } from 'antd/lib/checkbox'
 import { FormItemProps } from 'antd/lib/form/FormItem'
 import cx from 'classnames'
 import { map } from 'lodash'
-import { CSSProperties } from 'react'
+import { CSSProperties, useState } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import { formFieldID } from '../utils/helper'
 
@@ -34,6 +34,8 @@ const CheckboxGroupField = (props: Props) => {
 		large
 	} = props
 
+	const [value, setValue] = useState<any []>([])
+
 	const checkboxes = map(options, (option: any) => {
 		if (typeof option === 'string') {
 			return (
@@ -48,14 +50,19 @@ const CheckboxGroupField = (props: Props) => {
 			</Checkbox>
 		)
 	})
+
+	const onChange = (e: any) => {
+		setValue(e)
+	}
+
 	return (
 		<Item label={label} required={required} help={touched && error} className={className} validateStatus={error && touched ? 'error' : undefined} style={style}>
 			<Checkbox.Group
 				// @ts-ignore
 				id={formFieldID(form, input.name)}
 				className={'flex flex-wrap'}
-				value={input.value || []}
-				onChange={input.onChange}
+				value={value}
+				onChange={onChange}
 				defaultValue={defaultValue}
 				style={{
 					...checkboxGroupStyles,

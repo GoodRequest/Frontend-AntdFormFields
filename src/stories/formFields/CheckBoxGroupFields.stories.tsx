@@ -9,7 +9,6 @@ const inputDefaultProps = {
     form: undefined,
     error: null,
     onBlur: () => {},
-    onChange: () => {}
 }
 
 const options = ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5']
@@ -23,7 +22,7 @@ export default {
         meta: { touched: false },
         label: 'Label',
         className: 'base-checkbox',
-        direction: 'horizontal'
+        horizontal: true
     }
 }
 

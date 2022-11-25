@@ -13,6 +13,8 @@ const helper_1 = require("../utils/helper");
 const { Item } = antd_1.Form;
 const CheckboxGroupField = (props) => {
     const { input, options, label, required, meta: { form, error, touched }, style, checkboxGroupStyles, defaultValue, horizontal, className, disabled, large } = props;
+    if (input.onChange)
+        console.log('loggin');
     const [value, setValue] = (0, react_1.useState)([]);
     const checkboxes = (0, lodash_1.map)(options, (option) => {
         if (typeof option === 'string') {
@@ -27,7 +29,10 @@ const CheckboxGroupField = (props) => {
         // @ts-ignore
         , Object.assign({ 
             // @ts-ignore
-            id: (0, helper_1.formFieldID)(form, input.name), className: 'flex flex-wrap', value: value, onChange: onChange, defaultValue: defaultValue, style: Object.assign(Object.assign({}, checkboxGroupStyles), { flexDirection: horizontal ? 'row' : 'column' }) }, { children: checkboxes })) })));
+            id: (0, helper_1.formFieldID)(form, input.name), className: 'flex flex-wrap', 
+            // value={value}
+            // onChange={onChange}
+            value: input.value || [], onChange: input.onChange, defaultValue: defaultValue, style: Object.assign(Object.assign({}, checkboxGroupStyles), { flexDirection: horizontal ? 'row' : 'column' }) }, { children: checkboxes })) })));
 };
 exports.default = CheckboxGroupField;
 //# sourceMappingURL=CheckboxGroupField.js.map

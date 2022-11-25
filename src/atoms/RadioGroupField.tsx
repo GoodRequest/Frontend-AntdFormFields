@@ -59,7 +59,7 @@ const RadioGroupField = (props: Props) => {
 			style={style}
 			className={cx(className, 'radio', { 'radio-has-error': error && touched }, { 'form-item-disabled' : disabled})}
 		>
-			<Radio.Group value={value} onChange={onChange} className={cx({ flex: direction === 'horizontal', block: direction === 'vertical' })} disabled={disabled}>
+			<Radio.Group value={input.onChange ? input.value || [] : value} onChange={input.onChange ? input.onChange : onChange} className={cx({ flex: direction === 'horizontal', block: direction === 'vertical' })} disabled={disabled}>
 				{radioOptions}
 			</Radio.Group>
 		</Item>

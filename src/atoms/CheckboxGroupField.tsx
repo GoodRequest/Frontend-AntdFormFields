@@ -68,8 +68,8 @@ const CheckboxGroupField = (props: Props) => {
 				// @ts-ignore
 				id={formFieldID(form, input.name)}
 				className={'flex flex-wrap'}
-				value={value}
-				onChange={onChange}
+				onChange={input.onChange ? input.onChange : onChange}
+				value={input.onChange ? input.value || [] : value}
 				defaultValue={defaultValue}
 				style={{
 					...checkboxGroupStyles,

@@ -16,7 +16,7 @@
 			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark #{!important}
 
 		::after
-			border-bottom: 0 !important
+			border-width: 0 !important
 
 	&.secondary
 		border-bottom: 0 !important
@@ -32,42 +32,51 @@
 			@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark  #{!important}
 
 		::after
-			border-bottom: 0 !important
+			border-width: 0 !important
 
 	&.underlined-filled
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
 		::after
-			left: 0
-			right: 0
+			display: none
 		.ant-menu-item
+			border-style: solid
+			border-width: 2px
+			border-top: 0
+			border-left: 0
+			border-right: 0
+			border-radius: 0
+			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-		.ant-menu-item:hover::after
-			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
+				@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 		.ant-menu-item-selected
+			z-index: 2
 			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark
-		.ant-menu-item-selected::after
-			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 	&.underlined
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
 		::after
-			left: 0
-			right: 0
+			display: none
 		.ant-menu-item
+			border-style: solid
+			border-width: 2px
+			border-top: 0
+			border-left: 0
+			border-right: 0
+			border-radius: 0
+			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-		.ant-menu-item:hover::after
-			border-color: transparent
+		.ant-menu-item:not(.ant-menu-item-selected):hover::after
+			transition: none !important
+			display: none
 
 		.ant-menu-item-selected
+			z-index: 2
 			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
-
-		.ant-menu-item-selected::after
 			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 	&.buttons
@@ -101,7 +110,7 @@
 			box-shadow: $boxShadow-sm
 
 		::after
-			border-bottom: 0 !important
+			border-width: 0 !important
 
 	&.full-width
 		display: flex

@@ -21,8 +21,7 @@ const CheckboxGroupField = (props) => {
         return ((0, jsx_runtime_1.jsx)(antd_1.Checkbox, Object.assign({ disabled: option.disabled, value: option.value, className: (0, classnames_1.default)('my-1', { large, 'inline-flex': horizontal }) }, { children: option.label }), `${option.value}`));
     });
     const onChange = (e) => {
-        var _a;
-        setValue((_a = e === null || e === void 0 ? void 0 : e.target) === null || _a === void 0 ? void 0 : _a.checked);
+        setValue(e);
     };
     return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, help: touched && error, className: (0, classnames_1.default)(className, 'radio', { 'checkbox-has-error': error && touched }, { 'form-item-disabled': disabled }), validateStatus: error && touched ? 'error' : undefined, style: style }, { children: (0, jsx_runtime_1.jsx)(antd_1.Checkbox.Group
         // @ts-ignore

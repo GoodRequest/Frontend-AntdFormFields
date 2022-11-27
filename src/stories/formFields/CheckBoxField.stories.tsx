@@ -12,8 +12,11 @@ export default {
     args: {
         meta: { touched: false },
         input: {
-            onChange: () => {}
-        }
+            form: undefined,
+            error: null,
+        },
+        label: 'Label',
+        className: 'base-checkbox'
     }
 }
 
@@ -24,30 +27,23 @@ const Template: ComponentStory<typeof CheckboxField> = (args) => (
 )
 
 // stories
-export const WithLabel = Template.bind({})
-export const Required = Template.bind({})
-export const Error = Template.bind({})
-export const Disabled = Template.bind({})
+export const Checkbox = Template.bind({})
+export const CheckboxError = Template.bind({})
+export const CheckboxDisabled = Template.bind({})
+
 
 // arguments
-WithLabel.args = {
-    label: 'Label'
-}
-
-Required.args = {
-    label: 'Label',
+Checkbox.args = {
     required: true
 }
 
-Error.args = {
-    label: 'Label',
+CheckboxError.args = {
     meta: {
         error: 'Error message',
         touched: true
     } as any
 }
 
-Disabled.args = {
-    label: 'Label',
+CheckboxDisabled.args = {
     disabled: true
 }

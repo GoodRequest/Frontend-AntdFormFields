@@ -13,8 +13,6 @@ const helper_1 = require("../utils/helper");
 const { Item } = antd_1.Form;
 const CheckboxGroupField = (props) => {
     const { input, options, label, required, meta: { form, error, touched }, style, checkboxGroupStyles, defaultValue, horizontal, className, disabled, large } = props;
-    if (input.onChange)
-        console.log('loggin');
     const [value, setValue] = (0, react_1.useState)([]);
     const checkboxes = (0, lodash_1.map)(options, (option) => {
         if (typeof option === 'string') {
@@ -23,16 +21,14 @@ const CheckboxGroupField = (props) => {
         return ((0, jsx_runtime_1.jsx)(antd_1.Checkbox, Object.assign({ disabled: option.disabled, value: option.value, className: (0, classnames_1.default)('my-1', { large, 'inline-flex': horizontal }) }, { children: option.label }), `${option.value}`));
     });
     const onChange = (e) => {
-        setValue(e);
+        var _a;
+        setValue((_a = e === null || e === void 0 ? void 0 : e.target) === null || _a === void 0 ? void 0 : _a.checked);
     };
     return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, help: touched && error, className: (0, classnames_1.default)(className, 'radio', { 'checkbox-has-error': error && touched }, { 'form-item-disabled': disabled }), validateStatus: error && touched ? 'error' : undefined, style: style }, { children: (0, jsx_runtime_1.jsx)(antd_1.Checkbox.Group
         // @ts-ignore
         , Object.assign({ 
             // @ts-ignore
-            id: (0, helper_1.formFieldID)(form, input.name), className: 'flex flex-wrap', 
-            // value={value}
-            // onChange={onChange}
-            value: input.value || [], onChange: input.onChange, defaultValue: defaultValue, style: Object.assign(Object.assign({}, checkboxGroupStyles), { flexDirection: horizontal ? 'row' : 'column' }) }, { children: checkboxes })) })));
+            id: (0, helper_1.formFieldID)(form, input.name), className: 'flex flex-wrap', onChange: input.onChange ? input.onChange : onChange, value: input.onChange ? input.value || [] : value, defaultValue: defaultValue, style: Object.assign(Object.assign({}, checkboxGroupStyles), { flexDirection: horizontal ? 'row' : 'column' }) }, { children: checkboxes })) })));
 };
 exports.default = CheckboxGroupField;
 //# sourceMappingURL=CheckboxGroupField.js.map

@@ -22,7 +22,7 @@ const RadioGroupField = (props) => {
         var _a;
         setValue((_a = e === null || e === void 0 ? void 0 : e.target) === null || _a === void 0 ? void 0 : _a.value);
     };
-    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ required: required, label: label, help: touched && error, validateStatus: error && touched ? 'error' : undefined, style: style, className: (0, classnames_1.default)(className, 'radio', { 'radio-has-error': error && touched }, { 'form-item-disabled': disabled }) }, { children: (0, jsx_runtime_1.jsx)(antd_1.Radio.Group, Object.assign({ value: value, onChange: onChange, className: (0, classnames_1.default)({ flex: direction === 'horizontal', block: direction === 'vertical' }), disabled: disabled }, { children: radioOptions })) })));
+    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ required: required, label: label, help: touched && error, validateStatus: error && touched ? 'error' : undefined, style: style, className: (0, classnames_1.default)(className, 'radio', { 'radio-has-error': error && touched }, { 'form-item-disabled': disabled }) }, { children: (0, jsx_runtime_1.jsx)(antd_1.Radio.Group, Object.assign({ value: input.onChange ? input.value || [] : value, onChange: input.onChange ? input.onChange : onChange, className: (0, classnames_1.default)({ flex: direction === 'horizontal', block: direction === 'vertical' }), disabled: disabled }, { children: radioOptions })) })));
 };
 exports.default = RadioGroupField;
 //# sourceMappingURL=RadioGroupField.js.map

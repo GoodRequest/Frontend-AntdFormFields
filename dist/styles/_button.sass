@@ -313,7 +313,7 @@
 		.loading-icon
 			display: block !important
 			align-items: center
-			justify-content: center
+			margin-top: 4px
 			margin-right: 0
 			margin-left: 0
 			> svg
@@ -383,3 +383,29 @@
 					@apply stroke-action_primary_default_light dark:stroke-action_primary_default_dark #{!important}
 					> g > rect
 						@apply fill-action_primary_default_light dark:fill-action_primary_default_dark #{!important}
+
+.spinnerSC
+	position: relative
+	width: 100%
+	height: 100%
+
+	.spinnerStickSC
+		position: absolute
+		width: 0.125em
+		height: 0.3125em
+		border-radius: 0.515em
+		background-color: red
+		animation: loading-animation 1s linear infinite
+
+		@keyframes loading-animation
+			from
+				opacity: 1
+			to
+				opacity: 0.1
+
+	.spinnerStickSC:nth-child(1)
+		transform: translate(-50%, 0) rotate(0deg)
+		top: 0
+		left: 50%
+		animation-delay: -0.875s
+	

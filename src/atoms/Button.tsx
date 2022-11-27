@@ -8,9 +8,34 @@ const Button = (props: Props) => {
 
 	const classNames = `${props?.className} ${props?.children ? '' : 'ant-btn-icon-only'}`
 	
+	// const LoadingIcon = () => {
+	// 	return (
+	// 		<SpinnerSC>
+	// 			<SpinnerStickSC />
+	// 			<SpinnerStickSC />
+	// 			<SpinnerStickSC />
+	// 			<SpinnerStickSC />
+	// 			<SpinnerStickSC />
+	// 			<SpinnerStickSC />
+	// 			<SpinnerStickSC />
+	// 			<SpinnerStickSC />
+	// 		</SpinnerSC>
+	// 	)
+	// }
+
 	return <AntdButton {...props} className={classNames}>
 		<span className={'loading-icon'} style={{ display: 'none' }}>
-			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<div className={'spinnerSC'}>
+				<div className={'spinnerStickSC'}/>
+				<div className={'spinnerStickSC'}/>
+				<div className={'spinnerStickSC'}/>
+				<div className={'spinnerStickSC'}/>
+				<div className={'spinnerStickSC'}/>
+				<div className={'spinnerStickSC'}/>
+				<div className={'spinnerStickSC'}/>
+				<div className={'spinnerStickSC'}/>
+			</div>
+			{/* <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g clip-path="url(#clip0_805_64190)">
 					<rect x="7.08325" y="0.666748" width="1.83333" height="3.66667" rx="0.916667" fill="none"/>
 					<rect opacity="0.16" x="12.5376" y="2.16626" width="1.83333" height="3.66667" rx="0.916667" transform="rotate(45 12.5376 2.16626)" fill="none"/>
@@ -26,7 +51,7 @@ const Button = (props: Props) => {
 						<rect width="16" height="16" fill="none"/>
 					</clipPath>
 				</defs>
-			</svg>
+			</svg> */}
 		</span>
 		{props.children}
 		</AntdButton>

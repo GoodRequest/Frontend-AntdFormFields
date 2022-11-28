@@ -24,16 +24,19 @@ export const ButtonDangerLarge = Template.bind({})
 export const ButtonDangerLargeWithIcons = Template.bind({})
 export const ButtonDangerLargeIconOnly = Template.bind({})
 export const ButtonDangerLargeLoading = Template.bind({})
+export const ButtonDangerLargeLoadingIconOnly = Template.bind({})
 export const ButtonDangerLargeDisabled = Template.bind({})
 export const ButtonDangerMiddle = Template.bind({})
 export const ButtonDangerMiddleWithIcons = Template.bind({})
 export const ButtonDangerMiddleIconOnly = Template.bind({})
 export const ButtonDangerMiddleLoading = Template.bind({})
+export const ButtonDangerMiddleLoadingIconOnly = Template.bind({})
 export const ButtonDangerMiddleDisabled = Template.bind({})
 export const ButtonDangerSmall = Template.bind({})
 export const ButtonDangerSmallWithIcons = Template.bind({})
 export const ButtonDangerSmallIconOnly = Template.bind({})
 export const ButtonDangerSmallLoading = Template.bind({})
+export const ButtonDangerSmallLoadingIconOnly = Template.bind({})
 export const ButtonDangerSmallDisabled = Template.bind({})
 
 // arguments
@@ -57,6 +60,12 @@ ButtonDangerLargeLoading.args = {
 	size: 'large',
 	loading: true,
 	children: <span>Button</span>
+}
+
+ButtonDangerLargeLoadingIconOnly.args = {
+	size: 'large',
+	loading: true,
+	icon: <Plus />
 }
 
 ButtonDangerLargeDisabled.args = {
@@ -87,6 +96,12 @@ ButtonDangerMiddleLoading.args = {
 	children: <span>Button</span>
 }
 
+ButtonDangerMiddleLoadingIconOnly.args = {
+	size: 'middle',
+	loading: true,
+	icon: <Plus />
+}
+
 ButtonDangerMiddleDisabled.args = {
 	size: 'middle',
 	disabled: true,
@@ -113,6 +128,12 @@ ButtonDangerSmallLoading.args = {
 	size: 'small',
 	loading: true,
 	children: <span>Button</span>
+}
+
+ButtonDangerSmallLoadingIconOnly.args = {
+	size: 'small',
+	loading: true,
+	icon: <Plus />
 }
 
 ButtonDangerSmallDisabled.args = {

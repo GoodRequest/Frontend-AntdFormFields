@@ -389,9 +389,11 @@
 			animation: loading-animation 1s linear infinite
 
 			@keyframes loading-animation
-				from
+				0%
+					opacity: 0.1
+				50%
 					opacity: 1
-				to
+				100%
 					opacity: 0.1
 
 		.spinnerStickSC:nth-child(1)

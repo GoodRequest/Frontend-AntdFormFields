@@ -83,7 +83,7 @@ const handleChange = (data) => __awaiter(void 0, void 0, void 0, function* () {
         itemRef.current.blur();
     }
 });
-const fetchSearchData = ({ selectState, value, page, onSearch, dataSourcePath, allowInfinityScroll, missingValues }) => __awaiter(void 0, void 0, void 0, function* () {
+const fetchSearchData = ({ selectState, value, page, onSearch, dataSourcePath, allowInfinityScroll, missingValues, }) => __awaiter(void 0, void 0, void 0, function* () {
     let newState = {};
     try {
         let collectedData = [];
@@ -97,14 +97,14 @@ const fetchSearchData = ({ selectState, value, page, onSearch, dataSourcePath, a
         }
         else if (!allowInfinityScroll && (0, lodash_1.isArray)(newData)) {
             // NOTE: Výsledky sa nedoliepajú
-            newState = { data: newData, fetching: false };
+            newState = { data: newData, fetching: false, isOpen: false };
         }
         else {
             newState = {
                 data: [],
                 pagination: null,
                 fetching: false,
-                searchValue: ''
+                searchValue: '',
             };
         }
         if (newData.emptyText) {
@@ -118,7 +118,7 @@ const fetchSearchData = ({ selectState, value, page, onSearch, dataSourcePath, a
             data: [],
             pagination: null,
             fetching: false,
-            searchValue: ''
+            searchValue: '',
         };
     }
     return newState;
@@ -134,6 +134,8 @@ const SelectField = (props) => {
         emptyText: null,
         pagination: null
     });
+    const [isOpen, setIsOpen] = (0, react_1.useState)(false);
+    const [areOptsLoaded, setAreOptsLoaded] = (0, react_1.useState)(false);
     const renderDropdown = (0, react_1.useCallback)((antdActions) => (menu) => {
         return customDropdown(antdActions, menu, selectState.fetching, indicator);
     }, [selectState.fetching]);
@@ -193,6 +195,7 @@ const SelectField = (props) => {
     }, [selectState, handleSearch]);
     const onDropdownVisibleChange = (0, react_1.useCallback)((isOpen) => {
         const { onSearch } = props;
+        setIsOpen(isOpen);
         if (isOpen && onSearch) {
             // NOTE: Po vyhladani, vybrani polozky a znovu otvoreni ostavali vo vysledkoch stare vyhladane vysledky, nie 1. strana zo vsetkych
             handleSearch('', 1);
@@ -256,7 +259,25 @@ const SelectField = (props) => {
     if (emptyText || selectState.emptyText) {
         notFound = (0, jsx_runtime_1.jsx)(antd_1.Empty, { className: 'm-4', image: antd_1.Empty.PRESENTED_IMAGE_SIMPLE, description: selectState.emptyText || emptyText });
     }
-    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, className: (0, classnames_1.default)(className, { 'form-item-disabled': disabled, readOnly }), help: ((meta === null || meta === void 0 ? void 0 : meta.touched) || showErrorWhenUntouched) && !hideHelp && (0, lodash_1.isString)(meta === null || meta === void 0 ? void 0 : meta.error) ? meta === null || meta === void 0 ? void 0 : meta.error : undefined, validateStatus: ((meta === null || meta === void 0 ? void 0 : meta.touched) || showErrorWhenUntouched) && (meta === null || meta === void 0 ? void 0 : meta.error) ? 'error' : undefined }, { children: (0, jsx_runtime_1.jsx)(antd_1.Select, Object.assign({ bordered: bordered, style: { backgroundColor }, className: (0, classnames_1.default)({ 'select-input': !disableTpStyles, rounded: backgroundColor, 'filter-select': fieldMode === enums_1.FIELD_MODE.FILTER }), tagRender: tagRender, mode: mode }, input, { id: (0, helper_1.formFieldID)(meta.form, input.name), onFocus: onFocus, onChange: onChange, size: size || 'middle', value: value, onBlur: onBlur, placeholder: placeholder || '', loading: loading || selectState.fetching, clearIcon: clearIcon, allowClear: allowClear, showSearch: showSearch, filterOption: filterOption && localFilterOption, onSearch: showSearch ? onSearchDebounced : undefined, suffixIcon: suffIcon, labelInValue: labelInValue, dropdownRender: props.dropdownRender || renderDropdown(actions), disabled: disabled, removeIcon: removeIcon, notFoundContent: notFound, onPopupScroll: allowInfinityScroll ? onScroll : undefined, onDropdownVisibleChange: onDropdownVisibleChange, ref: itemRef, defaultValue: defaultValue, optionLabelProp: optionLabelProp, open: open, onDeselect: onDeselectWrap, onSelect: onSelectWrap, showArrow: showArrow, menuItemSelectedIcon: renderMenuItemSelectedIcon(mode, menuItemSelectedIcon, disableMenuItemSelectedIcon), popupClassName: (0, classnames_1.default)(`select-dropdown ${dropdownClassName}`, { 'dropdown-match-select-width': dropdownMatchSelectWidth }), dropdownStyle: dropdownStyle, dropdownMatchSelectWidth: dropdownMatchSelectWidth, listHeight: listHeight, autoClearSearchValue: autoClearSearchValue, maxTagTextLength: maxTagTextLength, showAction: showAction, getPopupContainer: setGetPopupContainer(mode, getPopupContainer), autoFocus: autoFocus }, { autoComplete: 'new-password' }, { children: getOptions(optionRender, opt) })) })));
+    let labelAvailable = true;
+    if (!areOptsLoaded) {
+        if (Array.isArray(value)) {
+            value === null || value === void 0 ? void 0 : value.forEach(val => {
+                if (!(0, lodash_1.find)(opt, (item) => (item === null || item === void 0 ? void 0 : item.value) === val))
+                    labelAvailable = false;
+            });
+        }
+        else if (value) {
+            if (!(0, lodash_1.find)(opt, (item) => (item === null || item === void 0 ? void 0 : item.value) === value))
+                labelAvailable = false;
+        }
+    }
+    if (labelAvailable && !areOptsLoaded)
+        setAreOptsLoaded(true);
+    return ((0, jsx_runtime_1.jsx)(Item, Object.assign({ label: label, required: required, style: style, className: (0, classnames_1.default)(className, { 'form-item-disabled': disabled, readOnly }), help: ((meta === null || meta === void 0 ? void 0 : meta.touched) || showErrorWhenUntouched) && !hideHelp && (0, lodash_1.isString)(meta === null || meta === void 0 ? void 0 : meta.error) ? meta === null || meta === void 0 ? void 0 : meta.error : undefined, validateStatus: ((meta === null || meta === void 0 ? void 0 : meta.touched) || showErrorWhenUntouched) && (meta === null || meta === void 0 ? void 0 : meta.error) ? 'error' : undefined }, { children: (0, jsx_runtime_1.jsx)(antd_1.Select, Object.assign({ bordered: bordered, style: { backgroundColor }, className: (0, classnames_1.default)({ 'select-input': !disableTpStyles, rounded: backgroundColor, 'filter-select': fieldMode === enums_1.FIELD_MODE.FILTER }), tagRender: tagRender, mode: mode }, input, { id: (0, helper_1.formFieldID)(meta.form, input.name), onFocus: onFocus, onChange: onChange, size: size || 'middle', value: areOptsLoaded ? value : undefined, 
+            // value={value}
+            // value={( labelAvailable) ? value : undefined}
+            onBlur: onBlur, placeholder: placeholder || '', loading: loading || selectState.fetching, clearIcon: clearIcon, allowClear: allowClear, showSearch: showSearch, filterOption: filterOption && localFilterOption, onSearch: showSearch ? onSearchDebounced : undefined, suffixIcon: suffIcon, labelInValue: labelInValue, dropdownRender: props.dropdownRender || renderDropdown(actions), disabled: disabled, removeIcon: removeIcon, notFoundContent: notFound, onPopupScroll: allowInfinityScroll ? onScroll : undefined, onDropdownVisibleChange: onDropdownVisibleChange, ref: itemRef, defaultValue: defaultValue, optionLabelProp: optionLabelProp, open: open, onDeselect: onDeselectWrap, onSelect: onSelectWrap, showArrow: showArrow, menuItemSelectedIcon: renderMenuItemSelectedIcon(mode, menuItemSelectedIcon, disableMenuItemSelectedIcon), popupClassName: (0, classnames_1.default)(`select-dropdown ${dropdownClassName}`, { 'dropdown-match-select-width': dropdownMatchSelectWidth }), dropdownStyle: dropdownStyle, dropdownMatchSelectWidth: dropdownMatchSelectWidth, listHeight: listHeight, autoClearSearchValue: autoClearSearchValue, maxTagTextLength: maxTagTextLength, showAction: showAction, getPopupContainer: setGetPopupContainer(mode, getPopupContainer), autoFocus: autoFocus }, { autoComplete: 'new-password' }, { children: getOptions(optionRender, opt) })) })));
 };
 exports.default = SelectField;
 //# sourceMappingURL=SelectField.js.map

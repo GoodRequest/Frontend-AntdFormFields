@@ -202,6 +202,8 @@ module.exports = {
 		72: '18rem',
 		80: '20rem',
 		96: '24rem',
+    none: 'var(--spacing-none)',
+    xxxs: 'var(--spacing-xxxs)',
 		xxs: 'var(--spacing-xxs)',
 		xs: 'var(--spacing-xs)',
 		sm: 'var(--spacing-sm)',
@@ -301,7 +303,7 @@ module.exports = {
       xxl: 'var(--border-radius-xxl)',
       xxxl: 'var(--border-radius-xxxl)',
       lg: 'var(--border-radius-lg)',
-	  full: '9999px',
+	    circle: 'var(--border-radius-circle)',
     },
     borderWidth: {
       xs: 'var(--border-width-xs)',

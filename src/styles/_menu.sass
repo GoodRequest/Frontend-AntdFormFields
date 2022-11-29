@@ -7,7 +7,7 @@
 		border-bottom: 0 !important
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
 		.ant-menu-item
-			border-radius: 6px
+			border-radius: $borderRadius-xs
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 
@@ -22,7 +22,7 @@
 		border-bottom: 0 !important
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
 		.ant-menu-item
-			border-radius: 6px
+			border-radius: $borderRadius-xs
 			&:hover
 				@apply text-content_primary_light dark:text-content_primary_dark
 				@apply bg-surface_secondary_light dark:bg-surface_secondary_dark
@@ -40,11 +40,11 @@
 			display: none
 		.ant-menu-item
 			border-style: solid
-			border-width: 2px
+			border-width: $borderWidth-md
 			border-top: 0
 			border-left: 0
 			border-right: 0
-			border-radius: 0
+			border-radius: $borderRadius-none
 			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
@@ -62,11 +62,11 @@
 			display: none
 		.ant-menu-item
 			border-style: solid
-			border-width: 2px
+			border-width: $borderWidth-md
 			border-top: 0
 			border-left: 0
 			border-right: 0
-			border-radius: 0
+			border-radius: $borderRadius-none
 			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
@@ -89,7 +89,7 @@
 		align-items: center
 		padding-left: 6px
 		padding-right: 6px
-		border-radius: 6px
+		border-radius: $borderRadius-xs
 
 		&.small
 			height: 44px !important
@@ -97,7 +97,7 @@
 			height: 56px !important
 
 		.ant-menu-item
-			border-radius: 6px
+			border-radius: $borderRadius-xs
 			margin-bottom: 1px
 			&:hover
 				@apply text-content_primary_light dark:text-content_primary_dark #{!important}

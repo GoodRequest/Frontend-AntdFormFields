@@ -1,6 +1,14 @@
 @import 'tailwind-variables'
 @import 'typography'
 
-.ant-select.base-select
-    &:not(.ant-select-disabled):hover .ant-select-selector
-		@apply border-action_primary_default_light dark:border-action_primary_default_dark
+.ant-form-item:not(.ant-form-item-has-error)
+    .base-select
+        .ant-select
+            .ant-select-selector
+                @apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
+            &.ant-select-focused .ant-select-selector
+                @apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
+                @apply shadow-focusring_primary_light dark:shadow-focusring_primary_dark
+            &:not(.ant-select-disabled):hover .ant-select-selector
+                @apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
+            // &.ant-select-disabled

@@ -1,447 +1,155 @@
 /*@tailwind base; !* Zakladne CSS pre pracu roznych prehliadacoch - moze prepisat nieco z antu *!*/
 
+.container {
+  width: 100%
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px
+  }
+}
+
 /* dekorator pre custom css komponenty - apply css1 css2 css3.... */
 
-#tailwind .static {
-  position: static
+#tailwind .pointer-events-none {
+  pointer-events: none
+}
+
+#tailwind .visible {
+  visibility: visible
+}
+
+#tailwind .absolute {
+  position: absolute
+}
+
+#tailwind .m-auto {
+  margin: auto
 }
 
 #tailwind .m-4 {
   margin: 1rem
 }
 
-#tailwind .mt-4 {
-  margin-top: 1rem
-}
-
-#tailwind .mr-4 {
-  margin-right: 1rem
-}
-
-#tailwind .ml-9 {
-  margin-left: 2.25rem
-}
-
-#tailwind .mr-9 {
-  margin-right: 2.25rem
-}
-
-#tailwind .mb-4 {
-  margin-bottom: 1rem
-}
-
-#tailwind .ml-2 {
-  margin-left: 0.5rem
+#tailwind .my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem
 }
 
 #tailwind .mb-2 {
   margin-bottom: 0.5rem
 }
 
-#tailwind .mr-2 {
-  margin-right: 0.5rem
+#tailwind .ml-2 {
+  margin-left: 0.5rem
 }
 
-#tailwind .mt-20 {
-  margin-top: 5rem
-}
-
-#tailwind .ml-4 {
-  margin-left: 1rem
+#tailwind .block {
+  display: block
 }
 
 #tailwind .flex {
   display: flex
 }
 
+#tailwind .inline-flex {
+  display: inline-flex
+}
+
+#tailwind .contents {
+  display: contents
+}
+
+#tailwind .h-12 {
+  height: 3rem
+}
+
 #tailwind .w-full {
   width: 100%
 }
 
-#tailwind .flex-row-reverse {
-  flex-direction: row-reverse
+#tailwind .w-1\/2 {
+  width: 50%
 }
 
-#tailwind .flex-col {
-  flex-direction: column
+#tailwind .w-11\/12 {
+  width: 91.666667%
+}
+
+#tailwind .w-2\/12 {
+  width: 16.666667%
+}
+
+#tailwind .cursor-pointer {
+  cursor: pointer
+}
+
+#tailwind .flex-wrap {
+  flex-wrap: wrap
 }
 
 #tailwind .items-center {
   align-items: center
 }
 
+#tailwind .justify-end {
+  justify-content: flex-end
+}
+
 #tailwind .justify-center {
   justify-content: center
 }
 
-#tailwind .bg-surface_primary_light {
-  background-color: var(--light-theme-surface-primary)
+#tailwind .justify-between {
+  justify-content: space-between
 }
 
-#tailwind .bg-surface_secondary_light {
-  background-color: var(--light-theme-surface-secondary)
+#tailwind .pr-2 {
+  padding-right: 0.5rem
 }
 
-#tailwind .bg-surface_tertiary_light {
-  background-color: var(--light-theme-surface-tertiary)
+#tailwind .text-right {
+  text-align: right
 }
 
-#tailwind .bg-surface_quatenary_light {
-  background-color: var(--light-theme-surface-quaternary)
-}
-
-#tailwind .bg-content_primary_light {
-  background-color: var(--light-theme-content-primary)
-}
-
-#tailwind .bg-content_secondary_light {
-  background-color: var(--light-theme-content-secondary)
-}
-
-#tailwind .bg-content_tertiary_light {
-  background-color: var(--light-theme-content-tertiary)
-}
-
-#tailwind .bg-content_quartenary_light {
-  background-color: var(--light-theme-content-quaternary)
-}
-
-#tailwind .bg-content_quintary_light {
-  background-color: var(--light-theme-content-quintarny)
-}
-
-#tailwind .bg-action_primary_default_light {
-  background-color: var(--light-theme-action-primary-default)
-}
-
-#tailwind .bg-action_primary_hover_light {
-  background-color: var(--light-theme-action-primary-hover)
-}
-
-#tailwind .bg-action_primary_active_light {
-  background-color: var(--light-theme-action-primary-active)
-}
-
-#tailwind .bg-action_primary_disable_light {
-  background-color: var(--light-theme-action-primary-disable)
-}
-
-#tailwind .bg-action_primary_bg_light {
-  background-color: var(--light-theme-action-primary-bg)
-}
-
-#tailwind .bg-action_secondary_default_light {
-  background-color: var(--light-theme-action-secondary-default)
-}
-
-#tailwind .bg-action_secondary_hover_light {
-  background-color: var(--light-theme-action-secondary-hover)
-}
-
-#tailwind .bg-action_secondary_active_light {
-  background-color: var(--light-theme-action-secondary-active)
-}
-
-#tailwind .bg-action_secondary_disable_light {
-  background-color: var(--light-theme-action-secondary-disable)
-}
-
-#tailwind .bg-action_secondary_bg_light {
-  background-color: var(--light-theme-action-secondary-bg)
-}
-
-#tailwind .bg-destructive_default_light {
-  background-color: var(--light-theme-action-destructive-default)
-}
-
-#tailwind .bg-destructive_hover_light {
-  background-color: var(--light-theme-action-destructive-hover)
-}
-
-#tailwind .bg-destructive_active_light {
-  background-color: var(--light-theme-action-destructive-active)
-}
-
-#tailwind .bg-destructive_disable_light {
-  background-color: var(--light-theme-action-destructive-disable)
-}
-
-#tailwind .bg-destructive_bg_light {
-  background-color: var(--light-theme-action-destructive-bg)
-}
-
-#tailwind .bg-state_success_fg_light {
-  background-color: var(--light-theme-state-success-fg)
-}
-
-#tailwind .bg-state_warning_fg_light {
-  background-color: var(--light-theme-state-warning-fg)
-}
-
-#tailwind .bg-state_error_fg_light {
-  background-color: var(--light-theme-state-error-fg)
-}
-
-#tailwind .bg-state_info_fg_light {
-  background-color: var(--light-theme-state-info-fg)
-}
-
-#tailwind .bg-state_help_fg_light {
-  background-color: var(--light-theme-state-help-fg)
-}
-
-#tailwind .bg-state_success_bg_light {
-  background-color: var(--light-theme-state-success-bg)
-}
-
-#tailwind .bg-state_warning_bg_light {
-  background-color: var(--light-theme-state-warning-bg)
-}
-
-#tailwind .bg-state_error_bg_light {
-  background-color: var(--light-theme-state-error-bg)
-}
-
-#tailwind .bg-state_info_bg_light {
-  background-color: var(--light-theme-state-info-bg)
-}
-
-#tailwind .bg-state_help_bg_light {
-  background-color: var(--light-theme-state-help-bg)
-}
-
-#tailwind .bg-ascent_1_fg_light {
-  background-color: var(--light-theme-ascent-primary-fg)
-}
-
-#tailwind .bg-ascent_2_fg_light {
-  background-color: var(--light-theme-ascent-secondary-fg)
-}
-
-#tailwind .bg-ascent_3_fg_light {
-  background-color: var(--light-theme-ascent-tertiary-fg)
-}
-
-#tailwind .bg-ascent_4_fg_light {
-  background-color: var(--light-theme-ascent-quanternary-fg)
-}
-
-#tailwind .bg-ascent_5_fg_light {
-  background-color: var(--light-theme-ascent-quintary-fg)
-}
-
-#tailwind .bg-ascent_1_bg_light {
-  background-color: var(--light-theme-ascent-primary-bg)
-}
-
-#tailwind .bg-ascent_2_bg_light {
-  background-color: var(--light-theme-ascent-secondary-bg)
-}
-
-#tailwind .bg-ascent_3_bg_light {
-  background-color: var(--light-theme-ascent-tertiary-bg)
-}
-
-#tailwind .bg-ascent_4_bg_light {
-  background-color: var(--light-theme-ascent-quanternary-bg)
-}
-
-#tailwind .bg-ascent_5_bg_light {
-  background-color: var(--light-theme-ascent-quintary-bg)
-}
-
-#tailwind .pb-6 {
-  padding-bottom: 1.5rem
-}
-
-#tailwind .pb-16 {
-  padding-bottom: 4rem
-}
-
-#tailwind .underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline
+#tailwind .blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
 #tailwind .filter {
-  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
 /* utilky pre CSS classy - marginy, apdding, colors, spacing... */
 
-#tailwind .dark .dark\:bg-surface_primary_dark {
-  background-color: var(--dark-theme-surface-primary)
-}
-
-#tailwind .dark .dark\:bg-surface_secondary_dark {
-  background-color: var(--dark-theme-surface-secondary)
-}
-
-#tailwind .dark .dark\:bg-surface_tertiary_dark {
-  background-color: var(--dark-theme-surface-tertiary)
-}
-
-#tailwind .dark .dark\:bg-surface_quatenary_dark {
-  background-color: var(--dark-theme-surface-quaternary)
-}
-
-#tailwind .dark .dark\:bg-content_primary_dark {
-  background-color: var(--dark-theme-content-primary)
-}
-
-#tailwind .dark .dark\:bg-content_secondary_dark {
-  background-color: var(--dark-theme-content-secondary)
-}
-
-#tailwind .dark .dark\:bg-content_tertiary_dark {
-  background-color: var(--dark-theme-content-tertiary)
-}
-
-#tailwind .dark .dark\:bg-content_quartenary_dark {
-  background-color: var(--dark-theme-content-quanternary)
-}
-
-#tailwind .dark .dark\:bg-content_quintary_dark {
-  background-color: var(--dark-theme-content-quintarny)
-}
-
-#tailwind .dark .dark\:bg-action_primary_default_dark {
-  background-color: var(--dark-theme-action-primary-default)
-}
-
-#tailwind .dark .dark\:bg-action_primary_hover_dark {
-  background-color: var(--dark-theme-action-primary-hover)
-}
-
-#tailwind .dark .dark\:bg-action_primary_active_dark {
-  background-color: var(--dark-theme-action-primary-active)
-}
-
-#tailwind .dark .dark\:bg-action_primary_disable_dark {
-  background-color: var(--dark-theme-action-primary-disable)
-}
-
-#tailwind .dark .dark\:bg-action_primary_bg_dark {
-  background-color: var(--dark-theme-action-primary-bg)
-}
-
-#tailwind .dark .dark\:bg-action_secondary_default_dark {
-  background-color: var(--dark-theme-action-secondary-default)
-}
-
-#tailwind .dark .dark\:bg-action_secondary_hover_dark {
-  background-color: var(--dark-theme-action-secondary-hover)
-}
-
-#tailwind .dark .dark\:bg-action_secondary_active_dark {
-  background-color: var(--dark-theme-action-secondary-active)
-}
-
-#tailwind .dark .dark\:bg-action_secondary_disable_dark {
-  background-color: var(--dark-theme-action-secondary-disable)
-}
-
-#tailwind .dark .dark\:bg-action_secondary_bg_dark {
-  background-color: var(--dark-theme-action-secondary-bg)
-}
-
-#tailwind .dark .dark\:bg-destructive_default_dark {
-  background-color: var(--dark-theme-action-destructive-default)
-}
-
-#tailwind .dark .dark\:bg-destructive_hover_dark {
-  background-color: var(--dark-theme-action-destructive-hover)
-}
-
-#tailwind .dark .dark\:bg-destructive_active_dark {
-  background-color: var(--dark-theme-action-destructive-active)
-}
-
-#tailwind .dark .dark\:bg-destructive_disable_dark {
-  background-color: var(--dark-theme-action-destructive-disable)
-}
-
-#tailwind .dark .dark\:bg-destructive_bg_dark {
-  background-color: var(--dark-theme-action-destructive-bg)
-}
-
-#tailwind .dark .dark\:bg-state_success_fg_dark {
-  background-color: var(--dark-theme-state-success-fg)
-}
-
-#tailwind .dark .dark\:bg-state_warning_fg_dark {
-  background-color: var(--dark-theme-state-warning-fg)
-}
-
-#tailwind .dark .dark\:bg-state_error_fg_dark {
-  background-color: var(--dark-theme-state-error-fg)
-}
-
-#tailwind .dark .dark\:bg-state_info_fg_dark {
-  background-color: var(--dark-theme-state-info-fg)
-}
-
-#tailwind .dark .dark\:bg-state_help_fg_dark {
-  background-color: var(--dark-theme-state-help-fg)
-}
-
-#tailwind .dark .dark\:bg-state_success_bg_dark {
-  background-color: var(--dark-theme-state-success-bg)
-}
-
-#tailwind .dark .dark\:bg-state_warning_bg_dark {
-  background-color: var(--dark-theme-state-warning-bg)
-}
-
-#tailwind .dark .dark\:bg-state_error_bg_dark {
-  background-color: var(--dark-theme-state-error-bg)
-}
-
-#tailwind .dark .dark\:bg-state_info_bg_dark {
-  background-color: var(--dark-theme-state-info-bg)
-}
-
-#tailwind .dark .dark\:bg-state_help_bg_dark {
-  background-color: var(--dark-theme-state-help-bg)
-}
-
-#tailwind .dark .dark\:bg-ascent_1_fg_dark {
-  background-color: var(--dark-theme-ascent-primary-fg)
-}
-
-#tailwind .dark .dark\:bg-ascent_2_fg_dark {
-  background-color: var(--dark-theme-ascent-secondary-fg)
-}
-
-#tailwind .dark .dark\:bg-ascent_3_fg_dark {
-  background-color: var(--dark-theme-ascent-tertiary-fg)
-}
-
-#tailwind .dark .dark\:bg-ascent_4_fg_dark {
-  background-color: var(--dark-theme-ascent-quanternary-fg)
-}
-
-#tailwind .dark .dark\:bg-ascent_5_fg_dark {
-  background-color: var(--dark-theme-ascent-quintary-fg)
-}
-
-#tailwind .dark .dark\:bg-ascent_1_bg_dark {
-  background-color: var(--dark-theme-ascent-primary-bg)
-}
-
-#tailwind .dark .dark\:bg-ascent_2_bg_dark {
-  background-color: var(--dark-theme-ascent-secondary-bg)
-}
-
-#tailwind .dark .dark\:bg-ascent_3_bg_dark {
-  background-color: var(--dark-theme-ascent-tertiary-bg)
-}
-
-#tailwind .dark .dark\:bg-ascent_4_bg_dark {
-  background-color: var(--dark-theme-ascent-quanternary-bg)
-}
-
-#tailwind .dark .dark\:bg-ascent_5_bg_dark {
-  background-color: var(--dark-theme-ascent-quintary-bg)
+@media (min-width: 640px) {
+  #tailwind .sm\:w-4\/12 {
+    width: 33.333333%
+  }
 }

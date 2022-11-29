@@ -1,6 +1,4 @@
 /* Converted Tailwind Config to sass */
-@use "sass:math"
-
 $columns-1: 1
 $columns-2: 2
 $columns-3: 3
@@ -415,7 +413,7 @@ $borderRadius-xl: var(--border-radius-xl)
 $borderRadius-xxl: var(--border-radius-xxl)
 $borderRadius-xxxl: var(--border-radius-xxxl)
 $borderRadius-lg: var(--border-radius-lg)
-$borderRadius-full: 9999px
+$borderRadius-circle: var(--border-radius-circle)
 
 $borderWidth-xs: var(--border-width-xs)
 $borderWidth-sm: var(--border-width-sm)
@@ -1120,6 +1118,8 @@ $flexBasis-0-5: 0.125rem
 $flexBasis-1-5: 0.375rem
 $flexBasis-2-5: 0.625rem
 $flexBasis-3-5: 0.875rem
+$flexBasis-none: var(--spacing-none)
+$flexBasis-xxxs: var(--spacing-xxxs)
 $flexBasis-xxs: var(--spacing-xxs)
 $flexBasis-xs: var(--spacing-xs)
 $flexBasis-sm: var(--spacing-sm)
@@ -1223,6 +1223,8 @@ $gap-0-5: 0.125rem
 $gap-1-5: 0.375rem
 $gap-2-5: 0.625rem
 $gap-3-5: 0.875rem
+$gap-none: var(--spacing-none)
+$gap-xxxs: var(--spacing-xxxs)
 $gap-xxs: var(--spacing-xxs)
 $gap-xs: var(--spacing-xs)
 $gap-sm: var(--spacing-sm)
@@ -1482,6 +1484,8 @@ $height-0-5: 0.125rem
 $height-1-5: 0.375rem
 $height-2-5: 0.625rem
 $height-3-5: 0.875rem
+$height-none: var(--spacing-none)
+$height-xxxs: var(--spacing-xxxs)
 $height-xxs: var(--spacing-xxs)
 $height-xs: var(--spacing-xs)
 $height-sm: var(--spacing-sm)
@@ -1547,6 +1551,8 @@ $inset-0-5: 0.125rem
 $inset-1-5: 0.375rem
 $inset-2-5: 0.625rem
 $inset-3-5: 0.875rem
+$inset-none: var(--spacing-none)
+$inset-xxxs: var(--spacing-xxxs)
 $inset-xxs: var(--spacing-xxs)
 $inset-xs: var(--spacing-xs)
 $inset-sm: var(--spacing-sm)
@@ -1627,6 +1633,8 @@ $margin-0-5: 0.125rem
 $margin-1-5: 0.375rem
 $margin-2-5: 0.625rem
 $margin-3-5: 0.875rem
+$margin-none: var(--spacing-none)
+$margin-xxxs: var(--spacing-xxxs)
 $margin-xxs: var(--spacing-xxs)
 $margin-xs: var(--spacing-xs)
 $margin-sm: var(--spacing-sm)
@@ -1671,6 +1679,8 @@ $maxHeight-0-5: 0.125rem
 $maxHeight-1-5: 0.375rem
 $maxHeight-2-5: 0.625rem
 $maxHeight-3-5: 0.875rem
+$maxHeight-none: var(--spacing-none)
+$maxHeight-xxxs: var(--spacing-xxxs)
 $maxHeight-xxs: var(--spacing-xxs)
 $maxHeight-xs: var(--spacing-xs)
 $maxHeight-sm: var(--spacing-sm)
@@ -1799,6 +1809,8 @@ $padding-0-5: 0.125rem
 $padding-1-5: 0.375rem
 $padding-2-5: 0.625rem
 $padding-3-5: 0.875rem
+$padding-none: var(--spacing-none)
+$padding-xxxs: var(--spacing-xxxs)
 $padding-xxs: var(--spacing-xxs)
 $padding-xs: var(--spacing-xs)
 $padding-sm: var(--spacing-sm)
@@ -2369,6 +2381,8 @@ $scrollMargin-0-5: 0.125rem
 $scrollMargin-1-5: 0.375rem
 $scrollMargin-2-5: 0.625rem
 $scrollMargin-3-5: 0.875rem
+$scrollMargin-none: var(--spacing-none)
+$scrollMargin-xxxs: var(--spacing-xxxs)
 $scrollMargin-xxs: var(--spacing-xxs)
 $scrollMargin-xs: var(--spacing-xs)
 $scrollMargin-sm: var(--spacing-sm)
@@ -2413,6 +2427,8 @@ $scrollPadding-0-5: 0.125rem
 $scrollPadding-1-5: 0.375rem
 $scrollPadding-2-5: 0.625rem
 $scrollPadding-3-5: 0.875rem
+$scrollPadding-none: var(--spacing-none)
+$scrollPadding-xxxs: var(--spacing-xxxs)
 $scrollPadding-xxs: var(--spacing-xxs)
 $scrollPadding-xs: var(--spacing-xs)
 $scrollPadding-sm: var(--spacing-sm)
@@ -2467,6 +2483,8 @@ $space-0-5: 0.125rem
 $space-1-5: 0.375rem
 $space-2-5: 0.625rem
 $space-3-5: 0.875rem
+$space-none: var(--spacing-none)
+$space-xxxs: var(--spacing-xxxs)
 $space-xxs: var(--spacing-xxs)
 $space-xs: var(--spacing-xs)
 $space-sm: var(--spacing-sm)
@@ -2860,6 +2878,8 @@ $textIndent-0-5: 0.125rem
 $textIndent-1-5: 0.375rem
 $textIndent-2-5: 0.625rem
 $textIndent-3-5: 0.875rem
+$textIndent-none: var(--spacing-none)
+$textIndent-xxxs: var(--spacing-xxxs)
 $textIndent-xxs: var(--spacing-xxs)
 $textIndent-xs: var(--spacing-xs)
 $textIndent-sm: var(--spacing-sm)
@@ -2963,6 +2983,8 @@ $translate-0-5: 0.125rem
 $translate-1-5: 0.375rem
 $translate-2-5: 0.625rem
 $translate-3-5: 0.875rem
+$translate-none: var(--spacing-none)
+$translate-xxxs: var(--spacing-xxxs)
 $translate-xxs: var(--spacing-xxs)
 $translate-xs: var(--spacing-xs)
 $translate-sm: var(--spacing-sm)
@@ -3015,6 +3037,8 @@ $width-0-5: 0.125rem
 $width-1-5: 0.375rem
 $width-2-5: 0.625rem
 $width-3-5: 0.875rem
+$width-none: var(--spacing-none)
+$width-xxxs: var(--spacing-xxxs)
 $width-xxs: var(--spacing-xxs)
 $width-xs: var(--spacing-xs)
 $width-sm: var(--spacing-sm)

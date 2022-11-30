@@ -8,6 +8,7 @@ import { Button, Divider, Empty, Form, Select, Spin } from 'antd'
 import { SelectProps } from 'antd/lib/select'
 import { FormItemProps } from 'antd/lib/form/FormItem'
 import { createSlug, formFieldID } from '../utils/helper'
+import CheckMark from '../assets/icons/CheckMark'
 
 import { FIELD_MODE } from '../utils/enums'
 
@@ -95,7 +96,7 @@ const renderMenuItemSelectedIcon = (
 	} else if (disableMenuItemSelectedIcon) {
 		icon = null
 	} else if ((mode === 'tags' || mode === 'multiple') && !disableMenuItemSelectedIcon) {
-		icon = menuItemSelectedIcon
+		icon = <CheckMark /> || menuItemSelectedIcon
 	}
 	return icon
 }
@@ -469,7 +470,7 @@ const SelectField = (props: Props) => {
 			<Select
 				bordered={bordered}
 				style={{ backgroundColor }}
-				className={cx({ 'select-input': !disableTpStyles, rounded: backgroundColor, 'filter-select': fieldMode === FIELD_MODE.FILTER })}
+				className={cx(className, {'filter-select': fieldMode === FIELD_MODE.FILTER })}
 				tagRender={tagRender}
 				mode={mode}
 				{...input}

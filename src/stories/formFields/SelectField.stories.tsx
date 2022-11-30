@@ -45,7 +45,7 @@ export const SimpleSelect: ComponentStory<typeof SelectField> = () => {
 
 	return (
 		<Form layout='vertical'>
-			<Field component={SelectField} className={'base-select'} allowClear placeholder={'Kategória'} name='categoryID' options={CATEGORIES} size={'large'} />
+			<Field component={SelectField} label={'Label'} className={'base-select'} allowClear placeholder={'Kategória'} name='categoryID' options={CATEGORIES} size={'large'} />
 		</Form>
 	)
 }

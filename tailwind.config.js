@@ -18,117 +18,266 @@ module.exports = {
   theme: {
 	extend: {
     colors: {
-			transparent: 'transparent',
+      transparent: 'transparent',
 			current: 'currentColor',
 			additional_white: 'var(--theme-additional-white)',
 			additional_black: 'var(--theme-additional-black)',
 			additional_dsurface: 'var(--theme-additional-dsurface)',
-			// light theme - default
+			// ******* light theme - default *******
+			// surface colors
 			surface_primary_light: 'var(--light-theme-surface-primary)',
 			surface_secondary_light: 'var(--light-theme-surface-secondary)',
 			surface_tertiary_light: 'var(--light-theme-surface-tertiary)',
 			surface_quatenary_light: 'var(--light-theme-surface-quaternary)',
+
+			surface_primary_inverse_light: 'var(--light-theme-surface-primary-inverse)',
+			surface_secondary_inverse_light: 'var(--light-theme-surface-secondary-inverse)',
+			surface_tertiary_inverse_light: 'var(--light-theme-surface-tertiary-inverse)',
+			surface_quatenary_inverse_light: 'var(--light-theme-surface-quaternary-inverse)',
+			// content colors
+			content_top_light: 'var(--light-theme-content-top)',
 			content_primary_light: 'var(--light-theme-content-primary)',
 			content_secondary_light: 'var(--light-theme-content-secondary)',
 			content_tertiary_light: 'var(--light-theme-content-tertiary)',
 			content_quartenary_light: 'var(--light-theme-content-quaternary)',
 			content_quintary_light: 'var(--light-theme-content-quintarny)',
+
+			content_top_inverse_light: 'var(--light-theme-content-top-inverse)',
 			content_primary_inverse_light: 'var(--light-theme-content-primary-inverse)',
 			content_secondary_inverse_light: 'var(--light-theme-content-secondary-inverse)',
 			content_tertiary_inverse_light: 'var(--light-theme-content-tertiary-inverse)',
 			content_quartenary_inverse_light: 'var(--light-theme-content-quartenary-inverse)',
 			content_quintary_inverse_light: 'var(--light-theme-content-quintary-inverse)',
+			// actions primary
 			action_primary_default_light: 'var(--light-theme-action-primary-default)',
 			action_primary_hover_light: 'var(--light-theme-action-primary-hover)',
 			action_primary_active_light: 'var(--light-theme-action-primary-active)',
 			action_primary_disable_light: 'var(--light-theme-action-primary-disable)',
 			action_primary_bg_light: 'var(--light-theme-action-primary-bg)',
 			action_primary_bg10_light: 'var(--light-theme-action-primary-bg-ten)',
+
+			action_primary_default_inverse_light: 'var(--light-theme-action-primary-default-inverse)',
+			action_primary_hover_inverse_light: 'var(--light-theme-action-primary-hover-inverse)',
+			action_primary_active_inverse_light: 'var(--light-theme-action-primary-active-inverse)',
+			action_primary_disable_inverse_light: 'var(--light-theme-action-primary-disable-inverse)',
+			action_primary_bg_inverse_light: 'var(--light-theme-action-primary-bg-inverse)',
+			action_primary_bg10_inverse_light: 'var(--light-theme-action-primary-bg-ten-inverse)',
+			// actions secondary
 			action_secondary_default_light: 'var(--light-theme-action-secondary-default)',
 			action_secondary_hover_light: 'var(--light-theme-action-secondary-hover)',
 			action_secondary_active_light: 'var(--light-theme-action-secondary-active)',
 			action_secondary_disable_light: 'var(--light-theme-action-secondary-disable)',
 			action_secondary_bg_light: 'var(--light-theme-action-secondary-bg)',
 			action_secondary_bg10_light: 'var(--light-theme-action-secondary-bg-ten)',
+
+			action_secondary_default_inverse_light: 'var(--light-theme-action-secondary-default-inverse)',
+			action_secondary_hover_inverse_light: 'var(--light-theme-action-secondary-hover-inverse)',
+			action_secondary_active_inverse_light: 'var(--light-theme-action-secondary-active-inverse)',
+			action_secondary_disable_inverse_light: 'var(--light-theme-action-secondary-disable-inverse)',
+			action_secondary_bg_inverse_light: 'var(--light-theme-action-secondary-bg-inverse)',
+			action_secondary_bg10_inverse_light: 'var(--light-theme-action-secondary-bg-ten-inverse)',
+			// destructive
 			destructive_default_light: 'var(--light-theme-action-destructive-default)',
 			destructive_hover_light: 'var(--light-theme-action-destructive-hover)',
 			destructive_active_light: 'var(--light-theme-action-destructive-active)',
 			destructive_disable_light: 'var(--light-theme-action-destructive-disable)',
 			destructive_bg_light: 'var(--light-theme-action-destructive-bg)',
 			destructive_bg10_light: 'var(--light-theme-action-destructive-bg-ten)',
+
+			destructive_default_inverse_light: 'var(--light-theme-action-destructive-default-inverse)',
+			destructive_hover_inverse_light: 'var(--light-theme-action-destructive-hover-inverse)',
+			destructive_active_inverse_light: 'var(--light-theme-action-destructive-active-inverse)',
+			destructive_disable_inverse_light: 'var(--light-theme-action-destructive-disable-inverse)',
+			destructive_bg_inverse_light: 'var(--light-theme-action-destructive-bg-inverse)',
+			destructive_bg10_inverse_light: 'var(--light-theme-action-destructive-bg-ten-inverse)',
+			// state
 			state_success_fg_light: 'var(--light-theme-state-success-fg)',
 			state_success_bg_light: 'var(--light-theme-state-success-bg)',
+
+			state_success_fg_inverse_light: 'var(--light-theme-state-success-fg-inverse)',
+			state_success_bg_inverse_light: 'var(--light-theme-state-success-bg-inverse)',
+
 			state_warning_fg_light: 'var(--light-theme-state-warning-fg)',
 			state_warning_bg_light: 'var(--light-theme-state-warning-bg)',
+
+			state_warning_fg_inverse_light: 'var(--light-theme-state-warning-fg-inverse)',
+			state_warning_bg_inverse_light: 'var(--light-theme-state-warning-bg-inverse)',
+
 			state_error_fg_light:'var(--light-theme-state-error-fg)',
 			state_error_bg_light: 'var(--light-theme-state-error-bg)',
+
+			state_error_fg_inverse_light:'var(--light-theme-state-error-fg-inverse)',
+			state_error_bg_inverse_light: 'var(--light-theme-state-error-bg-inverse)',
+
 			state_info_fg_light: 'var(--light-theme-state-info-fg)',
 			state_info_bg_light: 'var(--light-theme-state-info-bg)',
+
+			state_info_fg_inverse_light: 'var(--light-theme-state-info-fg-inverse)',
+			state_info_bg_inverse_light: 'var(--light-theme-state-info-bg-inverse)',
+
 			state_help_fg_light: 'var(--light-theme-state-help-fg)',
 			state_help_bg_light: 'var(--light-theme-state-help-bg)',
+
+			state_help_fg_inverse_light: 'var(--light-theme-state-help-fg-inverse)',
+			state_help_bg_inverse_light: 'var(--light-theme-state-help-bg-inverse)',
+			// ascent
 			ascent_1_fg_light: 'var(--light-theme-ascent-primary-fg)',
 			ascent_1_bg_light: 'var(--light-theme-ascent-primary-bg)',
+
+			ascent_1_fg_inverse_light: 'var(--light-theme-ascent-primary-fg-inverse)',
+			ascent_1_bg_inverse_light: 'var(--light-theme-ascent-primary-bg-inverse)',
+
 			ascent_2_fg_light: 'var(--light-theme-ascent-secondary-fg)',
 			ascent_2_bg_light: 'var(--light-theme-ascent-secondary-bg)',
+
+			ascent_2_fg_inverse_light: 'var(--light-theme-ascent-secondary-fg-inverse)',
+			ascent_2_bg_inverse_light: 'var(--light-theme-ascent-secondary-bg-inverse)',
+
 			ascent_3_fg_light: 'var(--light-theme-ascent-tertiary-fg)',
 			ascent_3_bg_light: 'var(--light-theme-ascent-tertiary-bg)',
+
+			ascent_3_fg_inverse_light: 'var(--light-theme-ascent-tertiary-fg-inverse)',
+			ascent_3_bg_inverse_light: 'var(--light-theme-ascent-tertiary-bg-inverse)',
+
 			ascent_4_fg_light: 'var(--light-theme-ascent-quanternary-fg)',
 			ascent_4_bg_light: 'var(--light-theme-ascent-quanternary-bg)',
+
+			ascent_4_fg_inverse_light: 'var(--light-theme-ascent-quanternary-fg-inverse)',
+			ascent_4_bg_inverse_light: 'var(--light-theme-ascent-quanternary-bg-inverse)',
+
 			ascent_5_fg_light: 'var(--light-theme-ascent-quintary-fg)',
 			ascent_5_bg_light: 'var(--light-theme-ascent-quintary-bg)',
-			// Dark theme
+
+			ascent_5_fg_inverse_light: 'var(--light-theme-ascent-quintary-fg-inverse)',
+			ascent_5_bg_inverse_light: 'var(--light-theme-ascent-quintary-bg-inverse)',
+
+			// ******* dark theme *******
+			// surface
 			surface_primary_dark: 'var(--dark-theme-surface-primary)',
 			surface_secondary_dark: 'var(--dark-theme-surface-secondary)',
 			surface_tertiary_dark: 'var(--dark-theme-surface-tertiary)',
 			surface_quatenary_dark: 'var(--dark-theme-surface-quaternary)',
+
+			surface_primary_inverse_dark: 'var(--dark-theme-surface-primary-inverse)',
+			surface_secondary_inverse_dark: 'var(--dark-theme-surface-secondary-inverse)',
+			surface_tertiary_inverse_dark: 'var(--dark-theme-surface-tertiary-inverse)',
+			surface_quatenary_inverse_dark: 'var(--dark-theme-surface-quaternary-inverse)',
+			// content
+			content_top_dark: 'var(--dark-theme-content-top)',
 			content_primary_dark: 'var(--dark-theme-content-primary)',
 			content_secondary_dark: 'var(--dark-theme-content-secondary)',
 			content_tertiary_dark: 'var(--dark-theme-content-tertiary)',
 			content_quartenary_dark: 'var(--dark-theme-content-quanternary)',
 			content_quintary_dark: 'var(--dark-theme-content-quintarny)',
+
+			content_top_inverse_dark: 'var(--dark-theme-content-top-inverse)',
 			content_primary_inverse_dark: 'var(--dark-theme-content-primary-inverse)',
 			content_secondary_inverse_dark: 'var(--dark-theme-content-secondary-inverse)',
 			content_tertiary_inverse_dark: 'var(--dark-theme-content-tertiary-inverse)',
 			content_quartenary_inverse_dark: 'var(--dark-theme-content-quartenary-inverse)',
 			content_quintary_inverse_dark: 'var(--dark-theme-content-quintary-inverse)',
+			// actions primary
 			action_primary_default_dark: 'var(--dark-theme-action-primary-default)',
 			action_primary_hover_dark: 'var(--dark-theme-action-primary-hover)',
 			action_primary_active_dark: 'var(--dark-theme-action-primary-active)',
 			action_primary_disable_dark: 'var(--dark-theme-action-primary-disable)',
 			action_primary_bg_dark: 'var(--dark-theme-action-primary-bg)',
 			action_primary_bg10_dark: 'var(--dark-theme-action-primary-bg-ten)',
+
+			action_primary_default_inverse_dark: 'var(--dark-theme-action-primary-default-inverse)',
+			action_primary_hover_inverse_dark: 'var(--dark-theme-action-primary-hover-inverse)',
+			action_primary_active_inverse_dark: 'var(--dark-theme-action-primary-active-inverse)',
+			action_primary_disable_inverse_dark: 'var(--dark-theme-action-primary-disable-inverse)',
+			action_primary_bg_inverse_dark: 'var(--dark-theme-action-primary-bg-inverse)',
+			action_primary_bg10_inverse_dark: 'var(--dark-theme-action-primary-bg-ten-inverse)',
+			// actions secondary
 			action_secondary_default_dark: 'var(--dark-theme-action-secondary-default)',
 			action_secondary_hover_dark: 'var(--dark-theme-action-secondary-hover)',
 			action_secondary_active_dark: 'var(--dark-theme-action-secondary-active)',
 			action_secondary_disable_dark: 'var(--dark-theme-action-secondary-disable)',
 			action_secondary_bg_dark: 'var(--dark-theme-action-secondary-bg)',
 			action_secondary_bg10_dark: 'var(--dark-theme-action-secondary-bg-ten)',
+
+			action_secondary_default_inverse_dark: 'var(--dark-theme-action-secondary-default-inverse)',
+			action_secondary_hover_inverse_dark: 'var(--dark-theme-action-secondary-hover-inverse)',
+			action_secondary_active_inverse_dark: 'var(--dark-theme-action-secondary-active-inverse)',
+			action_secondary_disable_inverse_dark: 'var(--dark-theme-action-secondary-disable-inverse)',
+			action_secondary_bg_inverse_dark: 'var(--dark-theme-action-secondary-bg-inverse)',
+			action_secondary_bg10_inverse_dark: 'var(--dark-theme-action-secondary-bg-ten-inverse)',
+			// destructive
 			destructive_default_dark: 'var(--dark-theme-action-destructive-default)',
 			destructive_hover_dark: 'var(--dark-theme-action-destructive-hover)',
 			destructive_active_dark: 'var(--dark-theme-action-destructive-active)',
 			destructive_disable_dark: 'var(--dark-theme-action-destructive-disable)',
 			destructive_bg_dark: 'var(--dark-theme-action-destructive-bg)',
 			destructive_bg10_dark: 'var(--dark-theme-action-destructive-bg-ten)',
+
+			destructive_default_inverse_dark: 'var(--dark-theme-action-destructive-default-inverse)',
+			destructive_hover_inverse_dark: 'var(--dark-theme-action-destructive-hover-inverse)',
+			destructive_active_inverse_dark: 'var(--dark-theme-action-destructive-active-inverse)',
+			destructive_disable_inverse_dark: 'var(--dark-theme-action-destructive-disable-inverse)',
+			destructive_bg_inverse_dark: 'var(--dark-theme-action-destructive-bg-inverse)',
+			destructive_bg10_inverse_dark: 'var(--dark-theme-action-destructive-bg-ten-inverse)',
+			// state
 			state_success_fg_dark: 'var(--dark-theme-state-success-fg)',
 			state_success_bg_dark: 'var(--dark-theme-state-success-bg)',
+
+			state_success_fg_inverse_dark: 'var(--dark-theme-state-success-fg-inverse)',
+			state_success_bg_inverse_dark: 'var(--dark-theme-state-success-bg-inverse)',
+
 			state_warning_fg_dark: 'var(--dark-theme-state-warning-fg)',
 			state_warning_bg_dark: 'var(--dark-theme-state-warning-bg)',
+
+			state_warning_fg_inverse_dark: 'var(--dark-theme-state-warning-fg-inverse)',
+			state_warning_bg_inverse_dark: 'var(--dark-theme-state-warning-bg-inverse)',
+
 			state_error_fg_dark: 'var(--dark-theme-state-error-fg)',
 			state_error_bg_dark: 'var(--dark-theme-state-error-bg)',
+
+			state_error_fg_inverse_dark: 'var(--dark-theme-state-error-fg-inverse)',
+			state_error_bg_inverse_dark: 'var(--dark-theme-state-error-bg-inverse)',
+
 			state_info_fg_dark: 'var(--dark-theme-state-info-fg)',
 			state_info_bg_dark: 'var(--dark-theme-state-info-bg)',
+
+			state_info_fg_inverse_dark: 'var(--dark-theme-state-info-fg-inverse)',
+			state_info_bg_inverse_dark: 'var(--dark-theme-state-info-bg-inverse)',
+
 			state_help_fg_dark: 'var(--dark-theme-state-help-fg)',
 			state_help_bg_dark: 'var(--dark-theme-state-help-bg)',
+
+			state_help_fg_inverse_dark: 'var(--dark-theme-state-help-fg-inverse)',
+			state_help_bg_inverse_dark: 'var(--dark-theme-state-help-bg-inverse)',
+			// ascent
 			ascent_1_fg_dark: 'var(--dark-theme-ascent-primary-fg)',
 			ascent_1_bg_dark: 'var(--dark-theme-ascent-primary-bg)',
+
+			ascent_1_fg_inverse_dark: 'var(--dark-theme-ascent-primary-fg-inverse)',
+			ascent_1_bg_inverse_dark: 'var(--dark-theme-ascent-primary-bg-inverse)',
+
 			ascent_2_fg_dark: 'var(--dark-theme-ascent-secondary-fg)',
 			ascent_2_bg_dark: 'var(--dark-theme-ascent-secondary-bg)',
+
+			ascent_2_fg_inverse_dark: 'var(--dark-theme-ascent-secondary-fg-inverse)',
+			ascent_2_bg_inverse_dark: 'var(--dark-theme-ascent-secondary-bg-inverse)',
+
 			ascent_3_fg_dark: 'var(--dark-theme-ascent-tertiary-fg)',
 			ascent_3_bg_dark: 'var(--dark-theme-ascent-tertiary-bg)',
+
+			ascent_3_fg_inverse_dark: 'var(--dark-theme-ascent-tertiary-fg-inverse)',
+			ascent_3_bg_inverse_dark: 'var(--dark-theme-ascent-tertiary-bg-inverse)',
+
 			ascent_4_fg_dark: 'var(--dark-theme-ascent-quanternary-fg)',
 			ascent_4_bg_dark: 'var(--dark-theme-ascent-quanternary-bg)',
+
+			ascent_4_fg_inverse_dark: 'var(--dark-theme-ascent-quanternary-fg-inverse)',
+			ascent_4_bg_inverse_dark: 'var(--dark-theme-ascent-quanternary-bg-inverse)',
+
 			ascent_5_fg_dark: 'var(--dark-theme-ascent-quintary-fg)',
-			ascent_5_bg_dark: 'var(--dark-theme-ascent-quintary-bg)'
+			ascent_5_bg_dark: 'var(--dark-theme-ascent-quintary-bg)',
+
+			ascent_5_fg_inverse_dark: 'var(--dark-theme-ascent-quintary-fg-inverse)',
+			ascent_5_bg_inverse_dark: 'var(--dark-theme-ascent-quintary-bg-inverse)'
 		},
 	},
     	screens: {

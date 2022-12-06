@@ -3,121 +3,266 @@
 @tailwind utilities
 @import 'generated-variables.scss'
 
-body 
-	font-family: Inter, sans-serif !important
-
 #root, .root, #docs-root
 	--theme-additional-white: #{$additional_white}
 	--theme-additional-black: #{$additional-black}
 	--theme-additional-dsurface: #{$additional-dsurface}
 
-	// light theme
+	// ******* light theme - default *******
+	// surface colors
 	--light-theme-surface-primary: #{$light-theme-surface-primary}
 	--light-theme-surface-secondary: #{$light-theme-surface-secondary}
 	--light-theme-surface-tertiary: #{$light-theme-surface-tertiary}
 	--light-theme-surface-quaternary: #{$light-theme-surface-quaternary}
+
+	--light-theme-surface-primary-inverse: #{$light-theme-surface-primary-inverse}
+	--light-theme-surface-secondary-inverse: #{$light-theme-surface-secondary-inverse}
+	--light-theme-surface-tertiary-inverse: #{$light-theme-surface-tertiary-inverse}
+	--light-theme-surface-quaternary-inverse: #{$light-theme-surface-quaternary-inverse}
+	// content
+	--light-theme-content-top: #{$light-theme-content-top}
 	--light-theme-content-primary: #{$light-theme-content-primary}
 	--light-theme-content-secondary: #{$light-theme-content-secondary}
 	--light-theme-content-tertiary: #{$light-theme-content-tertiary}
 	--light-theme-content-quaternary: #{$light-theme-content-quaternary}
 	--light-theme-content-quintarny: #{$light-theme-content-quintarny}
+
+	--light-theme-content-top-inverse: #{$light-theme-content-top-inverse}
 	--light-theme-content-primary-inverse: #{$light-theme-content-primary-inverse}
 	--light-theme-content-secondary-inverse: #{$light-theme-content-secondary-inverse}
 	--light-theme-content-tertiary-inverse: #{$light-theme-content-tertiary-inverse}
 	--light-theme-content-quartenary-inverse: #{$light-theme-content-quaternary-inverse}
 	--light-theme-content-quintary-inverse: #{$light-theme-content-quintarny-inverse}
+	// action primary
 	--light-theme-action-primary-default: #{$light-theme-action-primary-default}
 	--light-theme-action-primary-hover: #{$light-theme-action-primary-hover}
 	--light-theme-action-primary-active: #{$light-theme-action-primary-active}
 	--light-theme-action-primary-disable: #{$light-theme-action-primary-disable}
 	--light-theme-action-primary-bg: #{$light-theme-action-primary-bg}
 	--light-theme-action-primary-bg-ten: #{$light-theme-action-primary-bg10}
+
+	--light-theme-action-primary-default-inverse: #{$light-theme-action-primary-default-inverse}
+	--light-theme-action-primary-hover-inverse: #{$light-theme-action-primary-hover-inverse}
+	--light-theme-action-primary-active-inverse: #{$light-theme-action-primary-active-inverse}
+	--light-theme-action-primary-disable-inverse: #{$light-theme-action-primary-disable-inverse}
+	--light-theme-action-primary-bg-inverse: #{$light-theme-action-primary-bg-inverse}
+	--light-theme-action-primary-bg-ten-inverse: #{$light-theme-action-primary-bg10-inverse}
+	// action secondary
 	--light-theme-action-secondary-default: #{$light-theme-action-secondary-default}
 	--light-theme-action-secondary-hover: #{$light-theme-action-secondary-hover}
 	--light-theme-action-secondary-active: #{$light-theme-action-secondary-active}
 	--light-theme-action-secondary-disable: #{$light-theme-action-secondary-disable}
 	--light-theme-action-secondary-bg: #{$light-theme-action-secondary-bg}
 	--light-theme-action-secondary-bg-ten: #{$light-theme-action-secondary-bg10}
+
+	--light-theme-action-secondary-default-inverse: #{$light-theme-action-secondary-default-inverse}
+	--light-theme-action-secondary-hover-inverse: #{$light-theme-action-secondary-hover-inverse}
+	--light-theme-action-secondary-active-inverse: #{$light-theme-action-secondary-active-inverse}
+	--light-theme-action-secondary-disable-inverse: #{$light-theme-action-secondary-disable-inverse}
+	--light-theme-action-secondary-bg-inverse: #{$light-theme-action-secondary-bg-inverse}
+	--light-theme-action-secondary-bg-ten-inverse: #{$light-theme-action-secondary-bg10-inverse}
+	// destructive
 	--light-theme-action-destructive-default: #{$light-theme-action-destructive-default}
 	--light-theme-action-destructive-hover: #{$light-theme-action-destructive-hover}
 	--light-theme-action-destructive-active: #{$light-theme-action-destructive-active}
 	--light-theme-action-destructive-disable: #{$light-theme-action-destructive-disable}
 	--light-theme-action-destructive-bg: #{$light-theme-action-destructive-bg}
 	--light-theme-action-destructive-bg-ten: #{$light-theme-action-destructive-bg10}
+
+	--light-theme-action-destructive-default-inverse: #{$light-theme-action-destructive-default-inverse}
+	--light-theme-action-destructive-hover-inverse: #{$light-theme-action-destructive-hover-inverse}
+	--light-theme-action-destructive-active-inverse: #{$light-theme-action-destructive-active-inverse}
+	--light-theme-action-destructive-disable-inverse: #{$light-theme-action-destructive-disable-inverse}
+	--light-theme-action-destructive-bg-inverse: #{$light-theme-action-destructive-bg-inverse}
+	--light-theme-action-destructive-bg-ten-inverse: #{$light-theme-action-destructive-bg10-inverse}
+	// state
 	--light-theme-state-success-fg: #{$light-theme-state-success-fg}
 	--light-theme-state-success-bg: #{$light-theme-state-success-bg}
+
+	--light-theme-state-success-fg-inverse: #{$light-theme-state-success-fg-inverse}
+	--light-theme-state-success-bg-inverse: #{$light-theme-state-success-bg-inverse}
+
 	--light-theme-state-warning-fg: #{$light-theme-state-warning-fg}
 	--light-theme-state-warning-bg: #{$light-theme-state-warning-bg}
+
+	--light-theme-state-warning-fg-inverse: #{$light-theme-state-warning-fg-inverse}
+	--light-theme-state-warning-bg-inverse: #{$light-theme-state-warning-bg-inverse}
+
 	--light-theme-state-error-fg: #{$light-theme-state-error-fg}
 	--light-theme-state-error-bg: #{$light-theme-state-error-bg}
+
+	--light-theme-state-error-fg-inverse: #{$light-theme-state-error-fg-inverse}
+	--light-theme-state-error-bg-inverse: #{$light-theme-state-error-bg-inverse}
+
 	--light-theme-state-info-fg: #{$light-theme-state-info-fg}
 	--light-theme-state-info-bg: #{$light-theme-state-info-bg}
+
+	--light-theme-state-info-fg-inverse: #{$light-theme-state-info-fg-inverse}
+	--light-theme-state-info-bg-inverse: #{$light-theme-state-info-bg-inverse}
+
 	--light-theme-state-help-fg: #{$light-theme-state-help-fg}
 	--light-theme-state-help-bg: #{$light-theme-state-help-bg}
+
+	--light-theme-state-help-fg-inverse: #{$light-theme-state-help-fg-inverse}
+	--light-theme-state-help-bg-inverse: #{$light-theme-state-help-bg-inverse}
+	// ascent
 	--light-theme-ascent-primary-fg: #{$light-theme-ascent-1-fg}
 	--light-theme-ascent-primary-bg: #{$light-theme-ascent-1-bg}
+
+	--light-theme-ascent-primary-fg-inverse: #{$light-theme-ascent-1-fg-inverse}
+	--light-theme-ascent-primary-bg-inverse: #{$light-theme-ascent-1-bg-inverse}
+
 	--light-theme-ascent-secondary-fg: #{$light-theme-ascent-2-fg}
 	--light-theme-ascent-secondary-bg: #{$light-theme-ascent-2-bg}
+
+	--light-theme-ascent-secondary-fg-inverse: #{$light-theme-ascent-2-fg-inverse}
+	--light-theme-ascent-secondary-bg-inverse: #{$light-theme-ascent-2-bg-inverse}
+
 	--light-theme-ascent-tertiary-fg: #{$light-theme-ascent-3-fg}
 	--light-theme-ascent-tertiary-bg: #{$light-theme-ascent-3-bg}
+
+	--light-theme-ascent-tertiary-fg-inverse: #{$light-theme-ascent-3-fg-inverse}
+	--light-theme-ascent-tertiary-bg-inverse: #{$light-theme-ascent-3-bg-inverse}
+
 	--light-theme-ascent-quanternary-fg: #{$light-theme-ascent-4-fg}
 	--light-theme-ascent-quanternary-bg: #{$light-theme-ascent-4-bg}
+
+	--light-theme-ascent-quanternary-fg-inverse: #{$light-theme-ascent-4-fg-inverse}
+	--light-theme-ascent-quanternary-bg-inverse: #{$light-theme-ascent-4-bg-inverse}
+
 	--light-theme-ascent-quintary-fg: #{$light-theme-ascent-5-fg}
 	--light-theme-ascent-quintary-bg: #{$light-theme-ascent-5-bg}
 
-	// dark theme
+	--light-theme-ascent-quintary-fg-inverse: #{$light-theme-ascent-5-fg-inverse}
+	--light-theme-ascent-quintary-bg-inverse: #{$light-theme-ascent-5-bg-inverse}
+
+	// ******* dark theme *******
+	// surface
 	--dark-theme-surface-primary: #{$dark-theme-surface-primary}
 	--dark-theme-surface-secondary: #{$dark-theme-surface-secondary}
 	--dark-theme-surface-tertiary: #{$dark-theme-surface-tertiary}
 	--dark-theme-surface-quaternary: #{$dark-theme-surface-quaternary}
+
+	--dark-theme-surface-primary-inverse: #{$dark-theme-surface-primary-inverse}
+	--dark-theme-surface-secondary-inverse: #{$dark-theme-surface-secondary-inverse}
+	--dark-theme-surface-tertiary-inverse: #{$dark-theme-surface-tertiary-inverse}
+	--dark-theme-surface-quaternary-inverse: #{$dark-theme-surface-quaternary-inverse}
+	// content
+	--dark-theme-content-top: #{$dark-theme-content-top}
 	--dark-theme-content-primary: #{$dark-theme-content-primary}
 	--dark-theme-content-secondary: #{$dark-theme-content-secondary}
 	--dark-theme-content-tertiary: #{$dark-theme-content-tertiary}
 	--dark-theme-content-quanternary: #{$dark-theme-content-quaternary}
 	--dark-theme-content-quintarny: #{$dark-theme-content-quintarny}
+
+	--dark-theme-content-top-inverse: #{$dark-theme-content-top-inverse}
 	--dark-theme-content-primary-inverse: #{$dark-theme-content-primary-inverse}
 	--dark-theme-content-secondary-inverse: #{$dark-theme-content-secondary-inverse}
 	--dark-theme-content-tertiary-inverse: #{$dark-theme-content-tertiary-inverse}
 	--dark-theme-content-quartenary-inverse: #{$dark-theme-content-quaternary-inverse}
 	--dark-theme-content-quintary-inverse: #{$dark-theme-content-quintarny-inverse}
+	// action primary
 	--dark-theme-action-primary-default: #{$dark-theme-action-primary-default}
 	--dark-theme-action-primary-hover: #{$dark-theme-action-primary-hover}
 	--dark-theme-action-primary-active: #{$dark-theme-action-primary-active}
 	--dark-theme-action-primary-disable: #{$dark-theme-action-primary-disable}
 	--dark-theme-action-primary-bg: #{$dark-theme-action-primary-bg}
 	--dark-theme-action-primary-bg-ten: #{$dark-theme-action-primary-bg10}
+
+	--dark-theme-action-primary-default-inverse: #{$dark-theme-action-primary-default-inverse}
+	--dark-theme-action-primary-hover-inverse: #{$dark-theme-action-primary-hover-inverse}
+	--dark-theme-action-primary-active-inverse: #{$dark-theme-action-primary-active-inverse}
+	--dark-theme-action-primary-disable-inverse: #{$dark-theme-action-primary-disable-inverse}
+	--dark-theme-action-primary-bg-inverse: #{$dark-theme-action-primary-bg-inverse}
+	--dark-theme-action-primary-bg-ten-inverse: #{$dark-theme-action-primary-bg10-inverse}
+	// action sectory
 	--dark-theme-action-secondary-default: #{$dark-theme-action-secondary-default}
 	--dark-theme-action-secondary-hover: #{$dark-theme-action-secondary-hover}
 	--dark-theme-action-secondary-active: #{$dark-theme-action-secondary-active}
 	--dark-theme-action-secondary-disable: #{$dark-theme-action-secondary-disable}
 	--dark-theme-action-secondary-bg: #{$dark-theme-action-secondary-bg}
 	--dark-theme-action-secondary-bg-ten: #{$dark-theme-action-secondary-bg10}
+
+	--dark-theme-action-secondary-default-inverse: #{$dark-theme-action-secondary-default-inverse}
+	--dark-theme-action-secondary-hover-inverse: #{$dark-theme-action-secondary-hover-inverse}
+	--dark-theme-action-secondary-active-inverse: #{$dark-theme-action-secondary-active-inverse}
+	--dark-theme-action-secondary-disable-inverse: #{$dark-theme-action-secondary-disable-inverse}
+	--dark-theme-action-secondary-bg-inverse: #{$dark-theme-action-secondary-bg-inverse}
+	--dark-theme-action-secondary-bg-ten-inverse: #{$dark-theme-action-secondary-bg10-inverse}
+	// destructive
 	--dark-theme-action-destructive-default: #{$dark-theme-action-destructive-default}
 	--dark-theme-action-destructive-hover: #{$dark-theme-action-destructive-hover}
 	--dark-theme-action-destructive-active: #{$dark-theme-action-destructive-active}
 	--dark-theme-action-destructive-disable: #{$dark-theme-action-destructive-disable}
 	--dark-theme-action-destructive-bg: #{$dark-theme-action-destructive-bg}
 	--dark-theme-action-destructive-bg-ten: #{$dark-theme-action-destructive-bg10}
+
+	--dark-theme-action-destructive-default-inverse: #{$dark-theme-action-destructive-default-inverse}
+	--dark-theme-action-destructive-hover-inverse: #{$dark-theme-action-destructive-hover-inverse}
+	--dark-theme-action-destructive-active-inverse: #{$dark-theme-action-destructive-active-inverse}
+	--dark-theme-action-destructive-disable-inverse: #{$dark-theme-action-destructive-disable-inverse}
+	--dark-theme-action-destructive-bg-inverse: #{$dark-theme-action-destructive-bg-inverse}
+	--dark-theme-action-destructive-bg-ten-inverse: #{$dark-theme-action-destructive-bg10-inverse}
+	// state
 	--dark-theme-state-success-fg: #{$dark-theme-state-success-fg}
 	--dark-theme-state-success-bg: #{$dark-theme-state-success-bg}
+
+	--dark-theme-state-success-fg-inverse: #{$dark-theme-state-success-fg-inverse}
+	--dark-theme-state-success-bg-inverse: #{$dark-theme-state-success-bg-inverse}
+
 	--dark-theme-state-warning-fg: #{$dark-theme-state-warning-fg}
 	--dark-theme-state-warning-bg: #{$dark-theme-state-warning-bg}
+
+	--dark-theme-state-warning-fg-inverse: #{$dark-theme-state-warning-fg-inverse}
+	--dark-theme-state-warning-bg-inverse: #{$dark-theme-state-warning-bg-inverse}
+
 	--dark-theme-state-error-fg: #{$dark-theme-state-error-fg}
 	--dark-theme-state-error-bg: #{$dark-theme-state-error-bg}
+
+	--dark-theme-state-error-fg-inverse: #{$dark-theme-state-error-fg-inverse}
+	--dark-theme-state-error-bg-inverse: #{$dark-theme-state-error-bg-inverse}
+
 	--dark-theme-state-info-fg: #{$dark-theme-state-info-fg}
 	--dark-theme-state-info-bg: #{$dark-theme-state-info-bg}
+
+	--dark-theme-state-info-fg-inverse: #{$dark-theme-state-info-fg-inverse}
+	--dark-theme-state-info-bg-inverse: #{$dark-theme-state-info-bg-inverse}
+
 	--dark-theme-state-help-fg: #{$dark-theme-state-help-fg}
 	--dark-theme-state-help-bg: #{$dark-theme-state-help-bg}
+
+	--dark-theme-state-help-fg-inverse: #{$dark-theme-state-help-fg-inverse}
+	--dark-theme-state-help-bg-inverse: #{$dark-theme-state-help-bg-inverse}
+	// ascent
 	--dark-theme-ascent-primary-fg: #{$dark-theme-ascent-1-fg}
 	--dark-theme-ascent-primary-bg: #{$dark-theme-ascent-1-bg}
+
+	--dark-theme-ascent-primary-fg-inverse: #{$dark-theme-ascent-1-fg-inverse}
+	--dark-theme-ascent-primary-bg-inverse: #{$dark-theme-ascent-1-bg-inverse}
+
 	--dark-theme-ascent-secondary-fg: #{$dark-theme-ascent-2-fg}
 	--dark-theme-ascent-secondary-bg: #{$dark-theme-ascent-2-bg}
+
+	--dark-theme-ascent-secondary-fg-inverse: #{$dark-theme-ascent-2-fg-inverse}
+	--dark-theme-ascent-secondary-bg-inverse: #{$dark-theme-ascent-2-bg-inverse}
+
 	--dark-theme-ascent-tertiary-fg: #{$dark-theme-ascent-3-fg}
 	--dark-theme-ascent-tertiary-bg: #{$dark-theme-ascent-3-bg}
+
+	--dark-theme-ascent-tertiary-fg-inverse: #{$dark-theme-ascent-3-fg-inverse}
+	--dark-theme-ascent-tertiary-bg-inverse: #{$dark-theme-ascent-3-bg-inverse}
+
 	--dark-theme-ascent-quanternary-fg: #{$dark-theme-ascent-4-fg}
 	--dark-theme-ascent-quanternary-bg: #{$dark-theme-ascent-4-bg}
+
+	--dark-theme-ascent-quanternary-fg-inverse: #{$dark-theme-ascent-4-fg-inverse}
+	--dark-theme-ascent-quanternary-bg-inverse: #{$dark-theme-ascent-4-bg-inverse}
+
 	--dark-theme-ascent-quintary-fg: #{$dark-theme-ascent-5-fg}
 	--dark-theme-ascent-quintary-bg: #{$dark-theme-ascent-5-bg}
+
+	--dark-theme-ascent-quintary-fg-inverse: #{$dark-theme-ascent-5-fg-inverse}
+	--dark-theme-ascent-quintary-bg-inverse: #{$dark-theme-ascent-5-bg-inverse}
 
 	// border-radius
 	--border-radius-none: #{$border-radius-none}

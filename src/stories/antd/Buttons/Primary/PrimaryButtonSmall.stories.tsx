@@ -23,8 +23,10 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args}></Bu
 export const ButtonPrimarySmall = Template.bind({})
 export const ButtonPrimarySmallWithIcons = Template.bind({})
 export const ButtonPrimarySmallIconOnly = Template.bind({})
+export const ButtonPrimarySmallIconOnlySquared = Template.bind({})
 export const ButtonPrimarySmallLoading = Template.bind({})
 export const ButtonPrimarySmallLoadingIconOnly = Template.bind({})
+export const ButtonPrimarySmallLoadingIconOnlySquared = Template.bind({})
 export const ButtonPrimarySmallDisabled = Template.bind({})
 
 // arguments
@@ -41,6 +43,11 @@ ButtonPrimarySmallIconOnly.args = {
 	icon: <Plus />
 }
 
+ButtonPrimarySmallIconOnlySquared.args = {
+	icon: <Plus />,
+	className: 'base-btn squared',
+}
+
 ButtonPrimarySmallLoading.args = {
 	loading: true,
 	children: <span>Button</span>
@@ -49,6 +56,12 @@ ButtonPrimarySmallLoading.args = {
 ButtonPrimarySmallLoadingIconOnly.args = {
 	loading: true,
 	icon: <Plus />
+}
+
+ButtonPrimarySmallLoadingIconOnlySquared.args = {
+	loading: true,
+	icon: <Plus />,
+	className: 'base-btn squared',
 }
 
 ButtonPrimarySmallDisabled.args = {

@@ -32,7 +32,8 @@ export const ButtonDangerLargeDisabled = Template.bind({})
 
 // arguments
 ButtonDangerLarge.args = {
-	children: <span>Button</span>
+	children: <span>Button</span>,
+	onClick: () => console.log('dzengala')
 }
 
 ButtonDangerLargeWithIcons.args = {

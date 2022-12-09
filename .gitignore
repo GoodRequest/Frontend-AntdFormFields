@@ -20,3 +20,5 @@ src/styles/_generated-variables.scss
 src/styles/_theme.sass
 src/dist/_generated-variables.scss
 src/dist/_theme.sass
+
+dist/

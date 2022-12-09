@@ -125,6 +125,10 @@
   justify-content: center
 }
 
+#tailwind .flex-columns {
+  flex-direction: column
+}
+
 #tailwind .justify-between {
   justify-content: space-between
 }

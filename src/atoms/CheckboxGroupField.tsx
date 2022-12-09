@@ -45,7 +45,7 @@ const CheckboxGroupField = (props: Props) => {
 			)
 		}
 		return (
-			<Checkbox disabled={option.disabled} key={`${option.value}`} value={option.value} className={cx('my-1', { large, 'inline-flex': horizontal })}>
+			<Checkbox disabled={disabled || option.disabled} key={`${option.value}`} value={option.value} className={cx('my-1', { large, 'inline-flex': horizontal })}>
 				{option.label}
 			</Checkbox>
 		)

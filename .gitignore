@@ -4,7 +4,6 @@ coverage/
 .vscode/
 .env
 .idea
-package-lock.json
 tmp
 yarn.lock
 yarn-error.log

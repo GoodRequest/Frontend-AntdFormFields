@@ -5,6 +5,7 @@ coverage/
 .env
 .idea
 tmp
+dist
 yarn.lock
 yarn-error.log
 .eslintcache

@@ -2,159 +2,161 @@
 @import 'typography'
 
 .ant-form-item.base-input-number
-	.ant-form-item-control-input
-		@apply text-md-regular
-	.ant-form-item-explain
-		@apply text-sm-regular
-	.ant-input-number-affix-wrapper
-		&.ant-input-number-affix-wrapper-large
-			border-radius: $borderRadius-sm
-			border: 1px solid
-			.ant-input-number-prefix
-				> svg
-					width: 24px
-					height: 24px
-					@apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
+    .ant-form-item-control-input
+        @apply text-md-regular
+    .ant-form-item-explain
+        @apply text-sm-regular
+    .ant-input-number-affix-wrapper
+        &.ant-input-number-affix-wrapper-large
+            border-radius: $borderRadius-md
+            border: 1px solid
+            .ant-input-number-prefix
+                > svg
+                    width: 24px
+                    height: 24px
+                    @apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
 
-			.ant-input-number-in-form-item
-				border-radius: 0px $borderRadius-sm $borderRadius-sm 0px !important
-				.ant-input-number-handler-wrap
-					border-radius: 0px $borderRadius-sm $borderRadius-sm 0px !important
+            .ant-input-number-in-form-item
+                border-radius: $borderRadius-none $borderRadius-md $borderRadius-md $borderRadius-none !important
+                .ant-input-number-handler-wrap
+                    border-radius: $borderRadius-none $borderRadius-md $borderRadius-md $borderRadius-none !important
 
-		&.ant-input-number-affix-wrapper-small
-			border-radius: $borderRadius-xxs
-			border: 1px solid
-			.ant-input-number-prefix
-				> svg
-					width: 12px
-					height: 12px
-					@apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
+        &.ant-input-number-affix-wrapper-small
+            border-radius: $borderRadius-xxs
+            border: 1px solid
+            .ant-input-number-prefix
+                > svg
+                    width: 12px
+                    height: 12px
+                    @apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
 
-			.ant-input-number-in-form-item, .ant-input-number-handler-wrap
-				border-radius: 0px $borderRadius-xxs $borderRadius-xxs 0px !important
+            .ant-input-number-in-form-item, .ant-input-number-handler-wrap
+                border-radius: $borderRadius-none $borderRadius-xxs $borderRadius-xxs $borderRadius-none !important
 
-		&:not(.ant-input-number-affix-wrapper-large, .ant-input-number-affix-wrapper-small)
-			border-radius: $borderRadius-xs
-			border: 1px solid
-			.ant-input-number-prefix
-				> svg
-					width: 18px
-					height: 18px
-					@apply stroke-content_tertiary_light dark:stroke-content_primary_dark
+        &:not(.ant-input-number-affix-wrapper-large, .ant-input-number-affix-wrapper-small)
+            border-radius: $borderRadius-sm
+            border: 1px solid
+            .ant-input-number-prefix
+                > svg
+                    width: 18px
+                    height: 18px
+                    @apply stroke-content_tertiary_light dark:stroke-content_primary_dark
 
-			.ant-input-number-in-form-item, .ant-input-number-handler-wrap
-				border-radius: 0px $borderRadius-xs $borderRadius-xs 0px !important
+            .ant-input-number-in-form-item, .ant-input-number-handler-wrap
+                border-radius: $borderRadius-none $borderRadius-sm $borderRadius-sm $borderRadius-none !important
 
 
-	.ant-input-number-affix-wrapper:not(.ant-input-number-affix-wrapper-disabled), .ant-input-number-in-form-item:not(.ant-input-number-disabled)
-		@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
-		@apply border-surface_tertiary_light dark:border-surface_tertiary_dark #{!important}
-		@apply text-content_primary_light dark:text-content_primary_dark
-		&:hover
-			@apply border-surface_quatenary_light dark:border-surface_quatenary_dark
-			@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-			.ant-input-number
-				@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+    .ant-input-number-affix-wrapper:not(.ant-input-number-affix-wrapper-disabled), .ant-input-number-in-form-item:not(.ant-input-number-disabled)
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
+        @apply border-surface_tertiary_light dark:border-surface_tertiary_dark #{!important}
+        @apply text-content_primary_light dark:text-content_primary_dark
+        &:hover
+            @apply border-surface_quatenary_light dark:border-surface_quatenary_dark
+            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+            .ant-input-number
+                @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
 
-	.ant-input-number-affix-wrapper-status-success
-		&.ant-input-number-affix-wrapper
-			border: solid #{!important}
-			border-width: 1px #{!important}
-			@apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
+    .ant-input-number-affix-wrapper-status-success
+        &.ant-input-number-affix-wrapper
+            border: solid #{!important}
+            border-width: $borderWidth-xs #{!important}
+            @apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
 
-			&:hover
-				@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-				.ant-input-number
-					@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-		.ant-input-number-prefix
-			> svg
-				@apply stroke-state_success_fg_light dark:stroke-state_success_fg_dark #{!important}
+            &:hover
+                @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+                .ant-input-number
+                    @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+        .ant-input-number-prefix
+            > svg
+                @apply stroke-state_success_fg_light dark:stroke-state_success_fg_dark #{!important}
 
-	.ant-input-number-affix-wrapper-status-error
-		box-shadow: none !important
-		&.ant-input-number-affix-wrapper
-			border: solid #{!important}
-			border-width: 1px #{!important}
-			box-shadow: none !important
-			@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+    .ant-input-number-affix-wrapper-status-error
+        box-shadow: none !important
+        &.ant-input-number-affix-wrapper
+            border: solid #{!important}
+            border-width: $borderWidth-xs #{!important}
+            box-shadow: none !important
+            @apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+            @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+            &:hover
+                @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
+                .ant-input-number
+                    @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
 
-			&:hover
-				@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
-				.ant-input-number
-					@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
+            &:focus-within
+                @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+                .ant-input-number
+                    @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+        .ant-input-number-prefix
+            > svg
+                @apply stroke-state_error_fg_light dark:stroke-state_error_fg_dark #{!important}
 
-			&:focus-within
-				@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-				.ant-input-number
-					@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-		.ant-input-number-prefix
-			> svg
-				@apply stroke-state_error_fg_light dark:stroke-state_error_fg_dark #{!important}
+    .ant-input-number-affix-wrapper
+        &.ant-input-number-affix-wrapper-focused
+            border: solid
+            border-width: $borderWidth-xs
+            box-shadow: none
+            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+            .ant-input-number
+                @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
 
-	.ant-input-number-affix-wrapper
-		&.ant-input-number-affix-wrapper-focused
-			border: solid
-			border-width: 1px
-			box-shadow: none
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-			@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-			.ant-input-number
-				@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-
-	.ant-input-number-affix-wrapper-disabled, .ant-input-number-disabled
-		@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
-		@apply border-surface_tertiary_light dark:border-surface_tertiary_dark #{!important}
-		::placeholder
-			@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
-		.ant-input-number-prefix
-			> svg
-				@apply stroke-content_quintary_light dark:stroke-content_quintary_dark #{!important}
+    .ant-input-number-affix-wrapper-disabled, .ant-input-number-disabled
+        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+        @apply border-surface_tertiary_light dark:border-surface_tertiary_dark #{!important}
+        ::placeholder
+            @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+        .ant-input-number-prefix
+            > svg
+                @apply stroke-content_quintary_light dark:stroke-content_quintary_dark #{!important}
 
 // without prefix
 .ant-form-item.base-input-number
-	.ant-input-number:not(.ant-input-number-affix-wrapper)
-		border-radius: $borderRadius-xs
-		&:hover:not(.ant-input-number-disabled)
-			@apply border-surface_quatenary_light dark:border-surface_quatenary_dark
-			@apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-		&:focus-within
-			box-shadow: none
-			@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
-		&.ant-input-number-in-form-item
-			.ant-input-number-handler-wrap
-				border-radius: 0px $borderRadius-xs $borderRadius-xs 0px !important
-	.ant-input-number-lg:not(.ant-input-number-affix-wrapper)
-		border-radius: $borderRadius-sm !important
-		&.ant-input-number-in-form-item
-			.ant-input-number-handler-wrap
-				border-radius: 0px $borderRadius-sm $borderRadius-sm 0px !important
-	.ant-input-number-sm:not(.ant-input-number-affix-wrapper)
-		border-radius: $borderRadius-xxs !important
-		&.ant-input-number-in-form-item
-			.ant-input-number-handler-wrap
-				border-radius: 0px $borderRadius-xxs $borderRadius-xxs 0px !important
+    .ant-input-number:not(.ant-input-number-affix-wrapper)
+        border-radius: $borderRadius-sm
+        &:hover:not(.ant-input-number-disabled)
+            @apply border-surface_quatenary_light dark:border-surface_quatenary_dark
+            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
+        &:focus-within
+            box-shadow: none
+            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+        &.ant-input-number-in-form-item
+            .ant-input-number-handler-wrap
+                border-radius: $borderRadius-none $borderRadius-sm $borderRadius-sm $borderRadius-none !important
+    .ant-input-number-lg:not(.ant-input-number-affix-wrapper)
+        border-radius: $borderRadius-md !important
+        &.ant-input-number-in-form-item
+            .ant-input-number-handler-wrap
+                border-radius: $borderRadius-none $borderRadius-md $borderRadius-md $borderRadius-none !important
+    .ant-input-number-sm:not(.ant-input-number-affix-wrapper)
+        border-radius: $borderRadius-xxs !important
+        &.ant-input-number-in-form-item
+            .ant-input-number-handler-wrap
+                border-radius: $borderRadius-none $borderRadius-xxs $borderRadius-xxs $borderRadius-none !important
 
-	.ant-input-number:not(.ant-input-number-affix-wrapper)
-		&.ant-input-number-status-success
-			box-shadow: none !important
-			@apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
-		&:focus-within
-			@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+    .ant-input-number:not(.ant-input-number-affix-wrapper)
+        &.ant-input-number-status-success
+            box-shadow: none !important
+            @apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
+        &:focus-within
+            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
 
-	.ant-input-number:not(.ant-input-number-affix-wrapper)
-		&.ant-input-number-status-error
-			box-shadow: none !important
-			@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
-			@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
-			&:focus-within
-				@apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
+    .ant-input-number:not(.ant-input-number-affix-wrapper)
+        &.ant-input-number-status-error
+            box-shadow: none !important
+            @apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+            @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
+            &:focus-within
+                @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
 
 .ant-form-item-has-error.base-input-number
     .ant-form-item-row
         .ant-form-item-label
             > label
                 @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+        .ant-form-item-explain-error
+            @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
 
 .ant-form-item-has-success.base-input-number
     .ant-form-item-row
@@ -163,6 +165,6 @@
                 @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
 
 .form-item-disabled.base-input-number
-		.ant-form-item-row
-			.ant-form-item-label > label
-				@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+        .ant-form-item-row
+            .ant-form-item-label > label
+                @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}

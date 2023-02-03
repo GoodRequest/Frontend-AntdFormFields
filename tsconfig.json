@@ -12,8 +12,9 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "react-jsx",
+    "baseUrl": "./",
     "typeRoots" : [
-      "./src/types",
+      "./src/types"
     ],
     "types": ["cypress", "cypress-file-upload", "cypress-localstorage-commands"]
   },
@@ -22,7 +23,7 @@
     "node_modules/cypress/types/cypress-global-vars.d.ts"
   ],
   "exclude": [
-    "dist",
-    "src/stories"
+    "dist", //,
+    // "src/stories"
   ]
 }

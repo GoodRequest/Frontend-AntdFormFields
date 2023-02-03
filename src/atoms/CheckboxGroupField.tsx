@@ -4,7 +4,7 @@ import { CheckboxGroupProps } from 'antd/lib/checkbox'
 import { FormItemProps } from 'antd/lib/form/FormItem'
 import cx from 'classnames'
 import { map } from 'lodash'
-import { CSSProperties } from 'react'
+import { CSSProperties, useState } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import { formFieldID } from '../utils/helper'
 
@@ -34,6 +34,8 @@ const CheckboxGroupField = (props: Props) => {
 		large
 	} = props
 
+	const [value, setValue] = useState<any []>([])
+
 	const checkboxes = map(options, (option: any) => {
 		if (typeof option === 'string') {
 			return (
@@ -43,19 +45,31 @@ const CheckboxGroupField = (props: Props) => {
 			)
 		}
 		return (
-			<Checkbox disabled={option.disabled} key={`${option.value}`} value={option.value} className={cx('my-1', { large, 'inline-flex': horizontal })}>
+			<Checkbox disabled={disabled || option.disabled} key={`${option.value}`} value={option.value} className={cx('my-1', { large, 'inline-flex': horizontal })}>
 				{option.label}
 			</Checkbox>
 		)
 	})
+
+	const onChange = (e: any) => {
+		setValue(e)
+	}
+
 	return (
-		<Item label={label} required={required} help={touched && error} className={className} validateStatus={error && touched ? 'error' : undefined} style={style}>
+		<Item 
+			label={label} 
+			required={required} 
+			help={touched && error} 
+			className={cx(className, 'radio', { 'checkbox-has-error': error && touched }, { 'form-item-disabled' : disabled})} 
+			validateStatus={error && touched ? 'error' : undefined} 
+			style={style}
+		>
 			<Checkbox.Group
 				// @ts-ignore
 				id={formFieldID(form, input.name)}
 				className={'flex flex-wrap'}
-				value={input.value || []}
-				onChange={input.onChange}
+				onChange={input.onChange ? input.onChange : onChange}
+				value={input.onChange ? input.value || [] : value}
 				defaultValue={defaultValue}
 				style={{
 					...checkboxGroupStyles,

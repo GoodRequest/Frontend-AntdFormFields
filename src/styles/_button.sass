@@ -19,7 +19,7 @@
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-xs
+		border-radius: $borderRadius-sm
 		> svg
 			width: 20px
 			height: 20px
@@ -46,29 +46,35 @@
 			@apply bg-action_primary_active_light dark:bg-action_primary_active_dark #{!important}
 
 		&.ant-btn-icon-only
-			border-radius: $borderRadius-xl
+			border-radius: $borderRadius-circle
+			&.squared
+				border-radius: $borderRadius-sm
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 56px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			height: 40px
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 40px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-sm
 			border-radius: $borderRadius-xxs
@@ -78,8 +84,10 @@
 				height: 16px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				height: 24px
+				&.squared
+					border-radius: $borderRadius-xxs
 
 	&.ant-btn-default
 		@apply bg-action_secondary_default_light dark:bg-action_secondary_default_dark
@@ -91,7 +99,7 @@
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-xs
+		border-radius: $borderRadius-sm
 		> svg
 			width: 20px
 			height: 20px
@@ -120,29 +128,35 @@
 			@apply bg-action_secondary_active_dark dark:bg-action_secondary_active_dark #{!important}
 
 		&.ant-btn-icon-only
-			border-radius: $borderRadius-xl
+			border-radius: $borderRadius-circle
+			&.squared
+				border-radius: $borderRadius-sm
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 56px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			height: 40px
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 40px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-sm
 			border-radius: $borderRadius-xxs
@@ -152,8 +166,10 @@
 				height: 16px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				height: 24px
+				&.squared
+					border-radius: $borderRadius-xxs
 
 	&.ant-btn-dangerous
 		@apply bg-destructive_default_light dark:bg-destructive_default_dark
@@ -165,7 +181,7 @@
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-xs
+		border-radius: $borderRadius-sm
 		> svg
 			width: 20px
 			height: 20px
@@ -175,12 +191,16 @@
 			margin-left: 8px
 			margin-right: 8px
 
-		&:not(:disabled):hover,
+		&:not(:disabled):hover
 			@apply border-destructive_hover_light dark:border-destructive_hover_dark
 			@apply bg-destructive_hover_light dark:bg-destructive_hover_dark
 
 		&:focus-within:not(:disabled)
 			@apply shadow-focusring_destructive_light dark:shadow-focusring_destructive_dark
+			@apply bg-destructive_default_light dark:bg-destructive_default_dark
+			&:hover
+				@apply border-destructive_hover_light dark:border-destructive_hover_dark
+				@apply bg-destructive_hover_light dark:bg-destructive_hover_dark
 
 		&:disabled
 			opacity: 0.3
@@ -192,29 +212,37 @@
 			@apply bg-destructive_active_light dark:bg-destructive_active_dark #{!important}
 
 		&.ant-btn-icon-only
-			border-radius: $borderRadius-xl
+			border-radius: $borderRadius-circle
+			&.squared
+				border-radius: $borderRadius-sm
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 56px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			height: 40px
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 40px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-sm
 			border-radius: $borderRadius-xxs
@@ -224,8 +252,10 @@
 				height: 16px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				height: 24px
+				&.squared
+					border-radius: $borderRadius-xxs
 
 	&.ant-btn-text
 		@apply text-action_primary_default_light dark:text-action_primary_default_dark
@@ -236,7 +266,7 @@
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-xs
+		border-radius: $borderRadius-sm
 
 		> svg
 			width: 20px
@@ -264,29 +294,35 @@
 			@apply text-action_primary_active_light dark:text-action_primary_active_dark #{!important}
 
 		&.ant-btn-icon-only
-			border-radius: $borderRadius-xl
+			border-radius: $borderRadius-circle
+			&.squared
+					border-radius: $borderRadius-sm
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 56px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-sm
+			border-radius: $borderRadius-md
 			height: 40px
 			> svg
 				width: 24px
 				height: 24px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				width: 40px
+				&.squared
+					border-radius: $borderRadius-sm
 
 		&.ant-btn-sm
 			border-radius: $borderRadius-xxs
@@ -296,8 +332,10 @@
 				height: 16px
 
 			&.ant-btn-icon-only
-				border-radius: $borderRadius-xl
+				border-radius: $borderRadius-circle
 				height: 24px
+				&.squared
+					border-radius: $borderRadius-xxs
 
 	&.ant-btn-loading
 		> svg
@@ -309,22 +347,8 @@
 		.loading-icon
 			display: block !important
 			align-items: center
-			justify-content: center
 			margin-right: 0
 			margin-left: 0
-			> svg
-				width: 20px
-				height: 20px
-				@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark #{!important}
-				animation: loading-spinner 1s linear infinite
-
-				@keyframes loading-spinner
-					from
-						transform: rotate(0deg)
-					to
-						transform: rotate(360deg)
-				> g > rect
-					@apply fill-content_primary_inverse_light dark:fill-content_primary_inverse_dark #{!important}
 
 		&:not(.ant-btn-icon-only)
 			.loading-icon
@@ -351,31 +375,105 @@
 						margin-right: 12px !important
 						transition: margin-right 0.2s ease-in-out  !important
 
-		&.ant-btn-lg, &.extra-large
-			.loading-icon
-				> svg
-					width: 24px !important
-					height: 24px !important
-
-		&.ant-btn-sm
-			.loading-icon
-				> svg
-					width: 16px !important
-					height: 16px !important
-
 		&:before
 			display: none
 
-		&.ant-btn-default
-			.loading-icon
-				> svg
-					@apply stroke-content_primary_light dark:stroke-content_primary_dark #{!important}
-					> g > rect
-						@apply fill-content_primary_light dark:fill-content_primary_dark #{!important}
 
-		&.ant-btn-text
-			.loading-icon
-				> svg
-					@apply stroke-action_primary_default_light dark:stroke-action_primary_default_dark #{!important}
-					> g > rect
-						@apply fill-action_primary_default_light dark:fill-action_primary_default_dark #{!important}
+.ant-btn.base-btn
+	.spinnerStickSC
+		@apply bg-content_primary_inverse_light dark:bg-content_primary_inverse_dark
+
+	&.ant-btn-text
+		.spinnerStickSC
+			@apply bg-action_primary_default_light dark:bg-action_primary_default_dark
+
+	&.ant-btn-default
+		.spinnerStickSC
+			@apply bg-content_primary_light dark:bg-content_primary_dark
+
+	.spinnerSC
+		width: 16px
+		height: 16px
+		.spinnerStickSC
+			width: 2.29px
+			height: 4.58px
+
+	&.ant-btn-lg, &.extra-large
+		.spinnerSC
+			width: 20px
+			height: 20px
+			.spinnerStickSC
+				width: 2.5px
+				height: 5.5px
+
+	&.ant-btn-sm
+		.spinnerSC
+			width: 12px
+			height: 12px
+			.spinnerStickSC
+				width: 1.83px
+				height: 3.67px
+
+	.spinnerSC
+		position: relative
+
+		.spinnerStickSC
+			position: absolute
+			border-radius: 8.25px
+			animation: loading-animation 1s linear infinite
+
+			@keyframes loading-animation
+				0%
+					opacity: 0.1
+				50%
+					opacity: 1
+				100%
+					opacity: 0.1
+
+		.spinnerStickSC:nth-child(1)
+			transform: translate(-50%, 0) rotate(0deg)
+			top: 0
+			left: 50%
+			animation-delay: -0.875s
+		
+		.spinnerStickSC:nth-child(2)
+			transform: rotate(45deg)
+			top: 8%
+			right: 17%
+			animation-delay: -0.75s
+
+		.spinnerStickSC:nth-child(3)
+			transform: translate(-50%, -50%) rotate(90deg)
+			top: 50%
+			right: 0
+			animation-delay: -0.625s
+		
+		.spinnerStickSC:nth-child(4)
+			transform: rotate(-45deg)
+			bottom: 8%
+			right: 17%
+			animation-delay: -0.5s
+
+		.spinnerStickSC:nth-child(5)
+			transform: translate(-50%, 0) rotate(180deg)
+			bottom: 0
+			left: 50%
+			animation-delay: -0.375s
+
+		.spinnerStickSC:nth-child(6)
+			transform: rotate(45deg)
+			bottom: 8%
+			left: 17%
+			animation-delay: -0.25s
+
+		.spinnerStickSC:nth-child(7)
+			transform: translate(50%, -50%) rotate(270deg)
+			top: 50%
+			left: 0
+			animation-delay: -0.125s
+
+		.spinnerStickSC:nth-child(8)
+			transform: rotate(-45deg)
+			left: 17%
+			top: 8%
+			animation-delay: 0

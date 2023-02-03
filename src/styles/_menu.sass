@@ -3,12 +3,11 @@
 
 .ant-menu-horizontal.base-menu
 	background-color: transparent
-	@apply text-sm-semibold
 	&.primary
 		border-bottom: 0 !important
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
 		.ant-menu-item
-			border-radius: 6px
+			border-radius: $borderRadius-xs
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 
@@ -17,13 +16,13 @@
 			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark #{!important}
 
 		::after
-			border-bottom: 0 !important
+			border-width: 0 !important
 
 	&.secondary
 		border-bottom: 0 !important
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
 		.ant-menu-item
-			border-radius: 6px
+			border-radius: $borderRadius-xs
 			&:hover
 				@apply text-content_primary_light dark:text-content_primary_dark
 				@apply bg-surface_secondary_light dark:bg-surface_secondary_dark
@@ -33,38 +32,52 @@
 			@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark  #{!important}
 
 		::after
-			border-bottom: 0 !important
+			border-width: 0 !important
 
 	&.underlined-filled
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		::after
+			display: none
 		.ant-menu-item
-			border-width: 0 0 2px 0 !important
+			border-style: solid
+			border-width: $borderWidth-md
+			border-top: 0
+			border-left: 0
+			border-right: 0
+			border-radius: $borderRadius-none
 			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 				@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 
 		.ant-menu-item-selected
+			z-index: 2
 			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
 			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark
-		::after
-			border-bottom: 0 !important
 
 	&.underlined
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		::after
+			display: none
 		.ant-menu-item
-			border-width: 0 0 2px 0 !important
+			border-style: solid
+			border-width: $borderWidth-md
+			border-top: 0
+			border-left: 0
+			border-right: 0
+			border-radius: $borderRadius-none
 			border-color: transparent
 			&:hover
 				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
+		.ant-menu-item:not(.ant-menu-item-selected):hover::after
+			transition: none !important
+			display: none
 
 		.ant-menu-item-selected
+			z-index: 2
 			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
 			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
-
-		::after
-			border-bottom: 0 !important
 
 	&.buttons
 		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
@@ -76,6 +89,7 @@
 		align-items: center
 		padding-left: 6px
 		padding-right: 6px
+		border-radius: $borderRadius-xs
 
 		&.small
 			height: 44px !important
@@ -83,7 +97,7 @@
 			height: 56px !important
 
 		.ant-menu-item
-			border-radius: 6px
+			border-radius: $borderRadius-xs
 			margin-bottom: 1px
 			&:hover
 				@apply text-content_primary_light dark:text-content_primary_dark #{!important}
@@ -96,7 +110,7 @@
 			box-shadow: $boxShadow-sm
 
 		::after
-			border-bottom: 0 !important
+			border-width: 0 !important
 
 	&.full-width
 		display: flex
@@ -113,8 +127,10 @@
 		justify-content: center
 
 	&.small
+		@apply text-sm-semibold
 		.ant-menu-item
 			height: 36px !important
 	&.medium
+		@apply text-md-semibold #{!important}
 		.ant-menu-item
 			height: 44px !important

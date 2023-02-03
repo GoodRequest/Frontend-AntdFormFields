@@ -13,10 +13,11 @@
 		.ant-radio-disabled
 			.ant-radio-inner
 				@apply bg-content_primary_inverse_light dark:bg-content_primary_inverse_dark
+				@apply border-content_quintary_light dark:border-content_quintary_dark #{!important}
 
 	.ant-radio-wrapper:not(.ant-radio-wrapper-disabled):hover .ant-radio-inner,
 	.ant-radio:not(.ant-radio-disabled):hover .ant-radio-inner
-		@apply bg-action_primary_bg_light dark:bg-action_primary_bg_dark #{!important}
+		@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark #{!important}
 		@apply border-action_primary_hover_light dark:border-action_primary_hover_dark #{!important}
 
 	.ant-radio-wrapper:focus-within .ant-radio-inner,
@@ -27,3 +28,36 @@
 
 	.ant-radio-checked .ant-radio-inner:after
 		@apply bg-action_primary_default_light dark:bg-action_primary_default_dark #{!important}
+
+.form-item-disabled.base-radiobutton
+	.ant-form-item-row
+		.ant-form-item-label > label
+			@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+		.ant-radio-wrapper-disabled
+			> span
+				@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+
+.ant-form-item-has-error.base-radiobutton
+	.ant-form-item-row
+		.ant-form-item-label
+			> label
+				@apply text-state_error_fg_light dark:text-state_error_fg_dark
+		.ant-form-item-explain-error
+			@apply text-state_error_fg_light dark:text-state_error_fg_dark
+
+		.ant-radio-wrapper
+			@apply text-state_error_fg_light dark:text-state_error_fg_dark 
+			.ant-radio-inner
+				@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+		
+		.ant-radio-wrapper:not(.ant-radio-wrapper-disabled):hover .ant-radio-inner,
+		.ant-radio:not(.ant-radio-disabled):hover .ant-radio-inner
+			@apply bg-state_error_bg_light dark:bg-state_error_bg_dark #{!important}
+			@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+
+		.ant-radio-wrapper:focus-within .ant-radio-inner,
+		.ant-radio:focus-within .ant-radio-inner
+			@apply shadow-focusring_destructive_light dark:shadow-focusring_destructive_dark #{!important}
+
+		.ant-radio-checked .ant-radio-inner:after
+			@apply bg-state_error_fg_light dark:bg-state_error_fg_dark #{!important}

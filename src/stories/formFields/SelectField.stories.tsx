@@ -9,9 +9,20 @@ import { ComponentStory } from '@storybook/react'
 import SelectField from '../../atoms/SelectField'
 import withReduxForm, { STORYBOOK_FORM } from '../utils/withReduxForm'
 import { mock } from '../utils/helpers'
+import Plus from '../../assets/icons/Plus'
 
 const CATEGORIES = [
 	{ label: 'Kategória 1', value: 1, key: 1 },
+	// { label: 'Kategória 2', value: 2, key: 2 },
+	// { label: 'Kategória 3', value: 3, key: 3 }
+	// { label: 
+	// 	<div className='flex items-center justify-center'>
+	// 		<Plus />
+	// 		<span>DZENG</span>
+	// 		<span>ALICA</span>
+	// 	</div>, 
+	// 	value: 1, 
+	// 	key: 1 },
 	{ label: 'Kategória 2', value: 2, key: 2 },
 	{ label: 'Kategória 3', value: 3, key: 3 }
 ]
@@ -34,7 +45,7 @@ export const SimpleSelect: ComponentStory<typeof SelectField> = () => {
 
 	return (
 		<Form layout='vertical'>
-			<Field component={SelectField} allowClear placeholder={'Kategória'} name='categoryID' options={CATEGORIES} size={'large'} />
+			<Field component={SelectField} label={'Label'} className={'base-select'} allowClear placeholder={'Kategória'} name='categoryID' options={CATEGORIES} size={'large'} />
 		</Form>
 	)
 }
@@ -57,7 +68,7 @@ export const SelectWithFetch: ComponentStory<typeof SelectField> = () => {
 
 	return (
 		<Form layout='vertical'>
-			<Field component={SelectField} allowClear placeholder={'Salón'} name='salonID' onSearch={searchOption} onDidMountSearch size={'large'} />
+			<Field component={SelectField} allowClear className={'base-select'} placeholder={'Salón'} name='salonID' onSearch={searchOption} onDidMountSearch size={'large'} />
 		</Form>
 	)
 }
@@ -93,7 +104,7 @@ export const SelectWithFetchPagination: ComponentStory<typeof SelectField> = () 
 
 	return (
 		<Form layout='vertical'>
-			<Field component={SelectField} allowClear placeholder={'Salón'} name='salonID' onSearch={searchOption} onDidMountSearch size={'large'} allowInfinityScroll showSearch />
+			<Field component={SelectField} allowClear className={'base-select'} placeholder={'Salón'} name='salonID' onSearch={searchOption} onDidMountSearch size={'large'} allowInfinityScroll showSearch />
 		</Form>
 	)
 }
@@ -129,6 +140,7 @@ export const MultiSelectWithFetchPagination: ComponentStory<typeof SelectField> 
 				placeholder={'Salón'}
 				name='salonID'
 				onSearch={searchOption}
+				className={'base-select'}
 				onDidMountSearch
 				size={'large'}
 				allowInfinityScroll

@@ -8,6 +8,7 @@ import { Button, Divider, Empty, Form, Select, Spin } from 'antd'
 import { SelectProps } from 'antd/lib/select'
 import { FormItemProps } from 'antd/lib/form/FormItem'
 import { createSlug, formFieldID } from '../utils/helper'
+import CheckMark from '../assets/icons/CheckMark'
 
 import { FIELD_MODE } from '../utils/enums'
 
@@ -95,7 +96,7 @@ const renderMenuItemSelectedIcon = (
 	} else if (disableMenuItemSelectedIcon) {
 		icon = null
 	} else if ((mode === 'tags' || mode === 'multiple') && !disableMenuItemSelectedIcon) {
-		icon = menuItemSelectedIcon
+		icon = <CheckMark /> || menuItemSelectedIcon
 	}
 	return icon
 }
@@ -172,7 +173,7 @@ const fetchSearchData = async ({
 	onSearch,
 	dataSourcePath,
 	allowInfinityScroll,
-	missingValues
+	missingValues,
 }: {
 	selectState: SelectStateTypes
 	value: string
@@ -180,7 +181,7 @@ const fetchSearchData = async ({
 	onSearch: any
 	dataSourcePath: string
 	allowInfinityScroll: boolean | undefined
-	missingValues: number[] // used in select with pagination (allowInfinityScroll) when not all options are loaded during initialization
+	missingValues: number[]// used in select with pagination (allowInfinityScroll) when not all options are loaded during initialization
 }) => {
 	let newState = {}
 	try {
@@ -194,13 +195,13 @@ const fetchSearchData = async ({
 			newState = { data: mergedData, pagination: newData.pagination, fetching: false }
 		} else if (!allowInfinityScroll && isArray(newData)) {
 			// NOTE: Výsledky sa nedoliepajú
-			newState = { data: newData, fetching: false }
+			newState = { data: newData, fetching: false, isOpen: false }
 		} else {
 			newState = {
 				data: [],
 				pagination: null,
 				fetching: false,
-				searchValue: ''
+				searchValue: '',
 			}
 		}
 		if (newData.emptyText) {
@@ -213,10 +214,9 @@ const fetchSearchData = async ({
 			data: [],
 			pagination: null,
 			fetching: false,
-			searchValue: ''
+			searchValue: '',
 		}
 	}
-
 	return newState
 }
 
@@ -289,6 +289,8 @@ const SelectField = (props: Props) => {
 		emptyText: null,
 		pagination: null
 	})
+
+	const [areOptsLoaded, setAreOptsLoaded] = useState<boolean>(false)
 
 	const renderDropdown = useCallback(
 		(antdActions?: Action[] | null) => (menu: React.ReactElement) => {
@@ -446,6 +448,16 @@ const SelectField = (props: Props) => {
 		notFound = <Empty className={'m-4'} image={Empty.PRESENTED_IMAGE_SIMPLE} description={selectState.emptyText || emptyText} />
 	}
 
+	let labelAvailable = true
+	if (!areOptsLoaded) {
+		if (Array.isArray(value)) {
+			value?.forEach(val => {
+				if (!find(opt, (item) => item?.value === val)) labelAvailable = false
+			})
+		} else if (!find(opt, (item) => item?.value === value)) labelAvailable = false
+	}
+	if (labelAvailable && !areOptsLoaded) setAreOptsLoaded(true)
+
 	return (
 		<Item
 			label={label}
@@ -458,7 +470,7 @@ const SelectField = (props: Props) => {
 			<Select
 				bordered={bordered}
 				style={{ backgroundColor }}
-				className={cx({ 'select-input': !disableTpStyles, rounded: backgroundColor, 'filter-select': fieldMode === FIELD_MODE.FILTER })}
+				className={cx(className, {'filter-select': fieldMode === FIELD_MODE.FILTER })}
 				tagRender={tagRender}
 				mode={mode}
 				{...input}
@@ -466,7 +478,7 @@ const SelectField = (props: Props) => {
 				onFocus={onFocus}
 				onChange={onChange}
 				size={size || 'middle'}
-				value={value}
+				value={areOptsLoaded ? value : undefined}
 				onBlur={onBlur}
 				placeholder={placeholder || ''}
 				loading={loading || selectState.fetching}

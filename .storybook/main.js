@@ -8,26 +8,40 @@ module.exports = {
     "addons": [
         "@storybook/addon-links",
         "@storybook/addon-essentials",
-        "@storybook/addon-interactions"
+        "@storybook/addon-interactions",
+        'storybook-tailwind-dark-mode',
+        {
+          name: '@storybook/addon-postcss',
+          options: {
+            postcssLoaderOptions: {
+              implementation: require('postcss'),
+            },
+          },
+        },
     ],
+    "staticDirs": ['../dist/assets/fonts'],
     webpackFinal: async (config) => {
-        config.module.rules.push({
-            test: /\,css$/,
-            use: [
-                {
-                    loader: 'postcss-loader',
-                    options: {
-                        ident: 'postcss',
-                        plugins: [
-                            require('tailwindcss'),
-                            require('autoprefixer')
-                        ]
-                    }
-                }
-            ],
-            include: path.resolve(__dirname, '../')
-        })
-        return config
+
+      config.module.rules.push({
+        test: /\.sass$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      })
+
+      config.module.rules = [
+        ...config.module.rules.map(rule => {
+          if (/svg/.test(rule.test)) {
+            return { ...rule, exclude: /\.svg$/ }
+          }
+      
+          return rule
+        }),
+        {
+          test: /\.svg$/,
+          use: ["@svgr/webpack"]
+        }
+      ]
+      
+      return config
     },
     "framework": "@storybook/react",
     "core": {

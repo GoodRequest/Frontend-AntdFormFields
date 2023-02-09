@@ -1,0 +1,15 @@
+node_modules/
+logs/
+coverage/
+.vscode/
+.env
+.idea
+tmp
+yarn-error.log
+.eslintcache
+.DS_Store
+apidoc
+translations.csv
+storybook-static
+
+src

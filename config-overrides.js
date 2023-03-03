@@ -1,6 +1,6 @@
 /*eslint-disable*/
 
-const { override, fixBabelImports, addWebpackPlugin, addWebpackExternals } = require('customize-cra');
+const { override, fixBabelImports, addWebpackPlugin } = require('customize-cra');
 const AntdDayjsWebpackPlugin  = require('antd-dayjs-webpack-plugin')
 
 module.exports = override(
@@ -12,8 +12,4 @@ module.exports = override(
     }),
     // antd components dayjs
     addWebpackPlugin(new AntdDayjsWebpackPlugin()),
-    // addWebpackExternals({
-	// 	react: "React",
-	// 	"react-dom": "ReactDom"
-	// })
 )

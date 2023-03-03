@@ -45,6 +45,14 @@ initializeCustomCommands()
 ```
 
 ## Development
+storybook needs as a dependency react and react dom.
+
+npm run set-local-development
+
+dont forgot to unset after you done
+
+npm run unset-local-development
+
 Run storybook to check form fields.
 
 ```sh

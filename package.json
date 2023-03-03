@@ -14,7 +14,10 @@
     "sass": "sass --watch ./src/styles/global.sass ./.storybook/main.css",
     "prepublish": "npm run build",
     "export-tailwind-config": "tailwindcss-export-config --config=tailwind.config.js --destination=src/styles/tailwind-variables --flat=true --format=sass --quoted-keys=true",
-    "build:tailwind": "npm run export-tailwind-config && tailwind build src/styles/tailwind.css -o src/styles/main.css"
+    "build:tailwind": "npm run export-tailwind-config && tailwind build src/styles/tailwind.css -o src/styles/main.css",
+    "build-css": "node-sass -w ./dist/styles/_global.sass -o ./dist/styles/global.css",
+    "set-local-development": "npm install react --save-dev && npm install react-dom --save-dev",
+    "unset-local-development": "npm uninstall react && npm uninstall react-dom"
   },
   "module": "dist/index.js",
   "types": "./src/types/index.d.ts",
@@ -26,6 +29,7 @@
     "autoprefixer": "10.4.8",
     "css-loader": "6.7.2",
     "file-loader": "6.2.0",
+    "node-sass": "7.0.3",
     "postcss": "8.4.18",
     "react-input-mask": "2.0.4",
     "resolve-url-loader": "5.0.0",
@@ -61,8 +65,6 @@
     "cypress-localstorage-commands": "2.2.2",
     "postcss-import": "15.0.0",
     "postcss-loader": "7.0.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "react-redux": "8.0.5",
     "redux-form": "8.3.8",
     "storybook-addon-customize-antd-theme": "1.1.0",

@@ -11,5 +11,5 @@ module.exports = override(
         style: true
     }),
     // antd components dayjs
-    addWebpackPlugin(new AntdDayjsWebpackPlugin()),
+    addWebpackPlugin(new AntdDayjsWebpackPlugin())
 )

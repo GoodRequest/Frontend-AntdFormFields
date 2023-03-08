@@ -8,7 +8,7 @@
         @apply text-sm-regular
     .ant-input-number-affix-wrapper
         &.ant-input-number-affix-wrapper-large
-            border-radius: $borderRadius-md
+            border-radius: $borderRadius-12
             border: 1px solid
             .ant-input-number-prefix
                 > svg
@@ -17,12 +17,12 @@
                     @apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
 
             .ant-input-number-in-form-item
-                border-radius: $borderRadius-none $borderRadius-md $borderRadius-md $borderRadius-none !important
+                border-radius: 0 $borderRadius-12 $borderRadius-12 0 !important
                 .ant-input-number-handler-wrap
-                    border-radius: $borderRadius-none $borderRadius-md $borderRadius-md $borderRadius-none !important
+                    border-radius: 0 $borderRadius-12 $borderRadius-12 0 !important
 
         &.ant-input-number-affix-wrapper-small
-            border-radius: $borderRadius-xxs
+            border-radius: $borderRadius-4
             border: 1px solid
             .ant-input-number-prefix
                 > svg
@@ -31,10 +31,10 @@
                     @apply stroke-content_tertiary_light dark:stroke-content_tertiary_dark
 
             .ant-input-number-in-form-item, .ant-input-number-handler-wrap
-                border-radius: $borderRadius-none $borderRadius-xxs $borderRadius-xxs $borderRadius-none !important
+                border-radius: 0 $borderRadius-4 $borderRadius-4 0 !important
 
         &:not(.ant-input-number-affix-wrapper-large, .ant-input-number-affix-wrapper-small)
-            border-radius: $borderRadius-sm
+            border-radius: $borderRadius-8
             border: 1px solid
             .ant-input-number-prefix
                 > svg
@@ -43,7 +43,7 @@
                     @apply stroke-content_tertiary_light dark:stroke-content_primary_dark
 
             .ant-input-number-in-form-item, .ant-input-number-handler-wrap
-                border-radius: $borderRadius-none $borderRadius-sm $borderRadius-sm $borderRadius-none !important
+                border-radius: 0 $borderRadius-8 $borderRadius-8 0 !important
 
 
     .ant-input-number-affix-wrapper:not(.ant-input-number-affix-wrapper-disabled), .ant-input-number-in-form-item:not(.ant-input-number-disabled)
@@ -113,7 +113,7 @@
 // without prefix
 .ant-form-item.base-input-number
     .ant-input-number:not(.ant-input-number-affix-wrapper)
-        border-radius: $borderRadius-sm
+        border-radius: $borderRadius-8
         &:hover:not(.ant-input-number-disabled)
             @apply border-surface_quatenary_light dark:border-surface_quatenary_dark
             @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
@@ -123,17 +123,17 @@
             @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
         &.ant-input-number-in-form-item
             .ant-input-number-handler-wrap
-                border-radius: $borderRadius-none $borderRadius-sm $borderRadius-sm $borderRadius-none !important
+                border-radius: 0 $borderRadius-8 $borderRadius-8 0 !important
     .ant-input-number-lg:not(.ant-input-number-affix-wrapper)
-        border-radius: $borderRadius-md !important
+        border-radius: $borderRadius-12 !important
         &.ant-input-number-in-form-item
             .ant-input-number-handler-wrap
-                border-radius: $borderRadius-none $borderRadius-md $borderRadius-md $borderRadius-none !important
+                border-radius: 0 $borderRadius-12 $borderRadius-12 0 !important
     .ant-input-number-sm:not(.ant-input-number-affix-wrapper)
-        border-radius: $borderRadius-xxs !important
+        border-radius: $borderRadius-4 !important
         &.ant-input-number-in-form-item
             .ant-input-number-handler-wrap
-                border-radius: $borderRadius-none $borderRadius-xxs $borderRadius-xxs $borderRadius-none !important
+                border-radius: 0 $borderRadius-4 $borderRadius-4 0 !important
 
     .ant-input-number:not(.ant-input-number-affix-wrapper)
         &.ant-input-number-status-success

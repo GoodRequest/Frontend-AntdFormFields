@@ -5,59 +5,59 @@
 	&:not(.ant-form-item-label)
 		@apply text-md-medium
 	.ant-radio-wrapper
-		@apply text-content_primary_light dark:text-content_primary_dark
+		@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary
 		.ant-radio-inner
-			@apply border-content_quartenary_light dark:border-content_quartenary_dark #{!important}
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark
+			@apply border-color-light-base-content-quaternary dark:border-color-dark-base-content-quaternary #{!important}
+			@apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary
 
 		.ant-radio-disabled
 			.ant-radio-inner
-				@apply bg-content_primary_inverse_light dark:bg-content_primary_inverse_dark
-				@apply border-content_quintary_light dark:border-content_quintary_dark #{!important}
+				@apply bg-color-light-inverse-content-primary dark:bg-color-dark-inverse-content-primary
+				@apply border-color-light-base-content-quintarny dark:border-color-dark-base-content-quintarny #{!important}
 
 	.ant-radio-wrapper:not(.ant-radio-wrapper-disabled):hover .ant-radio-inner,
 	.ant-radio:not(.ant-radio-disabled):hover .ant-radio-inner
-		@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark #{!important}
-		@apply border-action_primary_hover_light dark:border-action_primary_hover_dark #{!important}
+		@apply bg-color-light-base-action-primary-bg10 dark:bg-color-dark-base-action-primary-bg10 #{!important}
+		@apply border-color-light-base-action-primary-hover dark:border-color-dark-base-action-primary-hover #{!important}
 
 	.ant-radio-wrapper:focus-within .ant-radio-inner,
 	.ant-radio:focus-within .ant-radio-inner
-		@apply bg-surface_primary_light dark:bg-surface_primary_dark
-		@apply border-action_primary_active_light dark:border-action_primary_active_dark
-		@apply shadow-focusring_primary_light dark:shadow-focusring_primary_dark #{!important}
+		@apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary
+		@apply border-color-light-base-action-primary-active dark:border-color-dark-base-action-primary-active
+		@apply shadow-ring-light-primary-xs dark:shadow-ring-dark-primary-xs #{!important}
 
 	.ant-radio-checked .ant-radio-inner:after
-		@apply bg-action_primary_default_light dark:bg-action_primary_default_dark #{!important}
+		@apply bg-color-light-base-action-primary-default dark:bg-color-dark-base-action-primary-default #{!important}
 
 .form-item-disabled.base-radiobutton
 	.ant-form-item-row
 		.ant-form-item-label > label
-			@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+			@apply text-color-light-base-content-quintarny dark:text-color-dark-base-content-quintarny #{!important}
 		.ant-radio-wrapper-disabled
 			> span
-				@apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+				@apply text-color-light-base-content-quintarny dark:text-color-dark-base-content-quintarny #{!important}
 
 .ant-form-item-has-error.base-radiobutton
 	.ant-form-item-row
 		.ant-form-item-label
 			> label
-				@apply text-state_error_fg_light dark:text-state_error_fg_dark
+				@apply text-color-light-base-state-error-fg dark:text-color-dark-base-state-error-fg
 		.ant-form-item-explain-error
-			@apply text-state_error_fg_light dark:text-state_error_fg_dark
+			@apply text-color-light-base-state-error-fg dark:text-color-dark-base-state-error-fg
 
 		.ant-radio-wrapper
-			@apply text-state_error_fg_light dark:text-state_error_fg_dark 
+			@apply text-color-light-base-state-error-fg dark:text-color-dark-base-state-error-fg 
 			.ant-radio-inner
-				@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+				@apply border-color-light-base-state-error-fg dark:border-color-dark-base-state-error-fg #{!important}
 		
 		.ant-radio-wrapper:not(.ant-radio-wrapper-disabled):hover .ant-radio-inner,
 		.ant-radio:not(.ant-radio-disabled):hover .ant-radio-inner
-			@apply bg-state_error_bg_light dark:bg-state_error_bg_dark #{!important}
-			@apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
+			@apply bg-color-light-base-state-error-bg dark:bg-color-dark-base-state-error-bg #{!important}
+			@apply border-color-light-base-state-error-fg dark:border-color-dark-base-state-error-fg #{!important}
 
 		.ant-radio-wrapper:focus-within .ant-radio-inner,
 		.ant-radio:focus-within .ant-radio-inner
-			@apply shadow-focusring_destructive_light dark:shadow-focusring_destructive_dark #{!important}
+			@apply shadow-ring-light-destructive-xs dark:shadow-ring-dark-destructive-xs #{!important}
 
 		.ant-radio-checked .ant-radio-inner:after
-			@apply bg-state_error_fg_light dark:bg-state_error_fg_dark #{!important}
+			@apply bg-color-light-base-state-error-fg dark:bg-color-dark-base-state-error-fg #{!important}

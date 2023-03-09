@@ -102,12 +102,12 @@
 			&:hover
 				@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary #{!important}
 				@apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary
-				box-shadow: $boxShadow-drop-shadow-light-sm
+				@apply shadow-drop-shadow-light-sm dark:shadow-drop-shadow-dark-sm
 
 		.ant-menu-item-selected
 			@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary #{!important}
 			@apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary
-			box-shadow: $boxShadow-drop-shadow-light-sm
+			@apply shadow-drop-shadow-light-sm dark:shadow-drop-shadow-dark-sm
 
 		::after
 			border-width: 0 !important

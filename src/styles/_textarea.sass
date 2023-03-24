@@ -8,55 +8,55 @@
         @apply text-sm-regular
     .ant-input
         resize: none
-        border-radius: $borderRadius-lg
+        border-radius: $borderRadius-16
         border-color: transparent
-        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
+        @apply bg-color-light-base-surface-tertiary dark:bg-color-dark-base-surface-tertiary
 
         &:hover:not(.ant-input-disabled)
-            @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark
-            @apply border-surface_quatenary_light dark:bg-surface_quatenary_dark
+            @apply bg-color-light-base-surface-quaternary dark:bg-color-dark-base-surface-quaternary
+            @apply border-color-light-base-surface-quaternary dark:border-color-dark-base-surface-quaternary
 
         &.ant-input-status-error:not(.ant-input-disabled)
             border: solid
             border-width: $borderWidth-xs
-            @apply border-state_error_fg_light dark:border-state_error_fg_dark #{!important}
-            @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+            @apply border-color-light-base-state-error-fg dark:border-color-dark-base-state-error-fg #{!important}
+            @apply bg-color-light-base-surface-tertiary dark:bg-color-dark-base-surface-tertiary #{!important}
             box-shadow: none
             &:hover
-                @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
+                @apply bg-color-light-base-surface-quaternary dark:bg-color-dark-base-surface-quaternary #{!important}
             &:focus
-                @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-                @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+                @apply border-color-light-base-action-primary-active dark:border-color-dark-base-action-primary-active #{!important}
+                @apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary #{!important}
                 box-shadow: none
 
         &.ant-input-status-success:not(.ant-input-disabled)
             border: solid
             border-width: $borderWidth-xs
-            @apply border-state_success_fg_light dark:border-state_success_fg_dark #{!important}
-            @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+            @apply border-color-light-base-state-success-fg dark:border-color-dark-base-state-success-fg #{!important}
+            @apply bg-color-light-base-surface-tertiary dark:bg-color-dark-base-surface-tertiary #{!important}
             box-shadow: none
             &:hover
-                @apply bg-surface_quatenary_light dark:bg-surface_quatenary_dark #{!important}
+                @apply bg-color-light-base-surface-quaternary dark:bg-color-dark-base-surface-quaternary #{!important}
             &:focus
-                @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-                @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+                @apply border-color-light-base-action-primary-active dark:border-color-dark-base-action-primary-active #{!important}
+                @apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary #{!important}
                 box-shadow: none
 
         &:focus
             border: solid
             box-shadow: none
             border-width: $borderWidth-xs
-            @apply border-action_primary_active_light dark:border-action_primary_active_dark #{!important}
-            @apply bg-surface_primary_light dark:bg-surface_primary_dark #{!important}
+            @apply border-color-light-base-action-primary-active dark:border-color-dark-base-action-primary-active #{!important}
+            @apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary #{!important}
 
     .ant-input-disabled
-        @apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark #{!important}
+        @apply bg-color-light-base-surface-tertiary dark:bg-color-dark-base-surface-tertiary #{!important}
 
     .ant-input-disabled:hover
         border-color: transparent
     
     .ant-input-disabled::placeholder
-        @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+        @apply text-color-light-base-content-quintarny dark:text-color-dark-base-content-quintarny #{!important}
 
     .ant-input-sm
         padding-top: 2px
@@ -68,20 +68,20 @@
     .ant-form-item-row
         .ant-form-item-label 
             > label
-                @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+                @apply text-color-light-base-state-error-fg dark:text-color-dark-base-state-error-fg #{!important}
         .ant-form-item-explain-error
-            @apply text-state_error_fg_light dark:text-state_error_fg_dark #{!important}
+            @apply text-color-light-base-state-error-fg dark:text-color-dark-base-state-error-fg #{!important}
 
 
 .ant-form-item-has-success.base-textarea
     .ant-form-item-row
         .ant-form-item-label
             > label
-                @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
+                @apply text-color-light-base-state-success-fg dark:text-color-dark-base-state-success-fg #{!important}
         .ant-form-item-explain-error
-            @apply text-state_success_fg_light dark:text-state_success_fg_dark #{!important}
+            @apply text-color-light-base-state-success-fg dark:text-color-dark-base-state-success-fg #{!important}
 
 .form-item-disabled.base-textarea
     .ant-form-item-row
         .ant-form-item-label > label
-            @apply text-content_quintary_light dark:text-content_quintary_dark #{!important}
+            @apply text-color-light-base-content-quintarny dark:text-color-dark-base-content-quintarny #{!important}

@@ -5,37 +5,37 @@
 	background-color: transparent
 	&.primary
 		border-bottom: 0 !important
-		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		@apply text-color-light-base-content-tertiary dark:text-color-dark-base-content-tertiary #{!important}
 		.ant-menu-item
-			border-radius: $borderRadius-xs
+			border-radius: $borderRadius-6
 			&:hover
-				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
+				@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default #{!important}
 
 		.ant-menu-item-selected
-			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark #{!important}
+			@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default #{!important}
+			@apply bg-color-light-base-action-primary-bg10 dark:bg-color-dark-base-action-primary-bg10 #{!important}
 
 		::after
 			border-width: 0 !important
 
 	&.secondary
 		border-bottom: 0 !important
-		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		@apply text-color-light-base-content-tertiary dark:text-color-dark-base-content-tertiary #{!important}
 		.ant-menu-item
-			border-radius: $borderRadius-xs
+			border-radius: $borderRadius-6
 			&:hover
-				@apply text-content_primary_light dark:text-content_primary_dark
-				@apply bg-surface_secondary_light dark:bg-surface_secondary_dark
+				@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary
+				@apply bg-color-light-base-surface-secondary dark:bg-color-dark-base-surface-secondary
 
 		.ant-menu-item-selected
-			@apply text-content_primary_light dark:text-content_primary_dark #{!important}
-			@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark  #{!important}
+			@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary #{!important}
+			@apply bg-color-light-base-surface-tertiary dark:bg-color-dark-base-surface-tertiary  #{!important}
 
 		::after
 			border-width: 0 !important
 
 	&.underlined-filled
-		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		@apply text-color-light-base-content-tertiary dark:text-color-dark-base-content-tertiary #{!important}
 		::after
 			display: none
 		.ant-menu-item
@@ -44,20 +44,20 @@
 			border-top: 0
 			border-left: 0
 			border-right: 0
-			border-radius: $borderRadius-none
+			border-radius: 0
 			border-color: transparent
 			&:hover
-				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-				@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
+				@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default #{!important}
+				@apply border-color-light-base-action-primary-default dark:border-color-dark-base-action-primary-default #{!important}
 
 		.ant-menu-item-selected
 			z-index: 2
-			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
-			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark
+			@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default #{!important}
+			@apply border-color-light-base-action-primary-default dark:border-color-dark-base-action-primary-default #{!important}
+			@apply bg-color-light-base-action-primary-bg10 dark:bg-color-dark-base-action-primary-bg10
 
 	&.underlined
-		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
+		@apply text-color-light-base-content-tertiary dark:text-color-dark-base-content-tertiary #{!important}
 		::after
 			display: none
 		.ant-menu-item
@@ -66,22 +66,22 @@
 			border-top: 0
 			border-left: 0
 			border-right: 0
-			border-radius: $borderRadius-none
+			border-radius: 0
 			border-color: transparent
 			&:hover
-				@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
+				@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default #{!important}
 		.ant-menu-item:not(.ant-menu-item-selected):hover::after
 			transition: none !important
 			display: none
 
 		.ant-menu-item-selected
 			z-index: 2
-			@apply text-action_primary_default_light dark:text-action_primary_default_dark #{!important}
-			@apply border-action_primary_default_light dark:border-action_primary_default_dark #{!important}
+			@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default #{!important}
+			@apply border-color-light-base-action-primary-default dark:border-color-dark-base-action-primary-default #{!important}
 
 	&.buttons
-		@apply text-content_tertiary_light dark:text-content_tertiary_dark #{!important}
-		@apply bg-surface_tertiary_light dark:bg-surface_tertiary_dark
+		@apply text-color-light-base-content-tertiary dark:text-color-dark-base-content-tertiary #{!important}
+		@apply bg-color-light-base-surface-tertiary dark:bg-color-dark-base-surface-tertiary
 		border-bottom: 0 !important
 		border-top: 0 !important
 
@@ -89,7 +89,7 @@
 		align-items: center
 		padding-left: 6px
 		padding-right: 6px
-		border-radius: $borderRadius-xs
+		border-radius: $borderRadius-6
 
 		&.small
 			height: 44px !important
@@ -97,17 +97,17 @@
 			height: 56px !important
 
 		.ant-menu-item
-			border-radius: $borderRadius-xs
+			border-radius: $borderRadius-6
 			margin-bottom: 1px
 			&:hover
-				@apply text-content_primary_light dark:text-content_primary_dark #{!important}
-				@apply bg-surface_primary_light dark:bg-surface_primary_dark
-				box-shadow: $boxShadow-sm
+				@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary #{!important}
+				@apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary
+				@apply shadow-drop-shadow-light-sm dark:shadow-drop-shadow-dark-sm
 
 		.ant-menu-item-selected
-			@apply text-content_primary_light dark:text-content_primary_dark #{!important}
-			@apply bg-surface_primary_light dark:bg-surface_primary_dark
-			box-shadow: $boxShadow-sm
+			@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary #{!important}
+			@apply bg-color-light-base-surface-primary dark:bg-color-dark-base-surface-primary
+			@apply shadow-drop-shadow-light-sm dark:shadow-drop-shadow-dark-sm
 
 		::after
 			border-width: 0 !important

@@ -10,49 +10,49 @@
 		display: none !important
 
 	&.ant-btn-primary:not(.ant-btn-dangerous)
-		@apply bg-action_primary_default_light dark:bg-action_primary_default_dark
-		@apply border-action_primary_default_light dark:border-action_primary_default_dark
-		@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark
+		@apply bg-color-light-base-action-primary-default dark:bg-color-dark-base-action-primary-default
+		@apply border-color-light-base-action-primary-default dark:border-color-dark-base-action-primary-default
+		@apply text-color-light-inverse-content-primary dark:text-color-dark-inverse-content-primary
 
 		display: flex
 		align-items: center
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-sm
+		border-radius: $borderRadius-8
 		> svg
 			width: 20px
 			height: 20px
-			@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark
+			@apply stroke-color-light-inverse-content-primary dark:stroke-color-dark-inverse-content-primary
 
 		> span:not(.loading-icon)
 			margin-left: 8px
 			margin-right: 8px
 
 		&:not(:disabled):hover
-			@apply border-action_primary_hover_light dark:border-action_primary_hover_dark
-			@apply bg-action_primary_hover_light dark:bg-action_primary_hover_dark
+			@apply border-color-light-base-action-primary-hover dark:border-color-dark-base-action-primary-hover
+			@apply bg-color-light-base-action-primary-hover dark:bg-color-dark-base-action-primary-hover
 
 		&:focus-within:not(:disabled)
-			@apply shadow-focusring_primary_light dark:shadow-focusring_primary_dark
+			@apply shadow-ring-light-primary-xs dark:shadow-ring-dark-primary-xs
 
 		&:disabled
 			opacity: 0.3
 			border: 0px !important
-			@apply bg-action_primary_disable_light dark:bg-action_primary_disable_dark
-			@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark
+			@apply bg-color-light-base-action-primary-disable dark:bg-color-dark-base-action-primary-disable
+			@apply text-color-light-inverse-content-primary dark:text-color-dark-inverse-content-primary
 
 		&::after
-			@apply bg-action_primary_active_light dark:bg-action_primary_active_dark #{!important}
+			@apply bg-color-light-base-action-primary-active dark:bg-color-dark-base-action-primary-active #{!important}
 
 		&.ant-btn-icon-only
 			border-radius: $borderRadius-circle
 			&.squared
-				border-radius: $borderRadius-sm
+				border-radius: $borderRadius-8
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			> svg
 				width: 24px
 				height: 24px
@@ -61,10 +61,10 @@
 				border-radius: $borderRadius-circle
 				width: 56px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			height: 40px
 			> svg
 				width: 24px
@@ -74,10 +74,10 @@
 				border-radius: $borderRadius-circle
 				width: 40px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-sm
-			border-radius: $borderRadius-xxs
+			border-radius: $borderRadius-4
 			height: 24px
 			> svg
 				width: 16px
@@ -87,54 +87,54 @@
 				border-radius: $borderRadius-circle
 				height: 24px
 				&.squared
-					border-radius: $borderRadius-xxs
+					border-radius: $borderRadius-4
 
 	&.ant-btn-default
-		@apply bg-action_secondary_default_light dark:bg-action_secondary_default_dark
-		@apply border-action_secondary_default_light dark:border-action_secondary_default_dark
-		@apply text-content_primary_light dark:text-content_primary_dark
+		@apply bg-color-light-base-action-secondary-default dark:bg-color-dark-base-action-secondary-default
+		@apply border-color-light-base-action-secondary-default dark:border-color-dark-base-action-secondary-default
+		@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary
 
 		display: flex
 		align-items: center
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-sm
+		border-radius: $borderRadius-8
 		> svg
 			width: 20px
 			height: 20px
-			@apply stroke-content_primary_light dark:stroke-content_primary_dark
+			@apply stroke-color-light-base-content-primary dark:stroke-color-dark-base-content-primary
 
 		> span
 			margin-left: 8px
 			margin-right: 8px
 
 		&:not(:disabled):hover
-			@apply border-action_secondary_hover_light dark:border-action_secondary_hover_dark
-			@apply bg-action_secondary_hover_light dark:bg-action_secondary_hover_dark
+			@apply border-color-light-base-action-secondary-hover dark:border-color-dark-base-action-secondary-hover
+			@apply bg-color-light-base-action-secondary-hover dark:bg-color-dark-base-action-secondary-hover
 
 		&:focus-within:not(:disabled)
-			@apply shadow-focusring_secondary_light dark:shadow-focusring_secondary_dark
+			@apply shadow-ring-light-secondary-xs dark:shadow-ring-dark-secondary-xs
 
 		&:disabled
 			opacity: 0.3
 			border: 0px !important
-			@apply text-content_primary_light dark:text-content_primary_dark
+			@apply text-color-light-base-content-primary dark:text-color-dark-base-content-primary
 
 			> svg
-				@apply stroke-content_primary_light dark:stroke-content_primary_dark #{!important}
+				@apply stroke-color-light-base-content-primary dark:stroke-color-dark-base-content-primary #{!important}
 
 		&::after
-			@apply bg-action_secondary_active_dark dark:bg-action_secondary_active_dark #{!important}
+			@apply bg-color-light-base-action-secondary-active dark:bg-color-dark-base-action-secondary-active #{!important}
 
 		&.ant-btn-icon-only
 			border-radius: $borderRadius-circle
 			&.squared
-				border-radius: $borderRadius-sm
+				border-radius: $borderRadius-8
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			> svg
 				width: 24px
 				height: 24px
@@ -143,10 +143,10 @@
 				border-radius: $borderRadius-circle
 				width: 56px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			height: 40px
 			> svg
 				width: 24px
@@ -156,10 +156,10 @@
 				border-radius: $borderRadius-circle
 				width: 40px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-sm
-			border-radius: $borderRadius-xxs
+			border-radius: $borderRadius-4
 			height: 24px
 			> svg
 				width: 16px
@@ -169,58 +169,58 @@
 				border-radius: $borderRadius-circle
 				height: 24px
 				&.squared
-					border-radius: $borderRadius-xxs
+					border-radius: $borderRadius-4
 
 	&.ant-btn-dangerous
-		@apply bg-destructive_default_light dark:bg-destructive_default_dark
-		@apply border-destructive_default_light dark:border-destructive_default_dark
-		@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark
+		@apply bg-color-light-base-action-destructive-default dark:bg-color-dark-base-action-destructive-default
+		@apply border-color-light-base-action-destructive-default dark:border-color-dark-base-action-destructive-default
+		@apply text-color-light-inverse-content-primary dark:text-color-dark-inverse-content-primary
 
 		display: flex
 		align-items: center
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-sm
+		border-radius: $borderRadius-8
 		> svg
 			width: 20px
 			height: 20px
-			@apply stroke-content_primary_inverse_light dark:stroke-content_primary_inverse_dark
+			@apply stroke-color-light-inverse-content-primary dark:stroke-color-dark-inverse-content-primary
 
 		> span
 			margin-left: 8px
 			margin-right: 8px
 
 		&:not(:disabled):hover
-			@apply border-destructive_hover_light dark:border-destructive_hover_dark
-			@apply bg-destructive_hover_light dark:bg-destructive_hover_dark
+			@apply border-color-light-base-action-destructive-hover dark:border-color-dark-base-action-destructive-hover
+			@apply bg-color-light-base-action-destructive-hover dark:bg-color-dark-base-action-destructive-hover
 
 		&:focus-within:not(:disabled)
-			@apply shadow-focusring_destructive_light dark:shadow-focusring_destructive_dark
-			@apply bg-destructive_default_light dark:bg-destructive_default_dark
+			@apply shadow-ring-light-destructive-xs dark:shadow-ring-dark-destructive-xs
+			@apply bg-color-light-base-action-destructive-default dark:bg-color-dark-base-action-destructive-default
 			&:hover
-				@apply border-destructive_hover_light dark:border-destructive_hover_dark
-				@apply bg-destructive_hover_light dark:bg-destructive_hover_dark
+				@apply border-color-light-base-action-destructive-hover dark:border-color-dark-base-action-destructive-hover
+				@apply bg-color-light-base-action-destructive-hover dark:bg-color-dark-base-action-destructive-hover
 
 		&:disabled
 			opacity: 0.3
 			border: 0px !important
-			@apply bg-destructive_disable_light dark:bg-destructive_disable_dark #{!important}
-			@apply text-content_primary_inverse_light dark:text-content_primary_inverse_dark #{!important}
+			@apply bg-color-light-base-action-destructive-disable dark:bg-color-dark-base-action-destructive-disable #{!important}
+			@apply text-color-light-inverse-content-primary dark:text-color-dark-inverse-content-primary #{!important}
 
 		&::after
-			@apply bg-destructive_active_light dark:bg-destructive_active_dark #{!important}
+			@apply bg-color-light-base-action-destructive-active dark:bg-color-light-base-action-destructive-active #{!important}
 
 		&.ant-btn-icon-only
 			border-radius: $borderRadius-circle
 			&.squared
-				border-radius: $borderRadius-sm
+				border-radius: $borderRadius-8
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			> svg
 				width: 24px
 				height: 24px
@@ -229,10 +229,10 @@
 				border-radius: $borderRadius-circle
 				width: 56px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			height: 40px
 			> svg
 				width: 24px
@@ -242,10 +242,10 @@
 				border-radius: $borderRadius-circle
 				width: 40px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-sm
-			border-radius: $borderRadius-xxs
+			border-radius: $borderRadius-4
 			height: 24px
 			> svg
 				width: 16px
@@ -255,10 +255,10 @@
 				border-radius: $borderRadius-circle
 				height: 24px
 				&.squared
-					border-radius: $borderRadius-xxs
+					border-radius: $borderRadius-4
 
 	&.ant-btn-text
-		@apply text-action_primary_default_light dark:text-action_primary_default_dark
+		@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default
 		@apply bg-transparent
 
 		display: flex
@@ -266,41 +266,41 @@
 		justify-content: center
 
 		height: 32px
-		border-radius: $borderRadius-sm
+		border-radius: $borderRadius-8
 
 		> svg
 			width: 20px
 			height: 20px
-			@apply stroke-action_primary_default_light dark:stroke-action_primary_default_dark
+			@apply stroke-color-light-base-action-primary-default dark:stroke-color-dark-base-action-primary-default
 
 		> span
 			margin-left: 8px
 			margin-right: 8px
 
 		&:not(:disabled):hover
-			@apply text-action_primary_hover_light dark:text-action_primary_hover_dark
-			@apply bg-action_primary_bg10_light dark:bg-action_primary_bg10_dark
+			@apply text-color-light-base-action-primary-hover dark:text-color-dark-base-action-primary-hover
+			@apply bg-color-light-base-action-primary-bg10 dark:bg-color-dark-base-action-primary-bg10
 			> svg
-				@apply stroke-action_primary_hover_light dark:stroke-action_primary_hover_dark
+				@apply stroke-color-light-base-action-primary-hover dark:stroke-color-dark-base-action-primary-hover
 
 		&:focus-within:not(:disabled)
-			@apply shadow-focusring_primary_light dark:shadow-focusring_primary_dark
+			@apply shadow-ring-light-primary-xs dark:shadow-ring-dark-primary-xs
 
 		&:disabled
 			opacity: 0.3
-			@apply text-action_primary_default_light dark:text-action_primary_default_dark
+			@apply text-color-light-base-action-primary-default dark:text-color-dark-base-action-primary-default
 
 		&::after
-			@apply text-action_primary_active_light dark:text-action_primary_active_dark #{!important}
+			@apply text-color-light-base-action-primary-active dark:text-color-dark-base-action-primary-active #{!important}
 
 		&.ant-btn-icon-only
 			border-radius: $borderRadius-circle
 			&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.extra-large
 			height: 56px
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			> svg
 				width: 24px
 				height: 24px
@@ -309,10 +309,10 @@
 				border-radius: $borderRadius-circle
 				width: 56px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-lg:not(.extra-large)
-			border-radius: $borderRadius-md
+			border-radius: $borderRadius-12
 			height: 40px
 			> svg
 				width: 24px
@@ -322,10 +322,10 @@
 				border-radius: $borderRadius-circle
 				width: 40px
 				&.squared
-					border-radius: $borderRadius-sm
+					border-radius: $borderRadius-8
 
 		&.ant-btn-sm
-			border-radius: $borderRadius-xxs
+			border-radius: $borderRadius-4
 			height: 24px
 			> svg
 				width: 16px
@@ -335,7 +335,7 @@
 				border-radius: $borderRadius-circle
 				height: 24px
 				&.squared
-					border-radius: $borderRadius-xxs
+					border-radius: $borderRadius-4
 
 	&.ant-btn-loading
 		> svg
@@ -381,15 +381,15 @@
 
 .ant-btn.base-btn
 	.spinnerStickSC
-		@apply bg-content_primary_inverse_light dark:bg-content_primary_inverse_dark
+		@apply bg-color-light-inverse-content-primary dark:bg-color-dark-inverse-content-primary
 
 	&.ant-btn-text
 		.spinnerStickSC
-			@apply bg-action_primary_default_light dark:bg-action_primary_default_dark
+			@apply bg-color-light-base-action-primary-default dark:bg-color-dark-base-action-primary-default
 
 	&.ant-btn-default
 		.spinnerStickSC
-			@apply bg-content_primary_light dark:bg-content_primary_dark
+			@apply bg-color-light-base-content-primary dark:bg-color-dark-base-content-primary
 
 	.spinnerSC
 		width: 16px

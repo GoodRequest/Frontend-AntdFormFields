@@ -5,12 +5,12 @@
     .ant-select.base-select
         .ant-select-selector:not(.ant-form-item-has-error)
             &:hover
-                @apply border-action_primary_default_light dark:border-action_primary_default_dark
+                @apply border-color-light-base-action-primary-default dark:border-color-dark-base-action-primary-default
             &:focus-within
-                @apply border-action_primary_default_light dark:border-action_primary_default_dark
-                @apply shadow-focusring_primary_light dark:shadow-focusring_primary_dark #{!important}
+                @apply border-color-light-base-action-primary-default dark:border-color-dark-base-action-primary-default
+                @apply shadow-ring-light-primary-xs dark:shadow-ring-dark-primary-xs #{!important}
         .ant-select-item
             &.ant-select-item-option-active
-                @apply bg-surface_secondary_light dark:bg-surface_secondary_dark
+                @apply bg-color-light-base-surface-secondary dark:bg-color-dark-base-surface-secondary
             &.ant-select-item-option-selected
-                @apply bg-surface_secondary_light dark:bg-surface_secondary_dark #{!important}
+                @apply bg-color-light-base-surface-secondary dark:bg-color-dark-base-surface-secondary #{!important}

@@ -33,5 +33,3 @@ export { default as TimeRangeField } from './atoms/TimeRangeField'
 export { default as ToggleField } from './atoms/ToggleField'
 export { default as Button } from './atoms/Button'
 export { default as Menu } from './atoms/Menu'
-
-declare module '@goodrequest/antd-form-fields'

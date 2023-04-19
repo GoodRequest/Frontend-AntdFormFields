@@ -7,5 +7,3 @@ declare module 'moment' {
     export = moment
     export as namespace moment
 }
-
-declare module '@goodrequest/antd-form-fields'

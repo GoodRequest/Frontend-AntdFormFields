@@ -13,6 +13,8 @@ dayjs.extend(utcPlugin)
 dayjs.extend(timezonePlugin)
 dayjs.extend(minMax)
 
+declare module '@goodrequest/antd-form-fields'
+
 export { default as CheckboxField } from './atoms/CheckboxField'
 export { default as CheckboxGroupField } from './atoms/CheckboxGroupField'
 export { default as DateField } from './atoms/DateField'

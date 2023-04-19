@@ -1,0 +1,1 @@
+declare module '@goodrequest/antd-form-fields'

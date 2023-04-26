@@ -1,6 +1,6 @@
 {
   "name": "@goodrequest/antd-form-fields",
-  "version": "0.0.21",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/GoodRequest/i18nextJsonToCsv.git"

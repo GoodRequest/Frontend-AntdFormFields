@@ -30,9 +30,9 @@ export const setInputValue = (form: string, key: string, value: string, force = 
     }
 }
 
-export const selectOptionDropdown = (form: string, key: string, value?: string) => {
-    const elementId: string = generateElementId(key, form)
-    cy.get(elementId).click()
+export const selectOptionDropdown = (form?: string, key?: string, value?: string, force?: boolean) => {
+    const elementId: string = form ? `#${form}-${key}` : `#${key}`
+    cy.get(elementId).click({ force })
     if (value) {
         // check for specific value in dropdown
         cy.get('.ant-select-dropdown :not(.ant-select-dropdown-hidden)', { timeout: 10000 })
@@ -40,7 +40,7 @@ export const selectOptionDropdown = (form: string, key: string, value?: string) 
             .find('.ant-select-item-option')
             .each((el: any) => {
                 if (el.text() === value) {
-                    cy.wrap(el).click()
+                    cy.wrap(el).click({ force })
                 }
             })
     } else {
@@ -49,8 +49,26 @@ export const selectOptionDropdown = (form: string, key: string, value?: string) 
     }
 }
 
+export const clickDropdownItem = (triggerId: string, dropdownItemId?: string, force?: boolean) => {
+    cy.get(triggerId).click({ force })
+    if (dropdownItemId) {
+        // check for specific value in dropdown
+        cy.get('.ant-dropdown :not(.ant-dropdown-hidden)', { timeout: 10000 })
+            .should('be.visible')
+            .find('.ant-dropdown-menu-item')
+            .each((el: any) => {
+                if (el.has(dropdownItemId)) {
+                    cy.wrap(el).click({ force })
+                }
+            })
+    } else {
+        // default select first item in list
+        cy.get('.ant-dropdown :not(.ant-dropdown-hidden)', { timeout: 10000 }).should('be.visible').find('.ant-dropdown-menu-item').first().click({ force: true })
+    }
+}
+
 export const setSearchBoxValueAndSelectFirstOption = (key: string, value: string, selectListKey: string, form?: string, googleGeocoding?: boolean, clear?: boolean, timeout?: number) => {
-    const elementId: string = generateElementId(key, form)
+    const elementId: string = form ? `#${form}-${key}` : `#${key}`
     if (clear) {
         cy.get(elementId).clear().type(value, { timeout }).should('have.value', value)
     } else {
@@ -74,9 +92,9 @@ export const clickButton = (key: string, form?: string, switchBtn?: boolean) => 
 }
 
 export const clickDeleteButtonWithConf = (form?: string, key = 'delete-btn') => {
-    cy.clickButton(key, form)
+    clickButton(key, form)
     // get popover conf box and click confirmation button
-    cy.get('.ant-popover-inner-content', { timeout: 10000 }).should('be.visible').find('.ant-popover-buttons > :nth-child(2)').click()
+    cy.get('.ant-popover-inner-content', { timeout: 10000 }).should('be.visible').find('.ant-popconfirm-buttons > :nth-child(2)').click()
 }
 
 export const uploadFile = (key: string, filePath: string, form?: string) => {
@@ -103,6 +121,7 @@ const initializeCustomCommands = () => {
         apiAuth,
         setInputValue,
         selectOptionDropdown,
+        clickDropdownItem,
         setSearchBoxValueAndSelectFirstOption,
         clickButton,
         clickDeleteButtonWithConf,

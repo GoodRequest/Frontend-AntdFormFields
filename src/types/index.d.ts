@@ -20,6 +20,12 @@ declare namespace Cypress {
          */
         selectOptionDropdown(form: string, key: string, value?: string)
         /**
+         * Command to click option in dropdown
+         * default selecting first option
+         * @example cy.clickDropdownItem('#moderate_btn-1', 'moderate-1-message', false)
+         */
+        clickDropdownItem(triggerId: string, dropdownItemId?: string, force?: boolean)
+        /**
          * Command to get search box, set value and select first listed option
          * attribute clear input value before its set
          * @example cy.setSearchBoxValueAndSelectFirstOption('email', 'test@test.com', 'LOGIN')
